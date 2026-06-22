@@ -1,0 +1,1058 @@
+{
+  "total": 50,
+  "strategy": "cuisine_weighted_balanced",
+  "recipes": [
+    {
+      "id": "tr-katmer",
+      "title": "Gaziantep Katmer",
+      "cuisine": "turkish",
+      "meal_type": [
+        "breakfast",
+        "dessert"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "yufka",
+        "pistachio"
+      ],
+      "search_terms": {
+        "primary_keywords": "yufka pistachio",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "yufka Turkish food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Gaziantep Katmer, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-mercimek-corbasi",
+      "title": "Mercimek Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "lentil"
+      ],
+      "search_terms": {
+        "primary_keywords": "lentil",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "lentil Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Mercimek Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-menemen",
+      "title": "Menemen",
+      "cuisine": "turkish",
+      "meal_type": [
+        "breakfast",
+        "lunch"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tomato",
+        "egg"
+      ],
+      "search_terms": {
+        "primary_keywords": "tomato eggs",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "tomato Turkish food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Menemen, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-kuru-fasulye-etli-klasik",
+      "title": "Etli Kuru Fasulye",
+      "cuisine": "turkish",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "white_bean",
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "white beans beef",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "white beans Turkish food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Etli Kuru Fasulye, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-gavurdagi-salata",
+      "title": "Gavurdağı Salatası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "snack",
+        "lunch"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tomato"
+      ],
+      "search_terms": {
+        "primary_keywords": "tomato",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "tomato Turkish food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Gavurdağı Salatası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-yayla-corbasi-pratik",
+      "title": "Yayla Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "soup",
+        "lunch"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "yogurt",
+        "rice"
+      ],
+      "search_terms": {
+        "primary_keywords": "yogurt rice",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "yogurt Turkish food",
+        "meal_type": "soup"
+      },
+      "ai_prompt": "Yayla Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, soup bowl with steam visible, spoon beside, garnish on top, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-firin-mangalda-patlican-meze-Türk",
+      "title": "Yoğurtlu Patlıcan",
+      "cuisine": "turkish",
+      "meal_type": [
+        "appetizer"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "eggplant",
+        "yogurt"
+      ],
+      "search_terms": {
+        "primary_keywords": "eggplant yogurt",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "eggplant Turkish food",
+        "meal_type": "appetizer"
+      },
+      "ai_prompt": "Yoğurtlu Patlıcan, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, small portion, mezze style, multiple elements, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-hamur-borek-rulo-fıstıklı-vegan",
+      "title": "Bülbül Yuvası (Şerbetli)",
+      "cuisine": "turkish",
+      "meal_type": [
+        "dessert"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "phyllo",
+        "almond"
+      ],
+      "search_terms": {
+        "primary_keywords": "phyllo dough almonds",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "phyllo dough Turkish food",
+        "meal_type": "dessert"
+      },
+      "ai_prompt": "Bülbül Yuvası (Şerbetli), authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, close-up dessert shot, garnish detail, indulgent feel, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-ezogelin-corbasi",
+      "title": "Ezogelin Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "lentil",
+        "bulgur"
+      ],
+      "search_terms": {
+        "primary_keywords": "lentil bulgur",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "lentil Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Ezogelin Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-yayla-corbasi",
+      "title": "Yayla Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "yogurt",
+        "rice"
+      ],
+      "search_terms": {
+        "primary_keywords": "yogurt rice",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "yogurt Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Yayla Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-suyu-corbasi",
+      "title": "Tavuk Suyu Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "chicken Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Tavuk Suyu Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-domates-corbasi",
+      "title": "Kremalı Domates Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tomato"
+      ],
+      "search_terms": {
+        "primary_keywords": "tomato",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "tomato Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Kremalı Domates Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tarhana-corbasi",
+      "title": "Tarhana Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tarhana"
+      ],
+      "search_terms": {
+        "primary_keywords": "tarhana",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "tarhana Turkish food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Tarhana Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-iskembe-corbasi",
+      "title": "İşkembe Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "hard",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tripe"
+      ],
+      "search_terms": {
+        "primary_keywords": "tripe",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "tripe Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "İşkembe Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-balik-corbasi",
+      "title": "Akdeniz Usulü Balık Çorbası",
+      "cuisine": "turkish",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "fish"
+      ],
+      "search_terms": {
+        "primary_keywords": "fish",
+        "cuisine_keyword": "Turkish food",
+        "fallback_query": "fish Turkish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Akdeniz Usulü Balık Çorbası, authentic Turkish home-cooked, copper or ceramic vessel, rustic wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-bisteca-fiorentina",
+      "title": "Bistecca Alla Fiorentina",
+      "cuisine": "italian",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef",
+        "cuisine_keyword": "Italian food",
+        "fallback_query": "beef Italian food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Bistecca Alla Fiorentina, Italian cuisine, white plate, marble surface, fresh basil, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-carbonara",
+      "title": "Spagetti Carbonara",
+      "cuisine": "italian",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "pasta"
+      ],
+      "search_terms": {
+        "primary_keywords": "pasta",
+        "cuisine_keyword": "Italian food",
+        "fallback_query": "pasta Italian food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Spagetti Carbonara, Italian cuisine, white plate, marble surface, fresh basil, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-pizza-margherita",
+      "title": "Pizza Margherita",
+      "cuisine": "italian",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour",
+        "cuisine_keyword": "Italian food",
+        "fallback_query": "flour Italian food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Pizza Margherita, Italian cuisine, white plate, marble surface, fresh basil, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-pesto-genovese",
+      "title": "Pesto Genovese (Klasik)",
+      "cuisine": "italian",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "basil"
+      ],
+      "search_terms": {
+        "primary_keywords": "basil",
+        "cuisine_keyword": "Italian food",
+        "fallback_query": "basil Italian food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Pesto Genovese (Klasik), Italian cuisine, white plate, marble surface, fresh basil, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-pasta-italyana-aglio-olio",
+      "title": "Aglio e Olio Makarna",
+      "cuisine": "italian",
+      "meal_type": [
+        "lunch",
+        "snack"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "pasta"
+      ],
+      "search_terms": {
+        "primary_keywords": "pasta",
+        "cuisine_keyword": "Italian food",
+        "fallback_query": "pasta Italian food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Aglio e Olio Makarna, Italian cuisine, white plate, marble surface, fresh basil, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-levrek-tuz-firin",
+      "title": "Tuzda Levrek",
+      "cuisine": "mediterranean",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "fish"
+      ],
+      "search_terms": {
+        "primary_keywords": "fish",
+        "cuisine_keyword": "Mediterranean food",
+        "fallback_query": "fish Mediterranean food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Tuzda Levrek, Mediterranean style, fresh herbs and lemon, light wooden surface, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-levrek-firin",
+      "title": "Fırında Bütün Levrek",
+      "cuisine": "mediterranean",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "fish"
+      ],
+      "search_terms": {
+        "primary_keywords": "fish",
+        "cuisine_keyword": "Mediterranean food",
+        "fallback_query": "fish Mediterranean food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Fırında Bütün Levrek, Mediterranean style, fresh herbs and lemon, light wooden surface, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-gyros-yunan",
+      "title": "Gyros Dürüm (Yunan)",
+      "cuisine": "mediterranean",
+      "meal_type": [
+        "lunch",
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "bread",
+        "pork"
+      ],
+      "search_terms": {
+        "primary_keywords": "bread pork",
+        "cuisine_keyword": "Mediterranean food",
+        "fallback_query": "bread Mediterranean food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Gyros Dürüm (Yunan), Mediterranean style, fresh herbs and lemon, light wooden surface, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-akdeniz-feta-baked-domates",
+      "title": "Fırında Fetalı Domates",
+      "cuisine": "mediterranean",
+      "meal_type": [
+        "breakfast"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "cheese",
+        "tomato"
+      ],
+      "search_terms": {
+        "primary_keywords": "cheese tomato",
+        "cuisine_keyword": "Mediterranean food",
+        "fallback_query": "cheese Mediterranean food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Fırında Fetalı Domates, Mediterranean style, fresh herbs and lemon, light wooden surface, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-firin-tavuk-veya-dana-roast-ot",
+      "title": "Akdeniz Tepsi Et",
+      "cuisine": "mediterranean",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "beef",
+        "potato"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef potato",
+        "cuisine_keyword": "Mediterranean food",
+        "fallback_query": "beef Mediterranean food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Akdeniz Tepsi Et, Mediterranean style, fresh herbs and lemon, light wooden surface, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-kunafa",
+      "title": "Künefe (Hatay Tarzı)",
+      "cuisine": "middle_eastern",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "phyllo",
+        "cheese"
+      ],
+      "search_terms": {
+        "primary_keywords": "phyllo dough cheese",
+        "cuisine_keyword": "Middle Eastern food",
+        "fallback_query": "phyllo dough Middle Eastern food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Künefe (Hatay Tarzı), Middle Eastern style, copper tray, fresh herbs, warm spices visible, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-shakshuka",
+      "title": "Shakshuka",
+      "cuisine": "middle_eastern",
+      "meal_type": [
+        "breakfast",
+        "lunch"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tomato",
+        "egg"
+      ],
+      "search_terms": {
+        "primary_keywords": "tomato eggs",
+        "cuisine_keyword": "Middle Eastern food",
+        "fallback_query": "tomato Middle Eastern food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Shakshuka, Middle Eastern style, copper tray, fresh herbs, warm spices visible, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-shawarma",
+      "title": "Tavuk Shawarma",
+      "cuisine": "middle_eastern",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Middle Eastern food",
+        "fallback_query": "chicken Middle Eastern food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Tavuk Shawarma, Middle Eastern style, copper tray, fresh herbs, warm spices visible, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-shish-tawook",
+      "title": "Shish Tawook",
+      "cuisine": "middle_eastern",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Middle Eastern food",
+        "fallback_query": "chicken Middle Eastern food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Shish Tawook, Middle Eastern style, copper tray, fresh herbs, warm spices visible, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-bouef-bourguignon",
+      "title": "Boeuf Bourguignon",
+      "cuisine": "french",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef",
+        "cuisine_keyword": "French food",
+        "fallback_query": "beef French food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Boeuf Bourguignon, French bistro style, elegant plating, warm tones, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-quiche-lorraine",
+      "title": "Quiche Lorraine",
+      "cuisine": "french",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour",
+        "cuisine_keyword": "French food",
+        "fallback_query": "flour French food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Quiche Lorraine, French bistro style, elegant plating, warm tones, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-croque-monsieur",
+      "title": "Croque Monsieur",
+      "cuisine": "french",
+      "meal_type": [
+        "snack",
+        "lunch"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "bread",
+        "cheese"
+      ],
+      "search_terms": {
+        "primary_keywords": "bread cheese",
+        "cuisine_keyword": "French food",
+        "fallback_query": "bread French food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Croque Monsieur, French bistro style, elegant plating, warm tones, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-croque-madame",
+      "title": "Croque Madame",
+      "cuisine": "french",
+      "meal_type": [
+        "snack",
+        "lunch",
+        "breakfast"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "bread",
+        "egg"
+      ],
+      "search_terms": {
+        "primary_keywords": "bread eggs",
+        "cuisine_keyword": "French food",
+        "fallback_query": "bread French food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Croque Madame, French bistro style, elegant plating, warm tones, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-cheesecake-newyork",
+      "title": "New York Cheesecake",
+      "cuisine": "american",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "cream_cheese"
+      ],
+      "search_terms": {
+        "primary_keywords": "cream_cheese",
+        "cuisine_keyword": "American food",
+        "fallback_query": "cream_cheese American food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "New York Cheesecake, American comfort food, casual presentation, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-fried-chicken",
+      "title": "Amerikan Çıtır Tavuk (Southern Fried Chicken)",
+      "cuisine": "american",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "American food",
+        "fallback_query": "chicken American food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Amerikan Çıtır Tavuk (Southern Fried Chicken), American comfort food, casual presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-cikolatali-brownies",
+      "title": "Brownies (Fudgy)",
+      "cuisine": "american",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chocolate"
+      ],
+      "search_terms": {
+        "primary_keywords": "chocolate",
+        "cuisine_keyword": "American food",
+        "fallback_query": "chocolate American food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Brownies (Fudgy), American comfort food, casual presentation, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-rib-fırın",
+      "title": "Fırın Antrikot (Rib Roast)",
+      "cuisine": "other",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef",
+        "cuisine_keyword": "food",
+        "fallback_query": "beef food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Fırın Antrikot (Rib Roast), home-cooked authentic presentation, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-hamur-cinnamon-rull-amerika",
+      "title": "Cinnamon Roll (Tarçın Sarmal)",
+      "cuisine": "other",
+      "meal_type": [
+        "breakfast",
+        "dessert"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour",
+        "cuisine_keyword": "food",
+        "fallback_query": "flour food",
+        "meal_type": "breakfast"
+      },
+      "ai_prompt": "Cinnamon Roll (Tarçın Sarmal), home-cooked authentic presentation, morning light, breakfast table setting, tea or coffee in corner, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-pho",
+      "title": "Pho Bo (Vietnam Etli Erişte Çorbası)",
+      "cuisine": "other",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "hard",
+      "is_premium": false,
+      "primary_ingredients": [
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef",
+        "cuisine_keyword": "food",
+        "fallback_query": "beef food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Pho Bo (Vietnam Etli Erişte Çorbası), home-cooked authentic presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-asado-arjantin",
+      "title": "Arjantin Asado (Chimichurri'li Et)",
+      "cuisine": "other",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "beef"
+      ],
+      "search_terms": {
+        "primary_keywords": "beef",
+        "cuisine_keyword": "food",
+        "fallback_query": "beef food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Arjantin Asado (Chimichurri'li Et), home-cooked authentic presentation, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-trilece",
+      "title": "Trileçe",
+      "cuisine": "other",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour",
+        "milk"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour milk",
+        "cuisine_keyword": "food",
+        "fallback_query": "flour food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Trileçe, home-cooked authentic presentation, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-greek-salata",
+      "title": "Yunan Salatası (Horiatiki)",
+      "cuisine": "other",
+      "meal_type": [
+        "lunch",
+        "snack"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "tomato",
+        "feta"
+      ],
+      "search_terms": {
+        "primary_keywords": "tomato feta",
+        "cuisine_keyword": "food",
+        "fallback_query": "tomato food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Yunan Salatası (Horiatiki), home-cooked authentic presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-mole-meksika",
+      "title": "Tavuk Mole",
+      "cuisine": "mexican",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "hard",
+      "is_premium": true,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Mexican food",
+        "fallback_query": "chicken Mexican food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Tavuk Mole, Mexican vibrant colors, lime and cilantro, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-meksika-tres-leches-klasik",
+      "title": "Meksika Tres Leches (Otantik)",
+      "cuisine": "mexican",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour",
+        "milk"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour milk",
+        "cuisine_keyword": "Mexican food",
+        "fallback_query": "flour Mexican food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Meksika Tres Leches (Otantik), Mexican vibrant colors, lime and cilantro, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-tikka-masala-hint",
+      "title": "Tavuk Tikka Masala",
+      "cuisine": "indian",
+      "meal_type": [
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": true,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Indian food",
+        "fallback_query": "chicken Indian food",
+        "meal_type": "dinner"
+      },
+      "ai_prompt": "Tavuk Tikka Masala, Indian cuisine, rich colors, traditional thali style, top-down view, warm dinner ambiance, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tavuk-curry",
+      "title": "Hint Tavuk Köri",
+      "cuisine": "indian",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "easy",
+      "is_premium": false,
+      "primary_ingredients": [
+        "chicken"
+      ],
+      "search_terms": {
+        "primary_keywords": "chicken",
+        "cuisine_keyword": "Indian food",
+        "fallback_query": "chicken Indian food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Hint Tavuk Köri, Indian cuisine, rich colors, traditional thali style, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tortilla-ispanyol-firin",
+      "title": "İspanyol Tortilla (Patates Omleti)",
+      "cuisine": "spanish",
+      "meal_type": [
+        "lunch",
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "egg",
+        "potato"
+      ],
+      "search_terms": {
+        "primary_keywords": "eggs potato",
+        "cuisine_keyword": "Spanish food",
+        "fallback_query": "eggs Spanish food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "İspanyol Tortilla (Patates Omleti), home-cooked authentic presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-japonyali-castella",
+      "title": "Castella (Japon Sünger Kek)",
+      "cuisine": "japanese",
+      "meal_type": [
+        "snack"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "egg",
+        "flour"
+      ],
+      "search_terms": {
+        "primary_keywords": "eggs flour",
+        "cuisine_keyword": "Japanese food",
+        "fallback_query": "eggs Japanese food",
+        "meal_type": "snack"
+      },
+      "ai_prompt": "Castella (Japon Sünger Kek), home-cooked authentic presentation, casual snack presentation, hand-held style, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-jiaozi",
+      "title": "Çin Mantısı (Jiaozi/Gyoza)",
+      "cuisine": "chinese",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "hard",
+      "is_premium": false,
+      "primary_ingredients": [
+        "flour",
+        "pork"
+      ],
+      "search_terms": {
+        "primary_keywords": "flour pork",
+        "cuisine_keyword": "Chinese food",
+        "fallback_query": "flour Chinese food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Çin Mantısı (Jiaozi/Gyoza), home-cooked authentic presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    },
+    {
+      "id": "tr-tom-yum",
+      "title": "Tom Yum Çorbası",
+      "cuisine": "thai",
+      "meal_type": [
+        "lunch",
+        "dinner"
+      ],
+      "difficulty": "medium",
+      "is_premium": false,
+      "primary_ingredients": [
+        "shrimp"
+      ],
+      "search_terms": {
+        "primary_keywords": "shrimp",
+        "cuisine_keyword": "Thai food",
+        "fallback_query": "shrimp Thai food",
+        "meal_type": "lunch"
+      },
+      "ai_prompt": "Tom Yum Çorbası, home-cooked authentic presentation, natural daylight, simple plating, natural soft window light from left, professional food photography, shallow depth of field, photorealistic, no text or watermarks, warm authentic colors, magazine cookbook quality, 4:3 aspect ratio"
+    }
+  ]
+}

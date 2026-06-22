@@ -1,0 +1,158 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============================================================
+    // HELPER FUNCTIONS
+    // ============================================================
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+    
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.admin == true;
+    }
+    
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+    
+    function isPremium() {
+      return isSignedIn() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             getUserData().subscription.tier in ['premium', 'pro'] &&
+             getUserData().subscription.status == 'active';
+    }
+    
+    function isValidRecipeUpdate() {
+      // Client sadece view_count/favorite_count gibi denormalize alanları artırabilir
+      let immutable = ['id', 'schema_version', 'language', 'ingredients', 
+                       'steps', 'is_premium', 'cuisine', 'image'];
+      return !request.resource.data.diff(resource.data).affectedKeys()
+                .hasAny(immutable);
+    }
+    
+    // ============================================================
+    // RECIPES (tüm diller)
+    // ============================================================
+    match /recipes_{lang}/{recipeId} {
+      // OKUMA: image_status=ready olmalı; premium ise abone olmalı
+      allow read: if resource.data.image_status == 'ready' &&
+                     (!resource.data.is_premium || isPremium() || isAdmin());
+      
+      // YAZMA: Sadece admin
+      allow create, delete: if isAdmin();
+      allow update: if isAdmin();
+      
+      // SADECE counter artışları (view_count) için Cloud Function tercih edilir
+    }
+    
+    // ============================================================
+    // USERS
+    // ============================================================
+    match /users/{userId} {
+      // OKUMA: Kendi profili
+      allow read: if isOwner(userId) || isAdmin();
+      
+      // OLUŞTURMA: İlk kayıtta
+      allow create: if isOwner(userId) &&
+                       request.resource.data.uid == userId &&
+                       request.resource.data.subscription.tier == 'free' &&
+                       request.resource.data.subscription.status == 'active';
+      
+      // GÜNCELLEME: Kendi profili, ama subscription/stats değiştirilemez (Cloud Function ile)
+      allow update: if isOwner(userId) &&
+                       request.resource.data.uid == userId &&
+                       request.resource.data.subscription == resource.data.subscription &&
+                       request.resource.data.stats == resource.data.stats;
+      
+      // SİLME: Kendi hesabını silebilir
+      allow delete: if isOwner(userId);
+      
+      // ===== Favorites Subcollection =====
+      match /favorites/{recipeId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+      
+      // ===== Pantry Subcollection =====
+      match /pantry/{itemId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // ===== Cook History Subcollection =====
+      match /cook_history/{historyId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow update, delete: if false;  // immutable
+      }
+    }
+    
+    // ============================================================
+    // RATINGS
+    // ============================================================
+    match /ratings/{ratingId} {
+      // OKUMA: Herkes (review listesi gösterimi)
+      allow read: if true;
+      
+      // OLUŞTURMA: Sadece kendi adına
+      allow create: if isSignedIn() &&
+                       request.resource.data.user_id == request.auth.uid &&
+                       request.resource.data.rating >= 1 &&
+                       request.resource.data.rating <= 5;
+      
+      // GÜNCELLEME/SİLME: Sadece kendi rating'i
+      allow update: if isSignedIn() && 
+                       resource.data.user_id == request.auth.uid &&
+                       request.resource.data.user_id == resource.data.user_id;
+      allow delete: if isSignedIn() && 
+                       resource.data.user_id == request.auth.uid;
+    }
+    
+    // ============================================================
+    // APP CONFIG (public read, admin write)
+    // ============================================================
+    match /app_config/{configId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    // ============================================================
+    // ADMIN-ONLY KOLEKSİYONLARI
+    // ============================================================
+    match /image_jobs/{jobId} {
+      allow read, write: if isAdmin();
+    }
+    
+    match /image_review_queue/{recipeId} {
+      allow read, write: if isAdmin();
+    }
+    
+    match /translation_jobs/{jobId} {
+      allow read, write: if isAdmin();
+    }
+    
+    // ============================================================
+    // ANALYTICS (write-only, read admin)
+    // ============================================================
+    match /analytics_events/{eventId} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+    
+    // ============================================================
+    // DEFAULT DENY
+    // ============================================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

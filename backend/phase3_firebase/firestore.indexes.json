@@ -1,0 +1,137 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "published_at", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "cuisine", "order": "ASCENDING"},
+        {"fieldPath": "rating_avg", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "meal_type", "arrayConfig": "CONTAINS"},
+        {"fieldPath": "published_at", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "diet_tags", "arrayConfig": "CONTAINS"},
+        {"fieldPath": "rating_avg", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "difficulty", "order": "ASCENDING"},
+        {"fieldPath": "total_time_min", "order": "ASCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "ingredient_tokens", "arrayConfig": "CONTAINS"},
+        {"fieldPath": "rating_avg", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "is_premium", "order": "ASCENDING"},
+        {"fieldPath": "rating_avg", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "favorite_count", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "image_status", "order": "ASCENDING"},
+        {"fieldPath": "search_keywords", "arrayConfig": "CONTAINS"}
+      ]
+    },
+    {
+      "collectionGroup": "image_jobs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "status", "order": "ASCENDING"},
+        {"fieldPath": "priority", "order": "ASCENDING"},
+        {"fieldPath": "created_at", "order": "ASCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "image_jobs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "requires_review", "order": "ASCENDING"},
+        {"fieldPath": "updated_at", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "ratings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "recipe_id", "order": "ASCENDING"},
+        {"fieldPath": "created_at", "order": "DESCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "favorites",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {"fieldPath": "recipe_id", "order": "ASCENDING"},
+        {"fieldPath": "added_at", "order": "DESCENDING"}
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "recipes_tr",
+      "fieldPath": "ingredient_tokens",
+      "indexes": [
+        {
+          "queryScope": "COLLECTION",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "recipes_tr",
+      "fieldPath": "search_keywords",
+      "indexes": [
+        {
+          "queryScope": "COLLECTION",
+          "arrayConfig": "CONTAINS"
+        }
+      ]
+    }
+  ]
+}
