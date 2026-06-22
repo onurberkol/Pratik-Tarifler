@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Pratik Tarifler - Urun Tanitim Dokumani</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; color:#22180F; line-height:1.6; font-size:10.5pt; }
+  .serif { font-family:'Fraunces',serif; }
+  .page { padding:0; page-break-after:always; position:relative; min-height:100vh; overflow:hidden; }
+  .page:last-child { page-break-after:auto; }
+  .inner { padding:50px 56px; }
+
+  /* KAPAK */
+  .cover {
+    background:linear-gradient(160deg,#E14328 0%,#C2371F 52%,#9C2E1A 100%);
+    min-height:100vh; display:flex; flex-direction:column;
+    justify-content:center; padding:70px; position:relative; color:#FFF;
+  }
+  .cover .ring { position:absolute; width:560px; height:560px; border-radius:50%;
+    border:70px solid rgba(255,255,255,.06); right:-200px; top:50%; transform:translateY(-50%); }
+  .cover .kicker { font-size:14px; font-weight:700; letter-spacing:3px; color:#FFD8CF; }
+  .cover h1 { font-size:68px; font-weight:700; margin-top:12px; line-height:1.02; }
+  .cover .tag { font-size:21px; font-weight:500; margin-top:20px; max-width:480px; color:#FFE8E2; }
+  .cover .divider { width:80px; height:5px; background:#F4A024; margin:30px 0; border-radius:3px; }
+  .cover .desc { font-size:14px; max-width:450px; color:#FFE0D9; line-height:1.85; }
+  .cover .bottom { position:absolute; bottom:58px; left:70px; font-size:13px; font-weight:600; color:#FFD8CF; }
+
+  .ph { font-size:13px; font-weight:800; color:#E14328; letter-spacing:1.5px; }
+  h2 { font-size:33px; font-weight:700; margin:6px 0 4px; line-height:1.13; }
+  .lead { font-size:13px; color:#7D6E5C; max-width:580px; }
+  h3 { font-size:18px; font-weight:700; margin:18px 0 6px; }
+
+  /* problem-cozum */
+  .prob-sol { display:flex; gap:18px; margin-top:24px; }
+  .ps-card { flex:1; border-radius:18px; padding:24px; }
+  .ps-card.prob { background:#FFF3E0; }
+  .ps-card.sol { background:#22180F; color:#FFF; }
+  .ps-card .ps-icon { font-size:34px; }
+  .ps-card h4 { font-size:16px; font-weight:700; margin:10px 0 8px; }
+  .ps-card.sol h4 { color:#F4A024; }
+  .ps-card ul { margin:0 0 0 16px; font-size:10pt; }
+  .ps-card li { margin:6px 0; }
+
+  /* istatistik seridi */
+  .statbar { display:flex; gap:0; margin-top:26px; border-radius:16px; overflow:hidden;
+    box-shadow:0 12px 28px rgba(225,67,40,.18); }
+  .statbar .s { flex:1; padding:22px 14px; text-align:center; color:#FFF; }
+  .statbar .s .n { font-size:32px; font-weight:700; font-family:'Fraunces',serif; }
+  .statbar .s .l { font-size:8.5pt; font-weight:600; opacity:.92; margin-top:3px; }
+
+  /* mod kartlari */
+  .modes { display:flex; flex-direction:column; gap:14px; margin-top:20px; }
+  .mode { display:flex; gap:18px; border-radius:18px; padding:22px; align-items:center; }
+  .mode .mode-badge { width:76px; height:76px; border-radius:20px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:38px; }
+  .mode .mode-body h4 { font-size:18px; font-weight:700; }
+  .mode .mode-body .mtag { font-size:9pt; font-weight:800; opacity:.6; letter-spacing:1px; }
+  .mode .mode-body p { font-size:10pt; margin-top:5px; color:#5C4E3E; }
+
+  /* feature grid */
+  .fgrid { display:flex; flex-wrap:wrap; gap:14px; margin-top:20px; }
+  .fcard { width:calc(50% - 7px); background:#FFF; border:1.5px solid #F0E7D8;
+    border-radius:16px; padding:18px; }
+  .fcard .fc-icon { width:44px; height:44px; border-radius:13px; background:#FFF3E0;
+    display:flex; align-items:center; justify-content:center; font-size:22px; }
+  .fcard h4 { font-size:13.5px; font-weight:700; margin:10px 0 4px; }
+  .fcard p { font-size:9pt; color:#7D6E5C; }
+
+  /* showcase */
+  .showcase { display:flex; gap:22px; margin-top:22px; align-items:flex-start; }
+  .showcase img { width:210px; border-radius:22px;
+    filter:drop-shadow(0 18px 40px rgba(40,28,16,.22)); }
+  .showcase .sc-text { flex:1; }
+  .showcase .sc-text h3 { margin-top:0; }
+  .sc-steps { margin-top:12px; }
+  .sc-step { display:flex; gap:13px; margin:14px 0; }
+  .sc-step .scs-num { width:32px; height:32px; border-radius:50%; background:#E14328;
+    color:#FFF; font-weight:800; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; font-size:13px; }
+  .sc-step .scs-body h4 { font-size:13px; font-weight:700; }
+  .sc-step .scs-body p { font-size:9pt; color:#7D6E5C; }
+
+  /* pricing */
+  .pricing { display:flex; gap:14px; margin-top:22px; }
+  .price { flex:1; border-radius:18px; padding:24px; border:2px solid #F0E7D8;
+    background:#FFF; text-align:center; }
+  .price.featured { border-color:#F4A024; background:linear-gradient(170deg,#FFF,#FFF3E0);
+    position:relative; }
+  .price .ribbon { position:absolute; top:-11px; left:50%; transform:translateX(-50%);
+    background:#F4A024; color:#FFF; font-size:9px; font-weight:800; padding:4px 14px;
+    border-radius:9px; white-space:nowrap; }
+  .price .p-name { font-size:12px; font-weight:800; letter-spacing:.5px; color:#7D6E5C; }
+  .price .p-amt { font-size:34px; font-weight:700; color:#E14328; margin:8px 0 2px; font-family:'Fraunces',serif; }
+  .price .p-per { font-size:8.5pt; color:#A89070; }
+  .price ul { list-style:none; margin:14px 0 0; font-size:8.5pt; text-align:left; }
+  .price li { padding:5px 0; padding-left:19px; position:relative; }
+  .price li::before { content:"\2713"; position:absolute; left:0; color:#3E8E5A; font-weight:800; }
+
+  .running { font-size:9px; color:#C3B7A4; font-weight:700; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:6px; }
+
+  .persona { display:flex; gap:16px; margin-top:18px; }
+  .pcard { flex:1; background:#FFF; border:1.5px solid #F0E7D8; border-radius:16px; padding:20px; }
+  .pcard .pemoji { font-size:38px; }
+  .pcard h4 { font-size:14px; font-weight:700; margin:8px 0 6px; }
+  .pcard p { font-size:9pt; color:#7D6E5C; }
+
+  .endcta { background:linear-gradient(160deg,#22180F,#3A2A1C); color:#FFF;
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:70px; }
+  .endcta h2 { font-size:44px; color:#FFF; }
+  .endcta .ec-tag { font-size:16px; color:#F4A024; margin-top:12px; font-weight:600; }
+  .endcta .ec-box { background:rgba(255,255,255,.05); border:1px solid #4A3A2C;
+    border-radius:18px; padding:24px; margin-top:26px; }
+  .endcta .ec-box h4 { font-size:14px; color:#F4A024; font-weight:700; }
+  .endcta .ec-box p { font-size:11px; color:#D8CCBE; margin-top:6px; line-height:1.9; }
+  .endcta .contact { margin-top:28px; font-size:12px; color:#A89578; line-height:2; }
+</style>
+</head>
+<body>
+
+<!-- KAPAK -->
+<div class="page">
+  <div class="cover">
+    <div class="ring"></div>
+    <div class="kicker">URUN TANITIM DOKUMANI</div>
+    <h1 class="serif">Pratik<br>Tarifler</h1>
+    <div class="tag">Buzdolabini cek, yapay zeka ne pisirecegini soylesin.</div>
+    <div class="divider"></div>
+    <div class="desc">
+      Turkiye'nin ilk AI destekli akilli mutfak asistani. 2500+ ozenle secilmis tarif,
+      3 akilli kesif modu, 13 dil destegi. Markete gitmeden, israf etmeden, akillica pisir.
+    </div>
+    <div class="bottom">Surum 1.0 &middot; 2026 &middot; pratiktarifler.app</div>
+  </div>
+</div>
+
+<!-- PROBLEM & COZUM -->
+<div class="page"><div class="inner">
+  <div class="running">Pratik Tarifler - Urun Tanitimi</div>
+  <div class="ph">VIZYON</div>
+  <h2 class="serif">Her gun sorulan bir soru:<br>"Aksam ne pisirsem?"</h2>
+  <div class="lead">
+    Milyonlarca insan her gun ayni karar yorgunlugunu yasar. Bu, hem zaman kaybina hem de
+    ciddi gida israfina yol acar. Pratik Tarifler bu problemi yapay zeka ile cozer.
+  </div>
+
+  <div class="prob-sol">
+    <div class="ps-card prob">
+      <div class="ps-icon">&#128533;</div>
+      <h4>Problem</h4>
+      <ul>
+        <li>"Ne pisirecegim?" karar yorgunlugu</li>
+        <li>Buzdolabindaki malzemeler curuyup atiliyor</li>
+        <li>Gereksiz market alisverisi, fazla harcama</li>
+        <li>Tarif sitelerinde malzeme bazli arama zayif</li>
+        <li>Elindeki malzemeyle ne yapilacagi belirsiz</li>
+      </ul>
+    </div>
+    <div class="ps-card sol">
+      <div class="ps-icon">&#10024;</div>
+      <h4>Pratik Tarifler Cozumu</h4>
+      <ul>
+        <li>Buzdolabi fotografi cek - AI malzemeleri tanisin</li>
+        <li>Sadece elindekilerle yapilabilecekleri gor</li>
+        <li>Eksikleri akilli alisveris listesinde topla</li>
+        <li>14 dunya mutfaginda 2500 tarif kesfet</li>
+        <li>Niyetine gore 3 farkli kesif modu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="statbar">
+    <div class="s" style="background:#E14328;"><div class="n">2.500</div><div class="l">Tarif</div></div>
+    <div class="s" style="background:#D43D22;"><div class="n">14</div><div class="l">Mutfak</div></div>
+    <div class="s" style="background:#C2371F;"><div class="n">13</div><div class="l">Dil</div></div>
+    <div class="s" style="background:#AC311B;"><div class="n">3</div><div class="l">Akilli Mod</div></div>
+    <div class="s" style="background:#962B18;"><div class="n">60+</div><div class="l">Malzeme Tanima</div></div>
+  </div>
+
+  <h3 class="serif" style="margin-top:30px;">Neden Simdi?</h3>
+  <div class="lead" style="max-width:none;">
+    Yapay zeka gorsel tanima teknolojisi olgunlasti ve mobil cihazlarda erisilebilir hale
+    geldi. Ayni zamanda enflasyon nedeniyle gida israfinin onlenmesi tuketiciler icin her
+    zamankinden daha onemli. Pratik Tarifler, bu iki trendin kesisiminde konumlanir.
+  </div>
+</div></div>
+
+<!-- 3 MOD -->
+<div class="page"><div class="inner">
+  <div class="running">Pratik Tarifler - Urun Tanitimi</div>
+  <div class="ph">TEMEL OZELLIK</div>
+  <h2 class="serif">3 Akilli Kesif Modu</h2>
+  <div class="lead">
+    Kullanicinin niyeti her zaman ayni degildir. Pratik Tarifler, uc farkli moda sahip
+    olarak her senaryoya uyum saglar - bu, pazardaki hicbir rakipte yoktur.
+  </div>
+
+  <div class="modes">
+    <div class="mode" style="background:#FFF3E0;">
+      <div class="mode-badge" style="background:#F4A024;">&#129362;</div>
+      <div class="mode-body">
+        <div class="mtag">MOD 1</div>
+        <h4 class="serif">Evdeki Kalanlarla</h4>
+        <p>"Markete cikmak istemiyorum." Buzdolabi fotografini cek veya malzemeleri yaz.
+        AI, yalnizca tamami elinde olan tarifleri onerir. Sifir eksik, sifir israf.</p>
+      </div>
+    </div>
+    <div class="mode" style="background:#E6F2EA;">
+      <div class="mode-badge" style="background:#3E8E5A;">&#128722;</div>
+      <div class="mode-body">
+        <div class="mtag">MOD 2</div>
+        <h4 class="serif">1-2 Ek Malzemeyle</h4>
+        <p>"Zaten markete gidiyorum." Eldeki malzemelere ek 1-3 malzemeye kadar tarifler.
+        Eksikler ve tahmini fiyatlari gosterilir, tek tikla alisveris listesine eklenir.</p>
+      </div>
+    </div>
+    <div class="mode" style="background:#FDE4DF;">
+      <div class="mode-badge" style="background:#E14328;">&#127757;</div>
+      <div class="mode-body">
+        <div class="mtag">MOD 3</div>
+        <h4 class="serif">Sinirsiz Kesfet</h4>
+        <p>"Ilham ariyorum." 2500 tariflik tum havuzda gez. Mutfak, ogun, diyet, sure
+        filtreleriyle ara. Gunun tarifi, trend olanlar ve 14 dunya mutfagi elinde.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps-card sol" style="margin-top:22px;">
+    <h4 style="margin-top:0;">&#127919; Ayrisma Noktasi</h4>
+    <p style="font-size:10pt; color:#D8CCBE;">
+      Rakip uygulamalar tek bir kesif yontemi sunar - ya tarif listesi ya da malzeme
+      aramasi. Pratik Tarifler, kullanicinin o anki niyetine gore uc farkli deneyim sunarak
+      hem "tembel aksam" hem "planli alisveris" hem de "kesif" anlarini tek uygulamada birlestirir.
+    </p>
+  </div>
+</div></div>
+
+<!-- NASIL CALISIR -->
+<div class="page"><div class="inner">
+  <div class="running">Pratik Tarifler - Urun Tanitimi</div>
+  <div class="ph">KULLANIM AKISI</div>
+  <h2 class="serif">Uc Adimda Tarife</h2>
+  <div class="lead">Buzdolabindan sofraya - toplam uc dokunus.</div>
+
+  <div class="showcase">
+    <img src="file:///home/claude/docs/assets/v2_screen_02.png">
+    <div class="sc-text">
+      <div class="sc-steps">
+        <div class="sc-step">
+          <div class="scs-num">1</div>
+          <div class="scs-body">
+            <h4 class="serif">Buzdolabini Cek</h4>
+            <p>Dolabin kapagini ac, fotografini cek. Yapay zeka, raflari tarayip 60+
+            farkli malzeme turunu saniyeler icinde tanir.</p>
+          </div>
+        </div>
+        <div class="sc-step">
+          <div class="scs-num">2</div>
+          <div class="scs-body">
+            <h4 class="serif">Sonucu Onayla</h4>
+            <p>AI'in buldugu malzemeler chip olarak listelenir. Yanlis olani kaldir,
+            eksik olani manuel ekle. Tam kontrol sende.</p>
+          </div>
+        </div>
+        <div class="sc-step">
+          <div class="scs-num">3</div>
+          <div class="scs-body">
+            <h4 class="serif">Tarifini Sec ve Pisir</h4>
+            <p>Sana ozel tarifler aninda listelenir. Birini sec, pisirme moduna gec -
+            buyuk yazi, otomatik sayac, sesli okuma ile rahatca pisir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase" style="margin-top:24px;">
+    <div class="sc-text">
+      <h3 class="serif">Pisirme Modu - Mutfak Dostu</h3>
+      <p style="font-size:10pt; color:#7D6E5C;">
+        Eller hamurlu, telefon kucuk yaziyla okunmuyor - bu sorunu Pisirme Modu cozer.
+        Adimlar buyuk puntoyla tek tek gosterilir, her bekleme adiminda otomatik sayac
+        kurulur, istenirse adimlar sesli okunur. Ekran pisirme boyunca kapanmaz.
+      </p>
+      <h3 class="serif" style="margin-top:16px;">Porsiyon Akilli Olcekleme</h3>
+      <p style="font-size:10pt; color:#7D6E5C;">
+        Tek kisilik mi, alti kisilik mi pisiriyorsun? Porsiyon sayisini degistir - tum
+        malzeme miktarlari otomatik yeniden hesaplanir, kesirler dahil.
+      </p>
+    </div>
+    <img src="file:///home/claude/docs/assets/v2_screen_07.png">
+  </div>
+</div></div>
+
+<!-- OZELLIKLER -->
+<div class="page"><div class="inner">
+  <div class="running">Pratik Tarifler - Urun Tanitimi</div>
+  <div class="ph">OZELLIK SETI</div>
+  <h2 class="serif">Kapsamli Ozellik Listesi</h2>
+  <div class="lead">Pratik Tarifler yalnizca bir tarif uygulamasi degil - eksiksiz bir mutfak asistani.</div>
+
+  <div class="fgrid">
+    <div class="fcard">
+      <div class="fc-icon">&#128247;</div>
+      <h4 class="serif">AI Gorsel Tanima</h4>
+      <p>Google Vision teknolojisi ile buzdolabi fotografindan otomatik malzeme tespiti.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#128717;</div>
+      <h4 class="serif">Akilli Alisveris Listesi</h4>
+      <p>Birden fazla tarifin eksiklerini tek listede topla, marketteyken kolayca takip et.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#128106;</div>
+      <h4 class="serif">Pisirme Modu</h4>
+      <p>Buyuk yazi, otomatik sayac, sesli okuma, ekran acik kalir - eller mesgulken ideal.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#10084;</div>
+      <h4 class="serif">Favoriler ve Buzdolabim</h4>
+      <p>Sevdigin tarifleri kaydet, buzdolabi icerigini surekli guncel tut.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#127760;</div>
+      <h4 class="serif">13 Dil Destegi</h4>
+      <p>Turkce, Ingilizce, Almanca, Arapca ve 9 dil daha - RTL destegiyle.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#128278;</div>
+      <h4 class="serif">Urun Etiketi Tarama</h4>
+      <p>Market urununun etiketini tara - marka ve son kullanma tarihi otomatik eklensin.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#129367;</div>
+      <h4 class="serif">Diyet Filtreleri</h4>
+      <p>Vejetaryen, vegan, glutensiz - 2500 tarif arasindan kolayca filtrele.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#128244;</div>
+      <h4 class="serif">Cevrimdisi Erisim</h4>
+      <p>Favori tariflerin internet olmadan da erisilebilir - SQLite onbellek.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#128276;</div>
+      <h4 class="serif">Akilli Bildirimler</h4>
+      <p>Haftalik tarif onerileri, pisirme sayaci, malzeme son kullanma uyarilari.</p>
+    </div>
+    <div class="fcard">
+      <div class="fc-icon">&#11088;</div>
+      <h4 class="serif">Benzer Tarif Onerisi</h4>
+      <p>AI embedding teknolojisiyle "bunu sevdiysen sunu da dene" onerileri.</p>
+    </div>
+  </div>
+</div></div>
+
+<!-- HEDEF KITLE + FIYAT -->
+<div class="page"><div class="inner">
+  <div class="running">Pratik Tarifler - Urun Tanitimi</div>
+  <div class="ph">HEDEF KITLE</div>
+  <h2 class="serif">Kimler Kullanir?</h2>
+
+  <div class="persona">
+    <div class="pcard">
+      <div class="pemoji">&#128105;&#8205;&#128188;</div>
+      <h4 class="serif">Calisan Ebeveyn</h4>
+      <p>25-45 yas. Is cikisi hizli, pratik cozum ariyor. Aileye saglikli yemek yetistirmek
+      istiyor ama zamani kisitli. Mod 1'in en sadik kullanicisi.</p>
+    </div>
+    <div class="pcard">
+      <div class="pemoji">&#129489;&#8205;&#127891;</div>
+      <h4 class="serif">Ogrenci / Genc Bekar</h4>
+      <p>20-35 yas. Butcesi sinirli, israf istemiyor. Az malzemeyle pratik tarifler ariyor.
+      TikTok'tan kesfeder, Mod 1 ve hizli tariflere yonelir.</p>
+    </div>
+    <div class="pcard">
+      <div class="pemoji">&#127757;</div>
+      <h4 class="serif">Mutfak Meraklisi</h4>
+      <p>Her yas. Yeni tatlar, dunya mutfaklari kesfetmeyi seviyor. Mod 3'te gezinir,
+      premium tariflere ilgi duyar, favori koleksiyonu yapar.</p>
+    </div>
+  </div>
+
+  <div class="ph" style="margin-top:36px;">IS MODELI</div>
+  <h2 class="serif">Freemium Fiyatlandirma</h2>
+  <div class="lead">Ucretsiz basla, ihtiyac duydugunda yukselt. 7 gun ucretsiz deneme.</div>
+
+  <div class="pricing">
+    <div class="price">
+      <div class="p-name">UCRETSIZ</div>
+      <div class="p-amt">0 &#8378;</div>
+      <div class="p-per">sonsuza dek</div>
+      <ul>
+        <li>Gunde 3 buzdolabi taramasi</li>
+        <li>20 favori tarif</li>
+        <li>Tum 3 mod erisimi</li>
+        <li>1998 ucretsiz tarif</li>
+      </ul>
+    </div>
+    <div class="price featured">
+      <div class="ribbon">EN POPULER &middot; %32 INDIRIM</div>
+      <div class="p-name">YILLIK PREMIUM</div>
+      <div class="p-amt">399 &#8378;</div>
+      <div class="p-per">yillik &middot; ayda ~33 TL</div>
+      <ul>
+        <li>Sinirsiz buzdolabi taramasi</li>
+        <li>Sinirsiz favori</li>
+        <li>500+ premium ozel tarif</li>
+        <li>Alisveris listesi disa aktarma</li>
+        <li>Reklamsiz deneyim</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="p-name">AYLIK PREMIUM</div>
+      <div class="p-amt">49 &#8378;</div>
+      <div class="p-per">aylik</div>
+      <ul>
+        <li>Tum premium ozellikler</li>
+        <li>Esnek - her ay yenilenir</li>
+        <li>Istedigin zaman iptal</li>
+        <li>7 gun ucretsiz deneme</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ps-card prob" style="margin-top:22px;">
+    <h4 class="serif" style="margin-top:0;">&#128176; Gelir Projeksiyonu</h4>
+    <p style="font-size:9.5pt;">
+      Hedef: ilk 30 gunde 10.000 indirme, %5 ucretliye donusum = 250 premium abone.
+      Konservatif LTV hesabiyla abone basina ~$15 yillik deger. Lansman pazarlama butcesi
+      $2.500, beklenen LTV/CAC orani 8x.
+    </p>
+  </div>
+</div></div>
+
+<!-- KAPANIS -->
+<div class="page">
+  <div class="endcta">
+    <div class="ph" style="color:#F4A024;">SONUC</div>
+    <h2 class="serif">Mutfakta yapay zeka<br>cagi basliyor.</h2>
+    <div class="ec-tag">Pratik Tarifler - buzdolabindan sofraya, akillica.</div>
+
+    <div class="ec-box">
+      <h4 class="serif">&#128230; Urun Hazirlik Durumu</h4>
+      <p>
+        Uygulama production'a hazir: 2500 tarif veritabani tamamlandi, React Native
+        mobil uygulama (17 ekran), Firebase backend, abonelik sistemi ve lansman
+        materyalleri eksiksiz. Tahmini pazara cikis suresi: 6 hafta.
+      </p>
+    </div>
+
+    <div class="ec-box">
+      <h4 class="serif">&#128640; Sonraki Adimlar</h4>
+      <p>
+        Icerik gorsellerinin batch uretimi &middot; 12 dile ceviri &middot; TestFlight beta programi
+        (100 tester) &middot; App Store ve Google Play yayini &middot; lansman pazarlama kampanyasi.
+      </p>
+    </div>
+
+    <div class="contact">
+      &#127760; pratiktarifler.app<br>
+      &#128231; destek@pratiktarifler.app<br>
+      &#128241; App Store &middot; Google Play - Yakinda
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

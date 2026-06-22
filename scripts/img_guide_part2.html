@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Görsel Üretim Kılavuzu — Bölüm 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; color:#22180F; line-height:1.6; font-size:10.5pt; }
+  .serif { font-family:'Fraunces',serif; }
+  .page { padding:54px 60px; page-break-after:always; position:relative; min-height:100vh; }
+  .page:last-child { page-break-after:auto; }
+  h2 { font-size:24px; font-weight:700; margin:0 0 6px; padding-bottom:10px; border-bottom:3px solid #E14328; }
+  .section-num { display:inline-block; background:#E14328; color:#FFF; font-size:13px;
+    font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:14px; }
+  h3 { font-size:15.5px; font-weight:800; color:#3E8E5A; margin:22px 0 8px; }
+  h4 { font-size:12.5px; font-weight:700; margin:14px 0 5px; }
+  p { margin:7px 0; }
+  ul, ol { margin:8px 0 8px 22px; }
+  li { margin:4px 0; }
+  strong { font-weight:700; color:#1F1810; }
+  code { font-family:'JetBrains Mono',monospace; font-size:9pt; background:#F4ECDD;
+    padding:1.5px 5px; border-radius:4px; color:#C2371F; }
+  pre { background:#22180F; color:#E8E0D0; padding:14px 16px; border-radius:10px;
+    font-family:'JetBrains Mono',monospace; font-size:8.3pt; line-height:1.55;
+    overflow-x:auto; margin:10px 0; white-space:pre-wrap; }
+  pre .c { color:#8A9B6E; } pre .k { color:#F4A024; } pre .s { color:#D9A86E; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:9pt; }
+  th { background:#22180F; color:#FFF; padding:8px 10px; text-align:left; font-weight:700; }
+  td { padding:7px 10px; border-bottom:1px solid #F0E7D8; }
+  tr:nth-child(even) td { background:#FFFBF5; }
+  .box { background:#FFF3E0; border-left:4px solid #E14328; padding:12px 16px;
+    border-radius:0 8px 8px 0; margin:12px 0; font-size:9.5pt; }
+  .box.green { background:#E6F2EA; border-color:#3E8E5A; }
+  .box.blue { background:#E8F0F4; border-color:#4A7A9C; }
+  .box.red { background:#FBE8E4; border-color:#E14328; }
+  .box .box-title { font-weight:800; margin-bottom:3px; }
+  .running { font-size:9px; color:#B5AB99; font-weight:600; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:24px; display:flex; justify-content:space-between; }
+  .apicard { border:1.5px solid #F0E7D8; border-radius:12px; padding:14px 16px;
+    margin:12px 0; background:#FFFBF5; }
+  .apicard .api-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+  .apicard .api-badge { width:36px; height:36px; border-radius:9px; color:#FFF;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px; }
+  .apicard .api-name { font-size:14px; font-weight:800; }
+  .apicard .api-tag { font-size:8.5pt; font-weight:700; padding:2px 8px; border-radius:8px; }
+  .step-list { counter-reset:step; margin:8px 0 0; padding:0; list-style:none; }
+  .step-list li { counter-increment:step; position:relative; padding-left:26px;
+    margin:6px 0; font-size:9pt; }
+  .step-list li::before { content:counter(step); position:absolute; left:0; top:0;
+    width:18px; height:18px; background:#E14328; color:#FFF; border-radius:50%;
+    font-size:9px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  /* Style bible gorsel kutucuk */
+  .spec-grid { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0; }
+  .spec { flex:1; min-width:150px; background:#FFFBF5; border:1.5px solid #F0E7D8;
+    border-radius:10px; padding:12px 14px; }
+  .spec .spec-label { font-size:8pt; font-weight:700; color:#7D6E5C; letter-spacing:.5px; }
+  .spec .spec-value { font-size:13px; font-weight:800; color:#22180F; margin-top:2px; }
+  .spec .spec-note { font-size:8pt; color:#7D6E5C; margin-top:2px; }
+  .do-dont { display:flex; gap:14px; margin:12px 0; }
+  .do-dont .col { flex:1; border-radius:10px; padding:14px; }
+  .do-dont .do { background:#E6F2EA; }
+  .do-dont .dont { background:#FBE8E4; }
+  .do-dont h4 { margin-top:0; }
+  .do-dont ul { margin-left:16px; font-size:8.5pt; }
+</style>
+</head>
+<body>
+
+<!-- ════ 2.4 DALL-E ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>2 · API Kanalları</span></div>
+
+  <h3>2.4 OpenAI DALL·E 3 — AI Görsel Üretimi</h3>
+  <div class="apicard">
+    <div class="api-head">
+      <div class="api-badge" style="background:#10A37F;">AI</div>
+      <div class="api-name">OpenAI DALL·E 3</div>
+      <span class="api-tag" style="background:#FFF3E0; color:#C2841C;">ÜCRETLİ</span>
+    </div>
+    <p style="font-size:9pt;">Ücretsiz kaynaklarda bulunamayan yöresel yemekler için.
+    Özel prompt mühendisliğiyle tutarlı, özgün görseller üretir.</p>
+    <h4>API Anahtarı Nasıl Alınır?</h4>
+    <ol class="step-list">
+      <li><code>platform.openai.com</code> adresine gidin, hesap açın.</li>
+      <li>"Billing" bölümünden ödeme yöntemi ekleyin ve kredi yükleyin (min. $5).</li>
+      <li>"API Keys" → "Create new secret key" ile anahtar üretin.</li>
+      <li>Anahtarı <strong>hemen kopyalayın</strong> — bir daha gösterilmez.</li>
+      <li>Kullanım limitlerini "Limits" bölümünden kontrol edin (Tier 1: 50 istek/dk).</li>
+    </ol>
+    <table>
+      <tr><th>Özellik</th><th>Değer</th></tr>
+      <tr><td>Endpoint</td><td><code>https://api.openai.com/v1/images/generations</code></td></tr>
+      <tr><td>Kimlik doğrulama</td><td><code>Authorization: Bearer {API_KEY}</code></td></tr>
+      <tr><td>Model</td><td><code>dall-e-3</code></td></tr>
+      <tr><td>Boyut seçenekleri</td><td>1024×1024 · 1792×1024 · 1024×1792</td></tr>
+      <tr><td>Maliyet (standart)</td><td>$0,040 / görsel</td></tr>
+      <tr><td>Maliyet (HD)</td><td>$0,080 / görsel</td></tr>
+      <tr><td>Oran limiti</td><td>Tier 1: 50 istek/dakika</td></tr>
+      <tr><td>Env değişkeni</td><td><code>OPENAI_API_KEY</code></td></tr>
+    </table>
+  </div>
+  <div class="box red">
+    <div class="box-title">🔒 Güvenlik Uyarısı</div>
+    OpenAI anahtarı ücretli bir kaynaktır. Asla kod içine gömmeyin, asla Git'e
+    commit'lemeyin. Yalnızca <code>.env</code> dosyasında tutun ve <code>.gitignore</code>'a
+    ekleyin. Sızması durumunda hemen iptal edip yenileyin.
+  </div>
+
+  <h3>2.5 Flux Pro — Alternatif AI Motoru</h3>
+  <div class="apicard">
+    <div class="api-head">
+      <div class="api-badge" style="background:#6B4DE6;">Fx</div>
+      <div class="api-name">Flux Pro (Black Forest Labs)</div>
+      <span class="api-tag" style="background:#FFF3E0; color:#C2841C;">ÜCRETLİ</span>
+    </div>
+    <p style="font-size:9pt;">DALL·E 3'e göre daha fotogerçekçi sonuçlar. Replicate veya
+    fal.ai üzerinden erişilir. AI üretimi gereken görsellerin bir kısmında kalite
+    karşılaştırması için kullanılır.</p>
+    <h4>Erişim</h4>
+    <ol class="step-list">
+      <li><code>replicate.com</code> veya <code>fal.ai</code> hesabı açın.</li>
+      <li>Ödeme yöntemi ekleyin.</li>
+      <li>API token üretin (panodan kopyalayın).</li>
+      <li>Model: <code>black-forest-labs/flux-1.1-pro</code></li>
+    </ol>
+    <table>
+      <tr><th>Özellik</th><th>Değer</th></tr>
+      <tr><td>Sağlayıcı</td><td>Replicate / fal.ai</td></tr>
+      <tr><td>Maliyet</td><td>~$0,055 / görsel</td></tr>
+      <tr><td>Env değişkeni</td><td><code>FLUX_API_TOKEN</code></td></tr>
+    </table>
+  </div>
+
+  <h3>2.6 API Anahtarı Yapılandırması</h3>
+  <p>
+    Tüm anahtarlar proje kökünde bir <code>.env</code> dosyasında tutulur. Pipeline bu
+    dosyayı <code>python-dotenv</code> ile okur. Örnek <code>.env</code>:
+  </p>
+  <pre><span class="c"># .env — API anahtarları (ASLA Git'e eklemeyin!)</span>
+<span class="c"># Ücretsiz stok fotoğraf kaynakları</span>
+UNSPLASH_ACCESS_KEY=<span class="s">"abc123_unsplash_access_key"</span>
+PEXELS_API_KEY=<span class="s">"563492_pexels_api_key"</span>
+PIXABAY_API_KEY=<span class="s">"12345678_pixabay_key"</span>
+
+<span class="c"># AI üretim kaynakları</span>
+OPENAI_API_KEY=<span class="s">"sk-proj-xxxxxxxxxxxxxxxx"</span>
+FLUX_API_TOKEN=<span class="s">"r8_xxxxxxxxxxxxxxxx"</span>
+
+<span class="c"># Firebase (görsel yükleme için)</span>
+FIREBASE_STORAGE_BUCKET=<span class="s">"pratik-tarifler.appspot.com"</span>
+GOOGLE_APPLICATION_CREDENTIALS=<span class="s">"./service-account.json"</span></pre>
+  <div class="box green">
+    <div class="box-title">✓ .gitignore Kontrolü</div>
+    <code>.env</code> ve <code>service-account.json</code> mutlaka <code>.gitignore</code>
+    dosyasına eklenmelidir. Sürüm kontrolüne sadece <code>.env.example</code> (anahtarsız
+    şablon) girilir.
+  </div>
+</div>
+
+<!-- ════ 3 · STANDARDIZASYON ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>3 · Standardizasyon</span></div>
+  <span class="section-num">BÖLÜM 3</span>
+  <h2 class="serif">Görsel Standardizasyonu (Style Bible)</h2>
+  <p>
+    Tüm 2500 görsel — kaynağı ne olursa olsun — <strong>aynı görsel dilde</strong>
+    olmalıdır. Bu bölüm, boyut/format/stil kurallarını tanımlar. Bu kurallar hem stok
+    fotoğraf seçiminde hem AI üretiminde uygulanır.
+  </p>
+
+  <h3>3.1 Boyut, Format, Çözünürlük</h3>
+  <p>Her tarif için <strong>üç boyut</strong> üretilir:</p>
+  <div class="spec-grid">
+    <div class="spec">
+      <div class="spec-label">FULL — ANA GÖRSEL</div>
+      <div class="spec-value">1200 × 900 px</div>
+      <div class="spec-note">4:3 oran · WebP kalite 85 · ~150 KB · tarif detay ekranı</div>
+    </div>
+    <div class="spec">
+      <div class="spec-label">THUMB — KÜÇÜK GÖRSEL</div>
+      <div class="spec-value">400 × 300 px</div>
+      <div class="spec-note">4:3 oran · WebP kalite 80 · ~25 KB · liste/grid</div>
+    </div>
+    <div class="spec">
+      <div class="spec-label">BLUR — PLACEHOLDER</div>
+      <div class="spec-value">BlurHash string</div>
+      <div class="spec-note">~30 karakter · progressif yükleme önizlemesi</div>
+    </div>
+  </div>
+  <table>
+    <tr><th>Parametre</th><th>Değer</th><th>Gerekçe</th></tr>
+    <tr><td>En-boy oranı</td><td>4:3 (yatay)</td><td>Mobil kart ve detay ekranı için ideal</td></tr>
+    <tr><td>Format</td><td>WebP (JPG yedek)</td><td>%30 daha küçük dosya, geniş destek</td></tr>
+    <tr><td>Renk profili</td><td>sRGB</td><td>Tüm cihazlarda tutarlı renk</td></tr>
+    <tr><td>Full kalite</td><td>WebP q85</td><td>Kalite/boyut dengesi</td></tr>
+    <tr><td>Hedef dosya boyutu</td><td>~150 KB (full)</td><td>Hızlı yükleme, düşük veri</td></tr>
+    <tr><td>Toplam depolama</td><td>~450 MB</td><td>2500 × (full+thumb+blur)</td></tr>
+  </table>
+
+  <h3>3.2 Işık, Açı, Kompozisyon Kuralları</h3>
+  <p>Görsel kimliğin tutarlı olması için <strong>her görsel</strong> şu kurallara uymalıdır:</p>
+  <table>
+    <tr><th>Kural</th><th>Standart</th></tr>
+    <tr><td>Çekim açısı</td><td>Top-down (kuş bakışı 90°) — yemeğe göre 45° opsiyonel</td></tr>
+    <tr><td>Işık</td><td>Doğal, yumuşak, soldan gelen — sert gölge yok</td></tr>
+    <tr><td>Arka plan</td><td>Tarafsız: ahşap masa, mermer, açık gri veya beyaz</td></tr>
+    <tr><td>Kompozisyon</td><td>Yemek %70 · prop (çatal, peçete) %20 · boşluk %10</td></tr>
+    <tr><td>Renk paleti</td><td>Sıcak tonlar (Türk yemekleri) — soğuk (modern tabaklar)</td></tr>
+    <tr><td>Doku</td><td>Net, gerçekçi, abartısız — yemek iştah açıcı görünmeli</td></tr>
+    <tr><td>Sunum tarzı</td><td>Sade, gerçekçi — minimal Instagram estetiği</td></tr>
+  </table>
+
+  <div class="do-dont">
+    <div class="col do">
+      <h4 style="color:#2E6B42;">✓ YAPILACAKLAR</h4>
+      <ul>
+        <li>Doğal ışık, yumuşak gölge</li>
+        <li>Tarafsız ahşap/mermer zemin</li>
+        <li>Yemek kadrajın merkezinde, dolgun</li>
+        <li>Gerçekçi porsiyon ve sunum</li>
+        <li>Tutarlı 4:3 yatay çerçeve</li>
+      </ul>
+    </div>
+    <div class="col dont">
+      <h4 style="color:#C2371F;">✗ KAÇINILACAKLAR</h4>
+      <ul>
+        <li>Marka/logo görünen objeler (kola şişesi vb.)</li>
+        <li>Aşırı şık restoran sunumu (gerçekçi değil)</li>
+        <li>Çizgi/karikatür tarz</li>
+        <li>Görsel üzerinde yazı veya grafik</li>
+        <li>Ağır Instagram filtreleri, aşırı işleme</li>
+        <li>AI filigranı veya stok foto damgası</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 3.3 PROMPT + 3.4 KALITE ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>3 · Standardizasyon</span></div>
+
+  <h3>3.3 AI Üretim Prompt Şablonu</h3>
+  <p>
+    DALL·E 3 / Flux ile üretilen görsellerin stok fotoğraflarla <strong>tutarlı</strong>
+    olması için standart bir prompt şablonu kullanılır. Şablon, yemek adını ve mutfak
+    bağlamını dinamik olarak alır:
+  </p>
+  <pre><span class="c"># Prompt şablonu — her AI üretiminde kullanılır</span>
+PROMPT_TEMPLATE = (
+    <span class="s">"Professional food photography of {dish_name}, "</span>
+    <span class="s">"{cuisine_context}, "</span>
+    <span class="s">"top-down 90 degree overhead shot, "</span>
+    <span class="s">"natural soft window light from the left, "</span>
+    <span class="s">"served on a neutral ceramic plate, "</span>
+    <span class="s">"rustic wooden table background, "</span>
+    <span class="s">"realistic textures, appetizing, warm tones, "</span>
+    <span class="s">"minimal styling, no text, no watermark, "</span>
+    <span class="s">"shallow depth of field, 4:3 aspect ratio, "</span>
+    <span class="s">"high resolution food magazine quality"</span>
+)
+
+<span class="c"># Yöresel Türk yemekleri için ek bağlam</span>
+TURKISH_CONTEXT = <span class="s">"traditional Turkish cuisine presentation, "</span> \
+                  <span class="s">"authentic home-style serving"</span>
+
+<span class="c"># Örnek kullanım</span>
+prompt = PROMPT_TEMPLATE.format(
+    dish_name=<span class="s">"Su Boregi (Turkish layered pastry)"</span>,
+    cuisine_context=TURKISH_CONTEXT
+)  <div class="box blue">
+    <div class="box-title">🎯 Negatif Yönergeler</div>
+    Prompt'a daima "no text, no watermark, realistic, not cartoon" gibi negatif
+    yönergeler eklenir. Bu, AI'ın çizgi-film tarzı veya üzerinde yazı olan görsel
+    üretmesini engeller — Style Bible kuralı 3.2 ile uyumludur.
+  </div>
+
+  <h3>3.4 Kalite Kontrol Kriterleri</h3>
+  <p>
+    Bir görsel — stok ya da AI — pipeline tarafından kabul edilmeden önce
+    <strong>kalite skoru</strong> hesaplanır. Skor eşiği <code>0.65</code>'tir;
+    altında kalan görseller bir sonraki kaynağa devredilir.
+  </p>
+  <table>
+    <tr><th>Kriter</th><th>Kontrol</th><th>Ağırlık</th></tr>
+    <tr><td>Çözünürlük</td><td>Genişlik ≥ 1200 px olmalı</td><td>Zorunlu (geçemezse elenir)</td></tr>
+    <tr><td>En-boy oranı</td><td>4:3'e yakınlık (yatay)</td><td>%25</td></tr>
+    <tr><td>Popülerlik</td><td>Unsplash beğeni ≥ 30 / Pixabay indirme ≥ 100</td><td>%40</td></tr>
+    <tr><td>Alaka</td><td>Arama terimi eşleşme gücü</td><td>%25</td></tr>
+    <tr><td>İçerik filtresi</td><td>Uygunsuz içerik taraması (API tarafı)</td><td>Zorunlu</td></tr>
+    <tr><td>Genişlik bonusu</td><td>1600 px+ ek puan</td><td>%10</td></tr>
+  </table>
+  <div class="box">
+    <div class="box-title">👁️ İnsan İncelemesi</div>
+    AI ile üretilen tüm görseller <code>requires_review: true</code> işaretiyle bir
+    inceleme kuyruğuna girer. Bir kişi, görseli onaylar veya yeniden üretim ister.
+    Stok fotoğraflar skor ≥ 0.80 ise otomatik onaylanır.
+  </div>
+</div>

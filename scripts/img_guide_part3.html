@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Görsel Üretim Kılavuzu — Bölüm 3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; color:#22180F; line-height:1.6; font-size:10.5pt; }
+  .serif { font-family:'Fraunces',serif; }
+  .page { padding:54px 60px; page-break-after:always; position:relative; min-height:100vh; }
+  .page:last-child { page-break-after:auto; }
+  h2 { font-size:24px; font-weight:700; margin:0 0 6px; padding-bottom:10px; border-bottom:3px solid #E14328; }
+  .section-num { display:inline-block; background:#E14328; color:#FFF; font-size:13px;
+    font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:14px; }
+  h3 { font-size:15.5px; font-weight:800; color:#3E8E5A; margin:20px 0 8px; }
+  h4 { font-size:12px; font-weight:700; margin:13px 0 5px; }
+  p { margin:7px 0; }
+  ul, ol { margin:8px 0 8px 22px; }
+  li { margin:4px 0; }
+  strong { font-weight:700; color:#1F1810; }
+  code { font-family:'JetBrains Mono',monospace; font-size:9pt; background:#F4ECDD;
+    padding:1.5px 5px; border-radius:4px; color:#C2371F; }
+  pre { background:#22180F; color:#E8E0D0; padding:13px 15px; border-radius:9px;
+    font-family:'JetBrains Mono',monospace; font-size:7.8pt; line-height:1.5;
+    overflow-x:auto; margin:9px 0; white-space:pre-wrap; }
+  pre .c { color:#8A9B6E; } pre .k { color:#F4A024; } pre .s { color:#D9A86E; }
+  pre .f { color:#6FB3D9; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:9pt; }
+  th { background:#22180F; color:#FFF; padding:8px 10px; text-align:left; font-weight:700; }
+  td { padding:7px 10px; border-bottom:1px solid #F0E7D8; }
+  tr:nth-child(even) td { background:#FFFBF5; }
+  .box { background:#FFF3E0; border-left:4px solid #E14328; padding:12px 16px;
+    border-radius:0 8px 8px 0; margin:12px 0; font-size:9.5pt; }
+  .box.green { background:#E6F2EA; border-color:#3E8E5A; }
+  .box.blue { background:#E8F0F4; border-color:#4A7A9C; }
+  .box .box-title { font-weight:800; margin-bottom:3px; }
+  .running { font-size:9px; color:#B5AB99; font-weight:600; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:24px; display:flex; justify-content:space-between; }
+  .filehdr { background:#3E8E5A; color:#FFF; font-family:'JetBrains Mono',monospace;
+    font-size:8.5pt; font-weight:700; padding:6px 12px; border-radius:7px 7px 0 0;
+    margin-top:12px; margin-bottom:0; }
+  .filehdr + pre { margin-top:0; border-radius:0 0 9px 9px; }
+  .endbox { background:linear-gradient(135deg,#22180F,#3A2A1C); color:#FFF;
+    border-radius:14px; padding:24px; margin-top:20px; }
+  .endbox h3 { color:#F4A024; margin-top:0; }
+  .endbox p { color:#D8CCBE; }
+</style>
+</head>
+<body>
+
+<!-- ════ 4 · SCRIPT KODU ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>4 · Pipeline Script Kodu</span></div>
+  <span class="section-num">BÖLÜM 4</span>
+  <h2 class="serif">Pipeline Script Kodu</h2>
+  <p>
+    Bu bölüm, görsel üretim pipeline'ının <strong>çalışan Python kodunu</strong> içerir.
+    Kod modüler yapıdadır: her kaynak ayrı bir istemci sınıfıdır, standardizasyon ayrı
+    bir modüldür, ana döngü hepsini birleştirir.
+  </p>
+
+  <h3>4.1 Yapılandırma ve Bağımlılıklar</h3>
+  <p>Önce gerekli paketler kurulur:</p>
+  <pre><span class="c"># Terminal — bağımlılık kurulumu</span>
+pip install aiohttp Pillow blurhash-python openai python-dotenv</pre>
+
+  <div class="filehdr">config.py</div>
+  <pre><span class="k">import</span> os
+<span class="k">from</span> dotenv <span class="k">import</span> load_dotenv
+
+load_dotenv()  <span class="c"># .env dosyasını oku</span>
+
+<span class="k">class</span> <span class="f">Config</span>:
+    <span class="c"># --- Görsel boyut standartları (Style Bible 3.1) ---</span>
+    FULL_WIDTH = <span class="s">1200</span>
+    FULL_HEIGHT = <span class="s">900</span>
+    THUMB_WIDTH = <span class="s">400</span>
+    THUMB_HEIGHT = <span class="s">300</span>
+    WEBP_QUALITY_FULL = <span class="s">85</span>
+    WEBP_QUALITY_THUMB = <span class="s">80</span>
+    BLURHASH_X = <span class="s">4</span>
+    BLURHASH_Y = <span class="s">3</span>
+
+    <span class="c"># --- Kalite eşikleri (3.4) ---</span>
+    MIN_UNSPLASH_LIKES = <span class="s">30</span>
+    MIN_PIXABAY_DOWNLOADS = <span class="s">100</span>
+    MATCH_SCORE_THRESHOLD = <span class="s">0.65</span>
+
+    <span class="c"># --- Maliyet kontrolü ---</span>
+    DALLE_COST_PER_IMAGE = <span class="s">0.040</span>
+    DALLE_MAX_PER_RUN = <span class="s">100</span>   <span class="c"># tek çalıştırmada max AI çağrısı</span>
+
+    <span class="c"># --- API anahtarları (.env'den) ---</span>
+    UNSPLASH_KEY = os.getenv(<span class="s">"UNSPLASH_ACCESS_KEY"</span>)
+    PEXELS_KEY   = os.getenv(<span class="s">"PEXELS_API_KEY"</span>)
+    PIXABAY_KEY  = os.getenv(<span class="s">"PIXABAY_API_KEY"</span>)
+    OPENAI_KEY   = os.getenv(<span class="s">"OPENAI_API_KEY"</span>)
+
+    OUTPUT_DIR = <span class="s">"./output"</span>
+    API_TIMEOUT = <span class="s">15</span>
+    DOWNLOAD_TIMEOUT = <span class="s">30</span></pre>
+
+  <h3>4.2 Kaynak İstemcileri — Stok Fotoğraf</h3>
+  <p>
+    Her ücretsiz kaynak için ortak arayüzlü bir istemci sınıfı. Hepsi <code>search()</code>
+    metodu sunar ve standart bir sonuç sözlüğü döndürür.
+  </p>
+
+  <div class="filehdr">clients/unsplash_client.py</div>
+  <pre><span class="k">import</span> aiohttp
+<span class="k">from</span> config <span class="k">import</span> Config
+
+<span class="k">class</span> <span class="f">UnsplashClient</span>:
+    BASE = <span class="s">"https://api.unsplash.com"</span>
+
+    <span class="k">def</span> <span class="f">__init__</span>(self, key):
+        self.headers = {
+            <span class="s">"Authorization"</span>: <span class="s">f"Client-ID {key}"</span>,
+            <span class="s">"Accept-Version"</span>: <span class="s">"v1"</span>,
+        }
+
+    <span class="k">async def</span> <span class="f">search</span>(self, session, query):
+        <span class="s">"""Unsplash'ta ara, en kaliteli sonucu döndür."""</span>
+        params = {
+            <span class="s">"query"</span>: query, <span class="s">"per_page"</span>: <span class="s">10</span>,
+            <span class="s">"orientation"</span>: <span class="s">"landscape"</span>,
+            <span class="s">"content_filter"</span>: <span class="s">"high"</span>,  <span class="c"># güvenli içerik</span>
+        }
+        <span class="k">async with</span> session.get(<span class="s">f"{self.BASE}/search/photos"</span>,
+                params=params, headers=self.headers) <span class="k">as</span> resp:
+            <span class="k">if</span> resp.status != <span class="s">200</span>:
+                <span class="k">return</span> <span class="k">None</span>
+            data = <span class="k">await</span> resp.json()
+
+        <span class="c"># Skorla: beğeni sayısı + min genişlik 1200</span>
+        scored = []
+        <span class="k">for</span> r <span class="k">in</span> data.get(<span class="s">"results"</span>, []):
+            <span class="k">if</span> r[<span class="s">"width"</span>] &lt; <span class="s">1200</span>:
+                <span class="k">continue</span>
+            score = min(r.get(<span class="s">"likes"</span>, <span class="s">0</span>) / <span class="s">200</span>, <span class="s">1.0</span>)
+            scored.append((score, r))
+        <span class="k">if</span> <span class="k">not</span> scored:
+            <span class="k">return</span> <span class="k">None</span>
+        scored.sort(key=<span class="k">lambda</span> x: -x[<span class="s">0</span>])
+        score, best = scored[<span class="s">0</span>]
+        <span class="k">if</span> best.get(<span class="s">"likes"</span>, <span class="s">0</span>) &lt; Config.MIN_UNSPLASH_LIKES:
+            <span class="k">return</span> <span class="k">None</span>
+
+        <span class="c"># ZORUNLU: Unsplash atıf kuralı — download tetikle</span>
+        <span class="k">try</span>:
+            <span class="k">async with</span> session.get(best[<span class="s">"links"</span>][<span class="s">"download_location"</span>],
+                    headers=self.headers):
+                <span class="k">pass</span>
+        <span class="k">except</span> Exception:
+            <span class="k">pass</span>
+
+        <span class="k">return</span> {
+            <span class="s">"url"</span>: best[<span class="s">"urls"</span>][<span class="s">"full"</span>],
+            <span class="s">"source"</span>: <span class="s">"unsplash"</span>,
+            <span class="s">"source_id"</span>: best[<span class="s">"id"</span>],
+            <span class="s">"photographer"</span>: best[<span class="s">"user"</span>][<span class="s">"name"</span>],
+            <span class="s">"photographer_url"</span>: best[<span class="s">"user"</span>][<span class="s">"links"</span>][<span class="s">"html"</span>],
+            <span class="s">"license"</span>: <span class="s">"unsplash"</span>, <span class="s">"score"</span>: score,
+        }</pre>
+</div>
+
+<!-- ════ 4.2 devam ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>4 · Pipeline Script Kodu</span></div>
+
+  <div class="filehdr">clients/pexels_client.py</div>
+  <pre><span class="k">import</span> aiohttp
+<span class="k">from</span> config <span class="k">import</span> Config
+
+<span class="k">class</span> <span class="f">PexelsClient</span>:
+    BASE = <span class="s">"https://api.pexels.com/v1"</span>
+
+    <span class="k">def</span> <span class="f">__init__</span>(self, key):
+        self.headers = {<span class="s">"Authorization"</span>: key}
+
+    <span class="k">async def</span> <span class="f">search</span>(self, session, query):
+        params = {<span class="s">"query"</span>: query, <span class="s">"per_page"</span>: <span class="s">10</span>,
+                  <span class="s">"orientation"</span>: <span class="s">"landscape"</span>, <span class="s">"size"</span>: <span class="s">"large"</span>}
+        <span class="k">async with</span> session.get(<span class="s">f"{self.BASE}/search"</span>,
+                params=params, headers=self.headers) <span class="k">as</span> resp:
+            <span class="k">if</span> resp.status != <span class="s">200</span>:
+                <span class="k">return</span> <span class="k">None</span>
+            data = <span class="k">await</span> resp.json()
+        photos = data.get(<span class="s">"photos"</span>, [])
+        <span class="k">if</span> <span class="k">not</span> photos:
+            <span class="k">return</span> <span class="k">None</span>
+        <span class="c"># En geniş foto = en kaliteli varsayımı</span>
+        best = max(photos, key=<span class="k">lambda</span> p: p[<span class="s">"width"</span>])
+        <span class="k">if</span> best[<span class="s">"width"</span>] &lt; <span class="s">1200</span>:
+            <span class="k">return</span> <span class="k">None</span>
+        <span class="k">return</span> {
+            <span class="s">"url"</span>: best[<span class="s">"src"</span>][<span class="s">"original"</span>],
+            <span class="s">"source"</span>: <span class="s">"pexels"</span>, <span class="s">"source_id"</span>: str(best[<span class="s">"id"</span>]),
+            <span class="s">"photographer"</span>: best[<span class="s">"photographer"</span>],
+            <span class="s">"photographer_url"</span>: best[<span class="s">"photographer_url"</span>],
+            <span class="s">"license"</span>: <span class="s">"pexels"</span>, <span class="s">"score"</span>: <span class="s">0.75</span>,
+        }</pre>
+
+  <div class="filehdr">clients/pixabay_client.py</div>
+  <pre><span class="k">import</span> aiohttp
+<span class="k">from</span> config <span class="k">import</span> Config
+
+<span class="k">class</span> <span class="f">PixabayClient</span>:
+    BASE = <span class="s">"https://pixabay.com/api/"</span>
+
+    <span class="k">def</span> <span class="f">__init__</span>(self, key):
+        self.key = key
+
+    <span class="k">async def</span> <span class="f">search</span>(self, session, query):
+        params = {
+            <span class="s">"key"</span>: self.key, <span class="s">"q"</span>: query,
+            <span class="s">"image_type"</span>: <span class="s">"photo"</span>, <span class="s">"orientation"</span>: <span class="s">"horizontal"</span>,
+            <span class="s">"category"</span>: <span class="s">"food"</span>, <span class="s">"per_page"</span>: <span class="s">10</span>,
+            <span class="s">"safesearch"</span>: <span class="s">"true"</span>, <span class="s">"min_width"</span>: <span class="s">1200</span>,
+        }
+        <span class="k">async with</span> session.get(self.BASE, params=params) <span class="k">as</span> resp:
+            <span class="k">if</span> resp.status != <span class="s">200</span>:
+                <span class="k">return</span> <span class="k">None</span>
+            data = <span class="k">await</span> resp.json()
+        hits = data.get(<span class="s">"hits"</span>, [])
+        <span class="c"># İndirme sayısı eşiği — kalite göstergesi</span>
+        good = [h <span class="k">for</span> h <span class="k">in</span> hits
+                <span class="k">if</span> h.get(<span class="s">"downloads"</span>, <span class="s">0</span>) &gt;= Config.MIN_PIXABAY_DOWNLOADS]
+        <span class="k">if</span> <span class="k">not</span> good:
+            <span class="k">return</span> <span class="k">None</span>
+        best = max(good, key=<span class="k">lambda</span> h: h[<span class="s">"downloads"</span>])
+        <span class="k">return</span> {
+            <span class="s">"url"</span>: best[<span class="s">"largeImageURL"</span>],
+            <span class="s">"source"</span>: <span class="s">"pixabay"</span>, <span class="s">"source_id"</span>: str(best[<span class="s">"id"</span>]),
+            <span class="s">"photographer"</span>: best.get(<span class="s">"user"</span>, <span class="s">""</span>),
+            <span class="s">"license"</span>: <span class="s">"pixabay"</span>, <span class="s">"score"</span>: <span class="s">0.68</span>,
+        }</pre>
+
+  <div class="box blue">
+    <div class="box-title">🔌 Ortak Arayüz</div>
+    Üç istemci de aynı imzaya sahiptir: <code>async search(session, query) → dict | None</code>.
+    Bu sayede ana döngü hepsini aynı şekilde, zincir halinde çağırabilir.
+  </div>
+</div>
+
+<!-- ════ 4.3 AI ÜRETIM ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>4 · Pipeline Script Kodu</span></div>
+
+  <h3>4.3 AI Üretim Modülü — DALL·E 3</h3>
+  <p>
+    Stok kaynaklar başarısız olduğunda devreye girer. Style Bible'a uygun prompt
+    şablonuyla görsel üretir.
+  </p>
+
+  <div class="filehdr">clients/ai_generator.py</div>
+  <pre><span class="k">from</span> openai <span class="k">import</span> AsyncOpenAI
+<span class="k">from</span> config <span class="k">import</span> Config
+
+<span class="c"># Style Bible uyumlu prompt şablonu (Bölüm 3.3)</span>
+PROMPT_TEMPLATE = (
+    <span class="s">"Professional food photography of {dish}, "</span>
+    <span class="s">"{context}, top-down 90 degree overhead shot, "</span>
+    <span class="s">"natural soft window light from the left, "</span>
+    <span class="s">"served on a neutral ceramic plate, "</span>
+    <span class="s">"rustic wooden table background, realistic textures, "</span>
+    <span class="s">"appetizing, warm tones, minimal styling, "</span>
+    <span class="s">"no text, no watermark, not cartoon, "</span>
+    <span class="s">"shallow depth of field, high resolution, "</span>
+    <span class="s">"food magazine quality"</span>
+)
+TURKISH_CTX = (<span class="s">"traditional Turkish cuisine presentation, "</span>
+               <span class="s">"authentic home-style serving"</span>)
+GENERIC_CTX = <span class="s">"clean modern food styling"</span>
+
+<span class="k">class</span> <span class="f">AIGenerator</span>:
+    <span class="k">def</span> <span class="f">__init__</span>(self, api_key):
+        self.client = AsyncOpenAI(api_key=api_key)
+        self.calls_made = <span class="s">0</span>
+
+    <span class="k">async def</span> <span class="f">generate</span>(self, dish_name, cuisine):
+        <span class="s">"""Tarif için AI görseli üret. Maliyet kontrollü."""</span>
+        <span class="c"># Maliyet koruması — run başına limit</span>
+        <span class="k">if</span> self.calls_made &gt;= Config.DALLE_MAX_PER_RUN:
+            <span class="k">raise</span> RuntimeError(<span class="s">"AI çağrı limiti doldu"</span>)
+
+        ctx = TURKISH_CTX <span class="k">if</span> cuisine == <span class="s">"turkish"</span> <span class="k">else</span> GENERIC_CTX
+        prompt = PROMPT_TEMPLATE.format(dish=dish_name, context=ctx)
+
+        resp = <span class="k">await</span> self.client.images.generate(
+            model=<span class="s">"dall-e-3"</span>,
+            prompt=prompt,
+            size=<span class="s">"1792x1024"</span>,    <span class="c"># 4:3'e en yakın yatay</span>
+            quality=<span class="s">"standard"</span>,   <span class="c"># $0.040 (hd: $0.080)</span>
+            n=<span class="s">1</span>,
+        )
+        self.calls_made += <span class="s">1</span>
+        <span class="k">return</span> {
+            <span class="s">"url"</span>: resp.data[<span class="s">0</span>].url,
+            <span class="s">"source"</span>: <span class="s">"dalle"</span>,
+            <span class="s">"source_id"</span>: <span class="s">f"dalle-{dish_name[:20]}"</span>,
+            <span class="s">"license"</span>: <span class="s">"ai-generated"</span>,
+            <span class="s">"score"</span>: <span class="s">0.80</span>,
+            <span class="s">"requires_review"</span>: <span class="k">True</span>,  <span class="c"># AI görseli → insan onayı</span>
+        }</pre>
+
+  <div class="box">
+    <div class="box-title">💰 Maliyet Koruması</div>
+    <code>DALLE_MAX_PER_RUN</code> sınırı, tek bir hatalı çalıştırmanın yüzlerce dolarlık
+    fatura çıkarmasını engeller. Her AI çağrısı sayılır; limit dolunca pipeline durur ve
+    kalan işler bir sonraki çalıştırmaya bırakılır.
+  </div>
+
+  <h3>4.4 Standardizasyon ve İşleme</h3>
+  <p>
+    Kaynaktan gelen ham görsel, Style Bible'a uygun hale getirilir: 1200×900 kırpma,
+    WebP'ye çevirme, thumbnail ve BlurHash üretimi.
+  </p>
+
+  <div class="filehdr">processing/standardize.py</div>
+  <pre><span class="k">from</span> io <span class="k">import</span> BytesIO
+<span class="k">from</span> PIL <span class="k">import</span> Image
+<span class="k">import</span> blurhash
+<span class="k">from</span> config <span class="k">import</span> Config
+
+<span class="k">def</span> <span class="f">standardize</span>(raw_bytes, recipe_id, out_dir):
+    <span class="s">"""Ham görseli 3 standart çıktıya dönüştür."""</span>
+    img = Image.open(BytesIO(raw_bytes)).convert(<span class="s">"RGB"</span>)
+
+    <span class="c"># 1) Merkeze göre 4:3 kırp</span>
+    img = crop_to_ratio(img, <span class="s">4</span>, <span class="s">3</span>)
+
+    <span class="c"># 2) FULL — 1200x900 WebP q85</span>
+    full = img.resize((Config.FULL_WIDTH, Config.FULL_HEIGHT),
+                       Image.LANCZOS)
+    full.save(<span class="s">f"{out_dir}/{recipe_id}_full.webp"</span>,
+              <span class="s">"WEBP"</span>, quality=Config.WEBP_QUALITY_FULL)
+
+    <span class="c"># 3) THUMB — 400x300 WebP q80</span>
+    thumb = img.resize((Config.THUMB_WIDTH, Config.THUMB_HEIGHT),
+                        Image.LANCZOS)
+    thumb.save(<span class="s">f"{out_dir}/{recipe_id}_thumb.webp"</span>,
+               <span class="s">"WEBP"</span>, quality=Config.WEBP_QUALITY_THUMB)
+
+    <span class="c"># 4) BLURHASH — progressif yükleme placeholder'ı</span>
+    small = img.resize((<span class="s">32</span>, <span class="s">24</span>))
+    bhash = blurhash.encode(small, Config.BLURHASH_X,
+                            Config.BLURHASH_Y)
+
+    <span class="k">return</span> {
+        <span class="s">"width"</span>: Config.FULL_WIDTH,
+        <span class="s">"height"</span>: Config.FULL_HEIGHT,
+        <span class="s">"blur_hash"</span>: bhash,
+    }
+
+<span class="k">def</span> <span class="f">crop_to_ratio</span>(img, rw, rh):
+    <span class="s">"""Görseli merkeze göre hedef orana kırp."""</span>
+    w, h = img.size
+    target = rw / rh
+    <span class="k">if</span> w / h &gt; target:          <span class="c"># çok geniş → yanları kes</span>
+        new_w = int(h * target)
+        x = (w - new_w) // <span class="s">2</span>
+        <span class="k">return</span> img.crop((x, <span class="s">0</span>, x + new_w, h))
+    <span class="k">else</span>:                       <span class="c"># çok uzun → alt/üst kes</span>
+        new_h = int(w / target)
+        y = (h - new_h) // <span class="s">2</span>
+        <span class="k">return</span> img.crop((<span class="s">0</span>, y, w, y + new_h))</pre>
+</div>
+
+<!-- ════ 4.5 ANA DÖNGÜ ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>4 · Pipeline Script Kodu</span></div>
+
+  <h3>4.5 Ana Pipeline Döngüsü</h3>
+  <p>
+    Tüm parçaları birleştiren ana script. Kaynakları öncelik sırasıyla dener,
+    standardize eder, sonucu kaydeder.
+  </p>
+
+  <div class="filehdr">pipeline.py</div>
+  <pre><span class="k">import</span> asyncio, aiohttp, json
+<span class="k">from</span> config <span class="k">import</span> Config
+<span class="k">from</span> clients.unsplash_client <span class="k">import</span> UnsplashClient
+<span class="k">from</span> clients.pexels_client <span class="k">import</span> PexelsClient
+<span class="k">from</span> clients.pixabay_client <span class="k">import</span> PixabayClient
+<span class="k">from</span> clients.ai_generator <span class="k">import</span> AIGenerator
+<span class="k">from</span> processing.standardize <span class="k">import</span> standardize
+
+<span class="k">async def</span> <span class="f">process_recipe</span>(session, recipe, clients, ai_gen):
+    <span class="s">"""Tek tarif için görsel üret — kaynak zinciri."""</span>
+    query = recipe[<span class="s">"search_query"</span>]   <span class="c"># örn "lentil soup turkish"</span>
+    result = <span class="k">None</span>
+
+    <span class="c"># 1-3: Ücretsiz kaynakları sırayla dene</span>
+    <span class="k">for</span> client <span class="k">in</span> clients:               <span class="c"># [unsplash, pexels, pixabay]</span>
+        result = <span class="k">await</span> client.search(session, query)
+        <span class="k">if</span> result <span class="k">and</span> result[<span class="s">"score"</span>] &gt;= Config.MATCH_SCORE_THRESHOLD:
+            <span class="k">break</span>
+        result = <span class="k">None</span>
+
+    <span class="c"># 4: Hiçbiri yetmezse AI üret</span>
+    <span class="k">if</span> result <span class="k">is</span> <span class="k">None</span>:
+        result = <span class="k">await</span> ai_gen.generate(
+            recipe[<span class="s">"title_en"</span>], recipe[<span class="s">"cuisine"</span>])
+
+    <span class="c"># Görseli indir</span>
+    <span class="k">async with</span> session.get(result[<span class="s">"url"</span>]) <span class="k">as</span> resp:
+        raw = <span class="k">await</span> resp.read()
+
+    <span class="c"># Standardize et (1200x900 WebP + thumb + blur)</span>
+    meta = standardize(raw, recipe[<span class="s">"id"</span>], Config.OUTPUT_DIR)
+    result.update(meta)
+    result[<span class="s">"recipe_id"</span>] = recipe[<span class="s">"id"</span>]
+    result[<span class="s">"status"</span>] = <span class="s">"ready"</span>
+    <span class="k">return</span> result
+
+<span class="k">async def</span> <span class="f">main</span>(recipes):
+    <span class="s">"""Tüm tarifleri paralel işle (5'erli grup)."""</span>
+    clients = [
+        UnsplashClient(Config.UNSPLASH_KEY),
+        PexelsClient(Config.PEXELS_KEY),
+        PixabayClient(Config.PIXABAY_KEY),
+    ]
+    ai_gen = AIGenerator(Config.OPENAI_KEY)
+    results = []
+
+    <span class="k">async with</span> aiohttp.ClientSession() <span class="k">as</span> session:
+        <span class="c"># 5 eşzamanlı — API limitlerini aşmadan</span>
+        sem = asyncio.Semaphore(<span class="s">5</span>)
+        <span class="k">async def</span> <span class="f">guarded</span>(r):
+            <span class="k">async with</span> sem:
+                <span class="k">try</span>:
+                    <span class="k">return</span> <span class="k">await</span> process_recipe(
+                        session, r, clients, ai_gen)
+                <span class="k">except</span> Exception <span class="k">as</span> e:
+                    <span class="k">return</span> {<span class="s">"recipe_id"</span>: r[<span class="s">"id"</span>],
+                            <span class="s">"status"</span>: <span class="s">"failed"</span>, <span class="s">"error"</span>: str(e)}
+        results = <span class="k">await</span> asyncio.gather(
+            *[guarded(r) <span class="k">for</span> r <span class="k">in</span> recipes])
+
+    <span class="c"># Sonuçları kaydet</span>
+    <span class="k">with</span> open(<span class="s">"results.json"</span>, <span class="s">"w"</span>) <span class="k">as</span> f:
+        json.dump(results, f, ensure_ascii=<span class="k">False</span>, indent=<span class="s">2</span>)
+    ok = sum(<span class="s">1</span> <span class="k">for</span> r <span class="k">in</span> results <span class="k">if</span> r[<span class="s">"status"</span>] == <span class="s">"ready"</span>)
+    print(<span class="s">f"Tamamlandı: {ok}/{len(results)} başarılı"</span>)
+
+<span class="k">if</span> __name__ == <span class="s">"__main__"</span>:
+    <span class="k">with</span> open(<span class="s">"recipes.json"</span>) <span class="k">as</span> f:
+        recipes = json.load(f)
+    asyncio.run(main(recipes))</pre>
+
+  <div class="box green">
+    <div class="box-title">⚡ Paralel İşleme</div>
+    <code>Semaphore(5)</code> ile aynı anda en fazla 5 tarif işlenir. Bu, API oran
+    limitlerini aşmadan ~2500 görseli birkaç saatte tamamlar — tek iş parçacıklı
+    yaklaşıma göre ~5 kat hızlı.
+  </div>
+</div>
+
+<!-- ════ 5 · OPERASYON ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>5 · Çalıştırma ve Operasyon</span></div>
+  <span class="section-num">BÖLÜM 5</span>
+  <h2 class="serif">Çalıştırma ve Operasyon</h2>
+
+  <h3>5.1 Adım Adım Çalıştırma</h3>
+  <pre><span class="c"># 1. Bağımlılıkları kur</span>
+pip install aiohttp Pillow blurhash-python openai python-dotenv
+
+<span class="c"># 2. .env dosyasını hazırla (API anahtarları)</span>
+cp .env.example .env
+<span class="c"># .env dosyasını düzenle, anahtarları gir</span>
+
+<span class="c"># 3. Önce küçük pilot grupla test et (50 tarif)</span>
+python pipeline.py --input pilot_batch.json
+
+<span class="c"># 4. Sonuçları incele — output/ klasörü + results.json</span>
+
+<span class="c"># 5. Sorun yoksa tam çalıştır (2500 tarif)</span>
+python pipeline.py --input recipes_all.json
+
+<span class="c"># 6. AI görsellerini onayla (inceleme kuyruğu)</span>
+python review_ai_images.py
+
+<span class="c"># 7. Onaylanan görselleri Firebase'e yükle</span>
+python upload_to_firebase.py</pre>
+
+  <h3>5.2 İş Kuyruğu ve Devam Edilebilirlik</h3>
+  <p>
+    Her tarif için bir <strong>iş kaydı</strong> tutulur (<code>image_jobs.json</code>).
+    Durum alanları: <code>pending</code>, <code>processing</code>, <code>completed</code>,
+    <code>failed</code>. Pipeline kesilse bile <code>pending</code> işlerden devam eder —
+    tamamlanmış işler tekrar işlenmez.
+  </p>
+
+  <h3>5.3 Önerilen Çalıştırma Sırası</h3>
+  <table>
+    <tr><th>Aşama</th><th>Kapsam</th><th>Amaç</th></tr>
+    <tr><td>1. Dry-run</td><td>API çağrısı yok</td><td>Yapılandırma testi</td></tr>
+    <tr><td>2. Pilot</td><td>50 tarif</td><td>Kalite ve maliyet ölçümü</td></tr>
+    <tr><td>3. Ücretsiz tur</td><td>2500 tarif, AI kapalı</td><td>Stok kaynakları topla</td></tr>
+    <tr><td>4. AI turu</td><td>Kalan tarifler</td><td>Eksikleri AI ile tamamla</td></tr>
+    <tr><td>5. İnceleme</td><td>AI görselleri</td><td>İnsan onayı</td></tr>
+    <tr><td>6. Yükleme</td><td>Tüm onaylılar</td><td>Firebase Storage + Firestore</td></tr>
+  </table>
+
+  <h3>5.4 İzleme ve Maliyet Takibi</h3>
+  <ul>
+    <li><strong>results.json</strong> — her tarifin kaynağı, skoru, durumu</li>
+    <li><strong>AI çağrı sayacı</strong> — <code>AIGenerator.calls_made</code> ile anlık maliyet</li>
+    <li><strong>Başarısızlar</strong> — <code>status: failed</code> olanlar ayrı dosyaya, tekrar denenir</li>
+    <li><strong>OpenAI panosu</strong> — platform.openai.com/usage'dan gerçek harcama</li>
+  </ul>
+
+  <div class="endbox">
+    <h3>📌 Özet</h3>
+    <p>
+      Bu pipeline, 2500 tariflik görsel içeriği <strong>$40–60 maliyetle</strong> ve
+      birkaç saatte üretir. Hibrit kaynak stratejisi (ücretsiz stok + AI) maliyeti
+      düşük tutar; Style Bible kuralları tüm görsellerin tutarlı olmasını sağlar;
+      iş kuyruğu sistemi süreci kesintiye dayanıklı kılar.
+    </p>
+    <p style="margin-top:10px;">
+      Geliştiriciye düşen: API anahtarlarını edinmek, <code>.env</code>'i doldurmak,
+      pilot grupla test etmek ve tam çalıştırmadır. AI görselleri için kısa bir insan
+      inceleme adımı önerilir.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

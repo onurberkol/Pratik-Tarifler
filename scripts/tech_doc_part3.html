@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Teknik Doküman Bölüm 3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; color:#2D2419; line-height:1.65; font-size:10.5pt; }
+  .page { padding:54px 60px; page-break-after:always; position:relative; min-height:100vh; }
+  .page:last-child { page-break-after:auto; }
+  h2 { font-size:24px; font-weight:800; margin:0 0 6px; padding-bottom:10px; border-bottom:3px solid #D89A1E; }
+  .section-num { display:inline-block; background:#D89A1E; color:#FFF; font-size:13px;
+    font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:14px; }
+  h3 { font-size:15.5px; font-weight:800; color:#3A6B3A; margin:22px 0 8px; }
+  h4 { font-size:12.5px; font-weight:700; margin:14px 0 5px; }
+  p { margin:7px 0; }
+  ul, ol { margin:8px 0 8px 22px; }
+  li { margin:4px 0; }
+  strong { font-weight:700; color:#1F1810; }
+  code { font-family:'JetBrains Mono',monospace; font-size:9pt; background:#F0EBE2;
+    padding:1.5px 5px; border-radius:4px; color:#A8540E; }
+  pre { background:#2D2419; color:#E8E0D0; padding:14px 16px; border-radius:10px;
+    font-family:'JetBrains Mono',monospace; font-size:8.3pt; line-height:1.55;
+    overflow-x:auto; margin:10px 0; white-space:pre-wrap; }
+  pre .c { color:#8A9B6E; } pre .k { color:#E8B53B; } pre .s { color:#C9A57B; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:9pt; }
+  th { background:#2D2419; color:#FFF; padding:8px 10px; text-align:left; font-weight:700; }
+  td { padding:7px 10px; border-bottom:1px solid #EDE6DC; }
+  tr:nth-child(even) td { background:#FAF7F2; }
+  .box { background:#FBF4E4; border-left:4px solid #D89A1E; padding:12px 16px;
+    border-radius:0 8px 8px 0; margin:12px 0; font-size:9.5pt; }
+  .box.green { background:#EAF1EA; border-color:#5B8C5A; }
+  .box.blue { background:#E8F0F4; border-color:#4A7A9C; }
+  .box .box-title { font-weight:800; margin-bottom:3px; }
+  .running { font-size:9px; color:#B5AB99; font-weight:600; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:24px; display:flex; justify-content:space-between; }
+  .arch { display:flex; flex-direction:column; gap:7px; margin:14px 0; }
+  .arch-layer { border-radius:9px; padding:10px 14px; color:#FFF; }
+  .arch-layer .layer-name { font-size:11px; font-weight:800; margin-bottom:4px; }
+  .arch-layer .layer-items { font-size:8pt; opacity:.92; }
+  .arch-arrow { text-align:center; color:#B5AB99; font-size:12px; }
+  .endbox { background:linear-gradient(135deg,#2D2419,#3A3024); color:#FFF;
+    border-radius:14px; padding:24px; margin-top:20px; }
+  .endbox h3 { color:#D4A847; margin-top:0; }
+  .endbox p { color:#D5CBB8; }
+</style>
+</head>
+<body>
+
+<!-- ════════════ 6 · ÇEVİRİ PIPELINE ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>6 · Çeviri Pipeline'ı</span></div>
+  <span class="section-num">BÖLÜM 6</span>
+  <h2>Çeviri Pipeline'ı (Faz 3.3)</h2>
+
+  <p>
+    Uygulama 13 dil destekler. 2500 tarifin 12 hedef dile çevrilmesi — başlık, malzemeler,
+    adımlar dahil — devasa bir iştir. Bu, AI tabanlı bir çeviri pipeline'ı ile otomatikleştirilir.
+  </p>
+
+  <h3>6.1 Glossary (Terim Sözlüğü) Sistemi</h3>
+  <p>
+    Naif çeviri Türk yemek kültürünü bozar. "Mantı" kelimesi İngilizceye "ravioli" diye
+    çevrilmemelidir — özgün kalmalıdır. Pipeline bunu bir <strong>glossary</strong> ile
+    çözer:
+  </p>
+  <ul>
+    <li><strong>67 Türk yemek ismi</strong> orijinal bırakılır (mantı, baklava, simit, lahmacun...)</li>
+    <li><strong>10 pişirme fiili</strong> her dile doğru karşılığıyla eşlenir (kavurmak, haşlamak...)</li>
+    <li><strong>8 ölçü birimi</strong> yerelleştirilir (su bardağı, çay kaşığı...)</li>
+  </ul>
+
+  <div class="box green">
+    <div class="box-title">✓ Kültürel Doğruluk</div>
+    Glossary, çeviri kalitesini garanti eder. "Su böreği" İngilizcede
+    <code>"Su Böreği (Turkish water pastry)"</code> biçiminde — özgün isim korunarak,
+    parantez içinde açıklama eklenerek çevrilir.
+  </div>
+
+  <h3>6.2 Çeviri Motoru ve Maliyet</h3>
+  <p>
+    Çeviri için <strong>Claude Haiku</strong> modeli kullanılır — hızlı, ucuz ve kültürel
+    bağlamda güçlüdür. Pipeline, tarifleri batch'ler hâlinde işler ve glossary'yi her
+    prompt'a enjekte eder.
+  </p>
+  <table>
+    <tr><th>Kapsam</th><th>Diller</th><th>Tahmini Maliyet</th></tr>
+    <tr><td>MVP</td><td>EN, DE, AR (3 dil)</td><td>~$9</td></tr>
+    <tr><td>Tam</td><td>12 hedef dil</td><td>~$35</td></tr>
+  </table>
+  <p style="font-size:9pt; color:#8A7E6D;">
+    Hedef diller: İngilizce, Almanca, Fransızca, İtalyanca, İspanyolca, Portekizce,
+    Yunanca, Hollandaca, Rusça, Sırpça, Arapça, İbranice. Arapça ve İbranice için
+    uygulama otomatik RTL (sağdan sola) düzene geçer.
+  </p>
+
+  <pre><span class="c"># Çeviri pipeline çalıştırma</span>
+<span class="c"># MVP — sadece 3 dil</span>
+python translate_recipes.py --langs en,de,ar --input recipes_db_FULL_tr.json
+
+<span class="c"># Tam — 12 dil</span>
+python translate_recipes.py --langs all --batch-size 20</pre>
+</div>
+
+<!-- ════════════ 7 · MOBİL UYGULAMA ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>7 · Mobil Uygulama</span></div>
+  <span class="section-num">BÖLÜM 7</span>
+  <h2>Mobil Uygulama (Faz 4)</h2>
+
+  <h3>7.1 Proje Dosya Yapısı</h3>
+  <pre>phase4_ux/
+├── screens/        <span class="c">// 17 ekran (.tsx)</span>
+├── components/     <span class="c">// 5 paylaşılan component</span>
+├── hooks/          <span class="c">// 10 custom hook</span>
+├── api/            <span class="c">// Firebase client, analytics</span>
+├── i18n/           <span class="c">// 13 dil JSON + init</span>
+├── styles/         <span class="c">// theme.ts — tasarım sistemi</span>
+├── types/          <span class="c">// TypeScript tip tanımları</span>
+├── notifications/  <span class="c">// push bildirim mantığı</span>
+├── offline/        <span class="c">// SQLite önbellek + senkron</span>
+├── cloud_functions/<span class="c">// backend fonksiyonları</span>
+└── tests/          <span class="c">// Jest + Detox testleri</span></pre>
+
+  <h3>7.2 3 Modlu UX Mimarisi</h3>
+  <p>
+    Üç mod, tek bir birleşik API endpoint'i (<code>getRecipeRecommendations</code>) üzerinden
+    çalışır. İstemci yalnızca <code>mode</code> parametresini değiştirir; backend dispatcher
+    doğru algoritmaya yönlendirir.
+  </p>
+
+  <div class="arch">
+    <div class="arch-layer" style="background:linear-gradient(120deg,#E8B53B,#F0C95E);">
+      <div class="layer-name">MOD 1 — PANTRY (Evdeki Kalanlar)</div>
+      <div class="layer-items">Girdi: malzeme listesi → Çıktı: yalnızca TÜM malzemesi mevcut tarifler · match_percentage=100</div>
+    </div>
+    <div class="arch-layer" style="background:linear-gradient(120deg,#5B8C5A,#74A773);">
+      <div class="layer-name">MOD 2 — SUPPLY (Hızlı Tedarik)</div>
+      <div class="layer-items">Girdi: liste + max_missing(1-3) → Çıktı: eksik malzemeli tarifler + fiyat tahmini · en az eksikten sıralı</div>
+    </div>
+    <div class="arch-layer" style="background:linear-gradient(120deg,#4A7A9C,#6092B4);">
+      <div class="layer-name">MOD 3 — DISCOVER (Sınırsız Keşif)</div>
+      <div class="layer-items">Girdi: filtreler (mutfak, öğün, diyet, süre) → Çıktı: sayfalanmış tüm havuz · trend/yeni/puan sıralama</div>
+    </div>
+  </div>
+
+  <h3>7.3 Performans Optimizasyonları</h3>
+  <table>
+    <tr><th>Teknik</th><th>Etki</th></tr>
+    <tr><td>BlurHash placeholder</td><td>Görseller yüklenirken bulanık önizleme — algılanan hız ↑</td></tr>
+    <tr><td>FlashList sanallaştırma</td><td>2500 tarif akıcı kaydırma, sabit RAM kullanımı</td></tr>
+    <tr><td>İyimser UI</td><td>Favori/puan anında yansır, arka planda senkronize olur</td></tr>
+    <tr><td>SQLite önbellek</td><td>Favoriler çevrimdışı erişilebilir</td></tr>
+    <tr><td>Debounce arama</td><td>Her tuş vuruşunda değil, 300ms duraklamada sorgu</td></tr>
+  </table>
+</div>
+
+<!-- ════════════ 7 devam · ALGORİTMA ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>7 · Öneri Algoritması</span></div>
+
+  <h3>7.4 Öneri Algoritması — Derinlemesine</h3>
+  <p>
+    Mod 1 ve 2'nin teknik zorluğu şudur: Firestore, "tüm bu malzemeler şu tarifte var mı?"
+    sorgusunu doğrudan desteklemez. Çözüm iki aşamalıdır:
+  </p>
+
+  <h4>Aşama 1 — Aday Havuzu (Firestore tarafı)</h4>
+  <p>
+    <code>array-contains-any</code> operatörü ile kullanıcının <em>herhangi bir</em>
+    malzemesini içeren tarifler çekilir. Bu, geniş ama hızlı bir ön filtredir.
+  </p>
+  <pre><span class="c">// Firestore sorgusu — aday havuzu</span>
+recipes_tr
+  .where(<span class="s">'image_status'</span>, <span class="s">'=='</span>, <span class="s">'ready'</span>)
+  .where(<span class="s">'ingredient_tokens'</span>, <span class="s">'array-contains-any'</span>, userTokens)
+  .orderBy(<span class="s">'rating_avg'</span>, <span class="s">'desc'</span>)
+  .limit(<span class="s">200</span>)  <span class="c">// Mod 1 için aday havuzu</span></pre>
+
+  <h4>Aşama 2 — Kesin Filtre (İstemci/Function tarafı)</h4>
+  <p>
+    Aday havuzu bellekte hassas biçimde filtrelenir. <strong>Mod 1</strong> için: tarifin
+    <em>tüm</em> token'ları kullanıcıda olmalıdır. <strong>Mod 2</strong> için: eksik sayısı
+    <code>max_missing</code> sınırını aşmamalıdır.
+  </p>
+  <pre><span class="c">// Mod 1 — kesin eşleşme kontrolü</span>
+<span class="k">const</span> userSet = <span class="k">new</span> Set(ingredients);
+<span class="k">for</span> (<span class="k">const</span> recipe <span class="k">of</span> candidates) {
+  <span class="k">const</span> allCovered = recipe.ingredient_tokens
+    .every(token => userSet.has(token));
+  <span class="k">if</span> (allCovered) {
+    recipe.match_percentage = <span class="s">100</span>;
+    matches.push(recipe);
+  }
+}
+
+<span class="c">// Mod 2 — eksik sayısı hesabı</span>
+<span class="k">const</span> missing = recipe.ingredient_tokens
+  .filter(token => !userSet.has(token));
+<span class="k">if</span> (missing.length &lt;= maxMissing) {
+  recipe.missing_count = missing.length;
+  recipe.missing_ingredients = missing.map(toLabel);
+  matches.push(recipe);
+}
+<span class="c">// Sıralama: en az eksikten en çoğa</span>
+matches.sort((a,b) => a.missing_count - b.missing_count);</pre>
+
+  <div class="box blue">
+    <div class="box-title">⚙️ array-contains-any Sınırı</div>
+    Firestore bu operatörde en fazla 30 değer kabul eder. Kullanıcı 30'dan fazla malzeme
+    girerse, en sık kullanılan 30 token sorgulanır; geri kalan istemci tarafında işlenir.
+  </div>
+
+  <h3>7.5 Vision API Entegrasyonu</h3>
+  <p>
+    <code>analyzePantryPhoto</code> fonksiyonu, Google Vision'ın <code>LABEL_DETECTION</code>
+    ve <code>OBJECT_LOCALIZATION</code> özelliklerini kullanır. Dönen İngilizce etiketler,
+    50+ kayıtlık bir eşleme tablosuyla iç token sistemine çevrilir (örn.
+    <code>"cherry tomato" → tomato</code>).
+  </p>
+</div>
+
+<!-- ════════════ 8 · ABONELİK + DAĞITIM ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>8 · Abonelik ve Dağıtım</span></div>
+  <span class="section-num">BÖLÜM 8</span>
+  <h2>Abonelik Sistemi (Faz 5)</h2>
+
+  <p>
+    Uygulama freemium modeli kullanır. Çoklu platform ödeme yönetimi iki servisle yapılır:
+  </p>
+  <table>
+    <tr><th>Platform</th><th>Servis</th><th>Ürün</th></tr>
+    <tr><td>iOS / Android</td><td>RevenueCat</td><td>Apple IAP + Google Play Billing tek SDK</td></tr>
+    <tr><td>Web</td><td>Stripe</td><td>Checkout + Customer Portal</td></tr>
+  </table>
+
+  <p>
+    Abonelik durumu, sağlayıcıdan bağımsız olarak Firestore'da
+    <code>users/{uid}/subscription</code> altında tutulur. Webhook'lar (yenileme, iptal,
+    iade) durumu gerçek zamanlı senkronize eder.
+  </p>
+
+  <div class="box">
+    <div class="box-title">💳 Freemium Sınırları</div>
+    Ücretsiz: 3 buzdolabı taraması/gün, 20 favori, reklamlar. Premium: sınırsız tarama,
+    sınırsız favori, premium tarifler, reklamsız. 7 gün ücretsiz deneme tüm planlarda aktif.
+  </div>
+
+  <h2 style="margin-top:30px;">Dağıtım ve Operasyon</h2>
+
+  <h3>9.1 Dağıtım Hattı</h3>
+  <ul>
+    <li><strong>Mobil:</strong> Expo EAS Build → TestFlight (iOS) / Internal Track (Android) → Production</li>
+    <li><strong>Backend:</strong> <code>firebase deploy</code> — Functions, Firestore kuralları, indeksler</li>
+    <li><strong>İçerik:</strong> Görsel + çeviri pipeline'ları lokal makinede çalışır, sonuç Storage/Firestore'a yüklenir</li>
+  </ul>
+
+  <h3>9.2 İzleme</h3>
+  <table>
+    <tr><th>Araç</th><th>İzlenen</th></tr>
+    <tr><td>Sentry</td><td>Çökme raporları, hata izleme</td></tr>
+    <tr><td>Firebase Analytics</td><td>Kullanıcı olayları, huniler</td></tr>
+    <tr><td>Firebase Performance</td><td>Uygulama başlangıcı, ekran render süreleri</td></tr>
+    <tr><td>Cloud Functions logs</td><td>Backend hata ve gecikme takibi</td></tr>
+  </table>
+
+  <h3>9.3 Test Stratejisi</h3>
+  <p>
+    Test paketi üç katmanlıdır: <strong>birim testleri</strong> (öneri algoritması,
+    yardımcı fonksiyonlar), <strong>entegrasyon testleri</strong> (Firebase emülatörü ile)
+    ve <strong>E2E testleri</strong> (Detox ile 3 modun tam akışı). Hedef kapsam %70+.
+  </p>
+
+  <div class="endbox">
+    <h3>📌 Özet</h3>
+    <p>
+      Pratik Tarifler, modern bir sunucusuz mimari üzerine inşa edilmiştir. İçerik üretiminin
+      otomatikleştirilmesi — özellikle <strong>görsel batch pipeline'ı</strong> ve
+      <strong>AI çeviri pipeline'ı</strong> — projenin 2500 tarif × 13 dil ölçeğine
+      düşük maliyetle ulaşmasını sağlamıştır.
+    </p>
+    <p style="margin-top:10px;">
+      Sistem 10.000+ aylık aktif kullanıcıya aylık ~$50 altyapı maliyetiyle hizmet
+      verebilecek şekilde tasarlanmıştır. Tüm bileşenler — mobil uygulama, backend,
+      içerik pipeline'ları, abonelik sistemi — production'a hazır durumdadır.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

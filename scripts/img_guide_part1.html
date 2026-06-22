@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Görsel Üretim Kılavuzu — Bölüm 1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; color:#22180F; line-height:1.6; font-size:10.5pt; }
+  .serif { font-family:'Fraunces',serif; }
+  .page { padding:54px 60px; page-break-after:always; position:relative; min-height:100vh; }
+  .page:last-child { page-break-after:auto; }
+
+  /* Kapak */
+  .cover { background:linear-gradient(165deg,#E14328 0%,#C2371F 55%,#9C2E1A 100%);
+    color:#FFF; display:flex; flex-direction:column; justify-content:center;
+    padding:80px 70px; position:relative; overflow:hidden; }
+  .cover .ring { position:absolute; width:540px; height:540px; border-radius:50%;
+    border:64px solid rgba(255,255,255,.06); right:-190px; top:42%; }
+  .cover .kicker { font-size:14px; font-weight:700; letter-spacing:3px; color:#FFD8CF; }
+  .cover h1 { font-size:46px; font-weight:700; margin-top:16px; line-height:1.08; }
+  .cover .divider { width:80px; height:5px; background:#F4A024; margin:28px 0; border-radius:3px; }
+  .cover .doctype { font-size:15px; color:#FFE0D9; font-weight:500; line-height:2; }
+  .cover .footer-meta { position:absolute; bottom:64px; left:70px; right:70px;
+    display:flex; justify-content:space-between; font-size:12px; color:#FFD0C6;
+    border-top:1px solid rgba(255,255,255,.2); padding-top:16px; }
+
+  h2 { font-size:24px; font-weight:700; color:#22180F; margin:0 0 6px;
+    padding-bottom:10px; border-bottom:3px solid #E14328; }
+  .section-num { display:inline-block; background:#E14328; color:#FFF; font-size:13px;
+    font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:14px; }
+  h3 { font-size:15.5px; font-weight:800; color:#3E8E5A; margin:22px 0 8px; }
+  h4 { font-size:12.5px; font-weight:700; color:#22180F; margin:14px 0 5px; }
+  p { margin:7px 0; }
+  ul, ol { margin:8px 0 8px 22px; }
+  li { margin:4px 0; }
+  strong { font-weight:700; color:#1F1810; }
+  code { font-family:'JetBrains Mono',monospace; font-size:9pt; background:#F4ECDD;
+    padding:1.5px 5px; border-radius:4px; color:#C2371F; }
+  pre { background:#22180F; color:#E8E0D0; padding:14px 16px; border-radius:10px;
+    font-family:'JetBrains Mono',monospace; font-size:8.3pt; line-height:1.55;
+    overflow-x:auto; margin:10px 0; white-space:pre-wrap; }
+  pre .c { color:#8A9B6E; } pre .k { color:#F4A024; } pre .s { color:#D9A86E; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:9pt; }
+  th { background:#22180F; color:#FFF; padding:8px 10px; text-align:left; font-weight:700; }
+  td { padding:7px 10px; border-bottom:1px solid #F0E7D8; }
+  tr:nth-child(even) td { background:#FFFBF5; }
+  .box { background:#FFF3E0; border-left:4px solid #E14328; padding:12px 16px;
+    border-radius:0 8px 8px 0; margin:12px 0; font-size:9.5pt; }
+  .box.green { background:#E6F2EA; border-color:#3E8E5A; }
+  .box.blue { background:#E8F0F4; border-color:#4A7A9C; }
+  .box .box-title { font-weight:800; margin-bottom:3px; }
+  .running { font-size:9px; color:#B5AB99; font-weight:600; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:24px; display:flex; justify-content:space-between; }
+  .toc-item { display:flex; justify-content:space-between; padding:7px 0;
+    border-bottom:1px dotted #D5CBB8; font-size:11px; }
+  .toc-item strong { font-weight:700; }
+  .toc-item.sub { padding-left:20px; font-size:10px; color:#6A5D48; }
+  /* API kart */
+  .apicard { border:1.5px solid #F0E7D8; border-radius:12px; padding:14px 16px;
+    margin:12px 0; background:#FFFBF5; }
+  .apicard .api-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+  .apicard .api-badge { width:36px; height:36px; border-radius:9px; color:#FFF;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; }
+  .apicard .api-name { font-size:14px; font-weight:800; }
+  .apicard .api-tag { font-size:8.5pt; font-weight:700; padding:2px 8px; border-radius:8px; }
+  .step-list { counter-reset:step; margin:8px 0 0; padding:0; list-style:none; }
+  .step-list li { counter-increment:step; position:relative; padding-left:26px;
+    margin:6px 0; font-size:9pt; }
+  .step-list li::before { content:counter(step); position:absolute; left:0; top:0;
+    width:18px; height:18px; background:#E14328; color:#FFF; border-radius:50%;
+    font-size:9px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+</style>
+</head>
+<body>
+
+<!-- ════ KAPAK ════ -->
+<div class="page cover">
+  <div class="ring"></div>
+  <div class="kicker">PRATİK TARİFLER — TEKNİK KILAVUZ</div>
+  <h1 class="serif">Görsel Üretim ve<br>Standardizasyon<br>Kılavuzu</h1>
+  <div class="divider"></div>
+  <div class="doctype">
+    Tarif & Malzeme Görsellerinin Üretimi<br>
+    API Kanalları · AI Üretim · Standardizasyon Kuralları · Script Kodu
+  </div>
+  <div class="footer-meta">
+    <span>Sürüm 1.0 · 2026</span>
+    <span>Faz 3.2 — Görsel İçerik Pipeline'ı</span>
+  </div>
+</div>
+
+<!-- ════ İÇİNDEKİLER ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>İçindekiler</span></div>
+  <h2 class="serif">İçindekiler</h2>
+  <div style="margin-top:20px;">
+    <div class="toc-item"><strong>1 · Genel Bakış ve Strateji</strong><span>3</span></div>
+    <div class="toc-item sub"><span>1.1 Hibrit Kaynak Yaklaşımı</span><span>3</span></div>
+    <div class="toc-item sub"><span>1.2 Maliyet ve Dağılım Tahmini</span><span>3</span></div>
+    <div class="toc-item"><strong>2 · Görsel Kaynak Kanalları ve API Anahtarları</strong><span>4</span></div>
+    <div class="toc-item sub"><span>2.1 Unsplash API</span><span>4</span></div>
+    <div class="toc-item sub"><span>2.2 Pexels API</span><span>5</span></div>
+    <div class="toc-item sub"><span>2.3 Pixabay API</span><span>5</span></div>
+    <div class="toc-item sub"><span>2.4 OpenAI DALL·E 3 (AI Üretim)</span><span>6</span></div>
+    <div class="toc-item sub"><span>2.5 Flux Pro — Alternatif AI</span><span>7</span></div>
+    <div class="toc-item sub"><span>2.6 API Anahtarı Yapılandırması (.env)</span><span>7</span></div>
+    <div class="toc-item"><strong>3 · Görsel Standardizasyonu (Style Bible)</strong><span>8</span></div>
+    <div class="toc-item sub"><span>3.1 Boyut, Format, Çözünürlük</span><span>8</span></div>
+    <div class="toc-item sub"><span>3.2 Işık, Açı, Kompozisyon Kuralları</span><span>9</span></div>
+    <div class="toc-item sub"><span>3.3 AI Üretim Prompt Şablonu</span><span>10</span></div>
+    <div class="toc-item sub"><span>3.4 Kalite Kontrol Kriterleri</span><span>11</span></div>
+    <div class="toc-item"><strong>4 · Pipeline Script Kodu</strong><span>12</span></div>
+    <div class="toc-item sub"><span>4.1 Yapılandırma ve Bağımlılıklar</span><span>12</span></div>
+    <div class="toc-item sub"><span>4.2 Kaynak İstemcileri (API Clients)</span><span>13</span></div>
+    <div class="toc-item sub"><span>4.3 AI Üretim Modülü</span><span>15</span></div>
+    <div class="toc-item sub"><span>4.4 Standardizasyon ve İşleme</span><span>16</span></div>
+    <div class="toc-item sub"><span>4.5 Ana Pipeline Döngüsü</span><span>17</span></div>
+    <div class="toc-item"><strong>5 · Çalıştırma ve Operasyon</strong><span>18</span></div>
+  </div>
+  <div class="box" style="margin-top:24px;">
+    <div class="box-title">📋 Bu Doküman Kimin İçin?</div>
+    Bu kılavuz, Pratik Tarifler uygulamasının 2500 tariflik görsel içeriğini üretecek
+    geliştiriciler içindir. Hangi API'lerin nereden alınacağı, görsellerin hangi
+    standartta olması gerektiği ve tüm süreci otomatikleştiren <strong>çalışan script
+    kodu</strong> burada açıklanır.
+  </div>
+</div>
+
+<!-- ════ 1 · GENEL BAKIŞ ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>1 · Genel Bakış</span></div>
+  <span class="section-num">BÖLÜM 1</span>
+  <h2 class="serif">Genel Bakış ve Strateji</h2>
+
+  <p>
+    2500 tarifin her birine, <strong>aynı estetik standartta</strong> profesyonel kalitede
+    bir görsel gerekir. Bunları manuel hazırlamak haftalar sürer ve tutarsız sonuç verir.
+    Çözüm: <strong>hibrit kaynak stratejisi</strong> ile yarı otomatik üretim.
+  </p>
+
+  <h3>1.1 Hibrit Kaynak Yaklaşımı</h3>
+  <p>
+    Pipeline, her tarif için kaynakları <strong>öncelik sırasıyla</strong> dener. Ücretsiz
+    stok fotoğraf siteleri önce taranır; yeterli kalitede sonuç bulunamazsa yapay zeka ile
+    görsel üretilir. Bu yaklaşım maliyeti minimumda tutar.
+  </p>
+  <ol>
+    <li><strong>Unsplash</strong> — en kaliteli, telifsiz; yaygın yemeklerin ~%45'i bulunur</li>
+    <li><strong>Pexels</strong> — Unsplash bulamazsa devreye girer</li>
+    <li><strong>Pixabay</strong> — geniş havuz, kalite değişken; son ücretsiz şans</li>
+    <li><strong>DALL·E 3 (AI)</strong> — yöresel Türk yemekleri için özel prompt'la üretim</li>
+    <li><strong>Flux Pro (AI)</strong> — alternatif, daha fotogerçekçi AI motoru</li>
+    <li><strong>Manuel</strong> — admin onayı / özel çekim (son çare)</li>
+  </ol>
+
+  <div class="box green">
+    <div class="box-title">💡 Neden Hibrit?</div>
+    "Pizza", "salata" gibi yaygın yemekler stok sitelerinde bol bulunur — bunlar
+    ücretsizdir. Ama "perde pilavı", "su böreği" gibi yöresel yemekler nadiren bulunur;
+    bunlar için DALL·E 3, "geleneksel Türk sunumu" yönergesiyle özgün görsel üretir.
+  </div>
+
+  <h3>1.2 Maliyet ve Dağılım Tahmini</h3>
+  <table>
+    <tr><th>Kaynak</th><th>Pay</th><th>Tahmini Adet</th><th>Birim</th><th>Toplam</th></tr>
+    <tr><td>Unsplash</td><td>%45</td><td>1.125</td><td>$0</td><td>$0</td></tr>
+    <tr><td>Pexels</td><td>%15</td><td>375</td><td>$0</td><td>$0</td></tr>
+    <tr><td>Pixabay</td><td>%5</td><td>125</td><td>$0</td><td>$0</td></tr>
+    <tr><td>DALL·E 3 (standart)</td><td>%25</td><td>625</td><td>$0,040</td><td>~$25</td></tr>
+    <tr><td>Flux Pro</td><td>%10</td><td>250</td><td>$0,055</td><td>~$14</td></tr>
+    <tr><td><strong>TOPLAM</strong></td><td><strong>%100</strong></td><td><strong>2.500</strong></td><td>—</td><td><strong>~$40–60</strong></td></tr>
+  </table>
+  <p style="font-size:9pt; color:#7D6E5C;">
+    Not: DALL·E 3 standart kalite görsel başına $0,040; HD kalite $0,080. Flux Pro $0,055.
+    Tüm 2500 tarif için toplam görsel maliyeti <strong>$40–60</strong> aralığındadır —
+    ücretsiz kaynaklar maliyeti dramatik biçimde düşürür.
+  </p>
+
+  <div class="box blue">
+    <div class="box-title">📦 Depolama Maliyeti</div>
+    2500 görsel × ~150 KB (full) + thumbnail + blur = <strong>~450 MB toplam</strong>.
+    Firebase Storage'da bu, aylık birkaç sentlik maliyet demektir. CDN trafiği,
+    kullanıcı sayısına göre artar.
+  </div>
+</div>
+
+<!-- ════ 2 · API KANALLARI ════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Görsel Üretim Kılavuzu</span><span>2 · API Kanalları</span></div>
+  <span class="section-num">BÖLÜM 2</span>
+  <h2 class="serif">Görsel Kaynak Kanalları ve API Anahtarları</h2>
+  <p>
+    Bu bölüm, her kaynağın API anahtarının <strong>nereden ve nasıl alınacağını</strong>,
+    ücretlendirme ve oran limitlerini açıklar.
+  </p>
+
+  <h3>2.1 Unsplash API</h3>
+  <div class="apicard">
+    <div class="api-head">
+      <div class="api-badge" style="background:#22180F;">U</div>
+      <div class="api-name">Unsplash</div>
+      <span class="api-tag" style="background:#E6F2EA; color:#2E6B42;">ÜCRETSİZ</span>
+    </div>
+    <p style="font-size:9pt;">En yüksek kaliteli telifsiz fotoğraf kaynağı. Birincil
+    tercih. Atıf (fotoğrafçı adı) gösterimi zorunludur.</p>
+    <h4>API Anahtarı Nasıl Alınır?</h4>
+    <ol class="step-list">
+      <li><code>unsplash.com/developers</code> adresine gidin, hesap açın.</li>
+      <li>"New Application" → kullanım koşullarını kabul edin.</li>
+      <li>Uygulama adı ve açıklaması girin (örn. "Pratik Tarifler — recipe images").</li>
+      <li>Oluşan ekranda <strong>Access Key</strong>'i kopyalayın.</li>
+      <li>Başlangıçta "Demo" tier (50 istek/saat). Üretim için "Apply for Production"
+      ile başvurun — onaylanınca limit 5.000 istek/saate çıkar.</li>
+    </ol>
+    <table>
+      <tr><th>Özellik</th><th>Değer</th></tr>
+      <tr><td>Endpoint</td><td><code>https://api.unsplash.com/search/photos</code></td></tr>
+      <tr><td>Kimlik doğrulama</td><td><code>Authorization: Client-ID {ACCESS_KEY}</code></td></tr>
+      <tr><td>Demo limiti</td><td>50 istek/saat</td></tr>
+      <tr><td>Üretim limiti</td><td>5.000 istek/saat</td></tr>
+      <tr><td>Maliyet</td><td>Ücretsiz</td></tr>
+      <tr><td>Env değişkeni</td><td><code>UNSPLASH_ACCESS_KEY</code></td></tr>
+    </table>
+  </div>
+  <div class="box">
+    <div class="box-title">⚠️ Unsplash Atıf Kuralı</div>
+    Unsplash, indirme işleminde <code>download_location</code> endpoint'inin tetiklenmesini
+    şart koşar. Ayrıca fotoğrafçı adı ve profili uygulamada gösterilmelidir. Pipeline kodu
+    bunu otomatik yapar (Bölüm 4.2).
+  </div>
+
+  <h3>2.2 Pexels API</h3>
+  <div class="apicard">
+    <div class="api-head">
+      <div class="api-badge" style="background:#05A081;">P</div>
+      <div class="api-name">Pexels</div>
+      <span class="api-tag" style="background:#E6F2EA; color:#2E6B42;">ÜCRETSİZ</span>
+    </div>
+    <p style="font-size:9pt;">Unsplash'a güçlü bir alternatif. Atıf zorunlu değildir ama
+    önerilir.</p>
+    <h4>API Anahtarı Nasıl Alınır?</h4>
+    <ol class="step-list">
+      <li><code>pexels.com/api</code> adresine gidin, "Get Started"a tıklayın.</li>
+      <li>Hesap oluşturun veya giriş yapın.</li>
+      <li>Kullanım amacını kısaca yazın (örn. "mobile recipe app").</li>
+      <li>API anahtarı anında üretilir — panodan kopyalayın.</li>
+    </ol>
+    <table>
+      <tr><th>Özellik</th><th>Değer</th></tr>
+      <tr><td>Endpoint</td><td><code>https://api.pexels.com/v1/search</code></td></tr>
+      <tr><td>Kimlik doğrulama</td><td><code>Authorization: {API_KEY}</code></td></tr>
+      <tr><td>Limit</td><td>200 istek/saat · 20.000 istek/ay</td></tr>
+      <tr><td>Maliyet</td><td>Ücretsiz</td></tr>
+      <tr><td>Env değişkeni</td><td><code>PEXELS_API_KEY</code></td></tr>
+    </table>
+  </div>
+
+  <h3>2.3 Pixabay API</h3>
+  <div class="apicard">
+    <div class="api-head">
+      <div class="api-badge" style="background:#2EC66D;">Px</div>
+      <div class="api-name">Pixabay</div>
+      <span class="api-tag" style="background:#E6F2EA; color:#2E6B42;">ÜCRETSİZ</span>
+    </div>
+    <p style="font-size:9pt;">Geniş havuz, kalite değişken. Üçüncül ücretsiz kaynak —
+    diğer ikisi başarısız olduğunda denenir.</p>
+    <h4>API Anahtarı Nasıl Alınır?</h4>
+    <ol class="step-list">
+      <li><code>pixabay.com/api/docs</code> adresine gidin.</li>
+      <li>Pixabay hesabı açın ve giriş yapın.</li>
+      <li>API dokümantasyon sayfasında anahtarınız otomatik gösterilir.</li>
+    </ol>
+    <table>
+      <tr><th>Özellik</th><th>Değer</th></tr>
+      <tr><td>Endpoint</td><td><code>https://pixabay.com/api/</code></td></tr>
+      <tr><td>Kimlik doğrulama</td><td>URL parametresi: <code>?key={API_KEY}</code></td></tr>
+      <tr><td>Limit</td><td>100 istek/dakika</td></tr>
+      <tr><td>Maliyet</td><td>Ücretsiz</td></tr>
+      <tr><td>Env değişkeni</td><td><code>PIXABAY_API_KEY</code></td></tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

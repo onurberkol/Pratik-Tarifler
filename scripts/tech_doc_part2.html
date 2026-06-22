@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Teknik Doküman Bölüm 2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; color:#2D2419; line-height:1.65; font-size:10.5pt; }
+  .page { padding:54px 60px; page-break-after:always; position:relative; min-height:100vh; }
+  .page:last-child { page-break-after:auto; }
+  h2 { font-size:24px; font-weight:800; margin:0 0 6px; padding-bottom:10px; border-bottom:3px solid #D89A1E; }
+  .section-num { display:inline-block; background:#D89A1E; color:#FFF; font-size:13px;
+    font-weight:800; padding:3px 11px; border-radius:7px; margin-bottom:14px; }
+  h3 { font-size:15.5px; font-weight:800; color:#3A6B3A; margin:22px 0 8px; }
+  h4 { font-size:12.5px; font-weight:700; margin:14px 0 5px; }
+  p { margin:7px 0; }
+  ul, ol { margin:8px 0 8px 22px; }
+  li { margin:4px 0; }
+  strong { font-weight:700; color:#1F1810; }
+  code { font-family:'JetBrains Mono',monospace; font-size:9pt; background:#F0EBE2;
+    padding:1.5px 5px; border-radius:4px; color:#A8540E; }
+  pre { background:#2D2419; color:#E8E0D0; padding:14px 16px; border-radius:10px;
+    font-family:'JetBrains Mono',monospace; font-size:8.3pt; line-height:1.55;
+    overflow-x:auto; margin:10px 0; white-space:pre-wrap; }
+  pre .c { color:#8A9B6E; } pre .k { color:#E8B53B; } pre .s { color:#C9A57B; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:9pt; }
+  th { background:#2D2419; color:#FFF; padding:8px 10px; text-align:left; font-weight:700; }
+  td { padding:7px 10px; border-bottom:1px solid #EDE6DC; }
+  tr:nth-child(even) td { background:#FAF7F2; }
+  .box { background:#FBF4E4; border-left:4px solid #D89A1E; padding:12px 16px;
+    border-radius:0 8px 8px 0; margin:12px 0; font-size:9.5pt; }
+  .box.green { background:#EAF1EA; border-color:#5B8C5A; }
+  .box.blue { background:#E8F0F4; border-color:#4A7A9C; }
+  .box .box-title { font-weight:800; margin-bottom:3px; }
+  .running { font-size:9px; color:#B5AB99; font-weight:600; letter-spacing:.5px;
+    text-transform:uppercase; margin-bottom:24px; display:flex; justify-content:space-between; }
+  .stats { display:flex; gap:12px; margin:14px 0; flex-wrap:wrap; }
+  .stat { flex:1; min-width:110px; background:#FAF7F2; border:1.5px solid #EDE6DC;
+    border-radius:12px; padding:14px; text-align:center; }
+  .stat .num { font-size:25px; font-weight:900; color:#D89A1E; }
+  .stat .lbl { font-size:8pt; color:#8A7E6D; font-weight:600; margin-top:2px; }
+  /* Pipeline akış */
+  .flow { display:flex; align-items:stretch; gap:5px; margin:14px 0; flex-wrap:wrap; }
+  .flow-step { flex:1; min-width:80px; background:#FFF; border:1.5px solid #D89A1E;
+    border-radius:9px; padding:9px 6px; text-align:center; }
+  .flow-step .fs-icon { font-size:17px; }
+  .flow-step .fs-title { font-weight:800; font-size:8pt; margin-top:3px; }
+  .flow-step .fs-desc { font-size:7pt; color:#8A7E6D; margin-top:1px; }
+  .flow-conn { display:flex; align-items:center; color:#D89A1E; font-weight:900; }
+</style>
+</head>
+<body>
+
+<!-- ════════════ 3 · VERİTABANI ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>3 · İçerik Veritabanı</span></div>
+  <span class="section-num">BÖLÜM 3</span>
+  <h2>İçerik Veritabanı (Faz 2)</h2>
+
+  <p>
+    Veritabanı, projenin temelidir. 2500 tarif <strong>50 tematik batch</strong> hâlinde
+    üretilmiş, her batch ayrı bir JSON dosyasında tutulmuştur (örn. <code>01_soups_complete.json</code>).
+    Bu modüler yapı, kalite kontrolü ve aşamalı genişlemeyi kolaylaştırır.
+  </p>
+
+  <h3>3.1 Veri Dağılımı</h3>
+  <table>
+    <tr><th>Boyut</th><th>Dağılım</th></tr>
+    <tr><td>Mutfak</td><td>Türk 1077 · Diğer 431 · İtalyan 259 · Akdeniz 233 · +10 dünya mutfağı</td></tr>
+    <tr><td>Zorluk</td><td>Kolay 1606 (%64) · Orta 752 · Zor 142</td></tr>
+    <tr><td>Diyet</td><td>Vejetaryen 1207 · Glutensiz 937 · Vegan 443</td></tr>
+    <tr><td>Erişim</td><td>Ücretsiz 1998 · Premium 502</td></tr>
+    <tr><td>Hız</td><td>Hızlı (≤15dk) 295 · Pratik az malzeme 123</td></tr>
+  </table>
+
+  <h3>3.2 Tarif Veri Şeması</h3>
+  <p>Her tarif aşağıdaki yapıda saklanır. <code>ingredient_tokens</code> alanı, öneri
+  algoritmasının kalbidir — normalize edilmiş malzeme kimlikleridir.</p>
+  <pre><span class="c">// Recipe nesnesi (TypeScript tipi)</span>
+{
+  <span class="k">id</span>: <span class="s">"tr-mercimek-corbasi"</span>,
+  <span class="k">title</span>: <span class="s">"Mercimek Çorbası"</span>,
+  <span class="k">cuisine</span>: <span class="s">"turkish"</span>,
+  <span class="k">difficulty</span>: <span class="s">"easy"</span>,
+  <span class="k">total_time_min</span>: <span class="s">35</span>,
+  <span class="k">servings</span>: <span class="s">4</span>,
+  <span class="k">ingredient_tokens</span>: [<span class="s">"lentil"</span>, <span class="s">"onion"</span>, <span class="s">"carrot"</span>, <span class="s">"flour"</span>],
+  <span class="k">ingredients</span>: [{ <span class="k">name</span>: <span class="s">"kırmızı mercimek"</span>, <span class="k">amount</span>: <span class="s">1</span>, <span class="k">unit</span>: <span class="s">"cup"</span> }, ...],
+  <span class="k">steps</span>: [{ <span class="k">order</span>: <span class="s">1</span>, <span class="k">text</span>: <span class="s">"Soğanı kavurun..."</span> }, ...],
+  <span class="k">diet_tags</span>: [<span class="s">"vegetarian"</span>, <span class="s">"vegan"</span>],
+  <span class="k">meal_type</span>: [<span class="s">"soup"</span>, <span class="s">"lunch"</span>],
+  <span class="k">is_premium</span>: <span class="k">false</span>,
+  <span class="k">image</span>: { <span class="k">full</span>: <span class="s">"..."</span>, <span class="k">thumb</span>: <span class="s">"..."</span>, <span class="k">blur_hash</span>: <span class="s">"L6Pj..."</span> },
+  <span class="k">rating_avg</span>: <span class="s">4.8</span>, <span class="k">rating_count</span>: <span class="s">0</span>, <span class="k">view_count</span>: <span class="s">0</span>
+}</pre>
+
+  <div class="box green">
+    <div class="box-title">✓ Token Sistemi Neden Önemli?</div>
+    Kullanıcı "kırmızı mercimek" yazsa da "mercimek" arasa da aynı <code>lentil</code>
+    token'ına eşlenir. Bu normalize katman, Mod 1/2 öneri algoritmasının doğru çalışmasını
+    sağlar — 60+ malzeme token'ı tanımlıdır.
+  </div>
+
+  <h3>3.3 Çıktı Formatları</h3>
+  <table>
+    <tr><th>Dosya</th><th>Boyut</th><th>Kullanım</th></tr>
+    <tr><td>recipes_db_FULL_tr_v2.json</td><td>8.8 MB</td><td>Ana referans, v2 görsel şeması</td></tr>
+    <tr><td>recipes_db_firestore_tr.json</td><td>5.9 MB</td><td>Firestore import formatı</td></tr>
+    <tr><td>recipes_db_ndjson_tr.ndjson</td><td>4.0 MB</td><td>Satır bazlı toplu import</td></tr>
+  </table>
+</div>
+
+<!-- ════════════ 4 · FIREBASE BACKEND ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>4 · Firebase Backend</span></div>
+  <span class="section-num">BÖLÜM 4</span>
+  <h2>Firebase Backend (Faz 3.1)</h2>
+
+  <h3>4.1 Firestore Koleksiyon Yapısı</h3>
+  <p>
+    Tarifler her dil için ayrı koleksiyonda tutulur (<code>recipes_tr</code>,
+    <code>recipes_en</code>, ...). Bu, dil bazlı sorgu performansını artırır. Görseller
+    ise dilden bağımsızdır — tüm diller aynı görsel URL'sini paylaşır.
+  </p>
+  <pre><span class="c">// Firestore koleksiyon ağacı</span>
+recipes_tr/{recipeId}          <span class="c">// 2500 doküman, dil başına</span>
+recipes_en/{recipeId}
+  ...
+users/{userId}
+  ├── favorites/{recipeId}
+  ├── scan_history/{scanId}
+  └── quotas/{date}            <span class="c">// günlük scan limiti takibi</span>
+ratings/{userId}_{recipeId}    <span class="c">// kullanıcı puanları</span>
+analytics_events/{eventId}     <span class="c">// olay günlüğü</span></pre>
+
+  <div class="box blue">
+    <div class="box-title">📊 13 Bileşik İndeks</div>
+    Firestore çoklu-alan sorguları için bileşik indeks gerektirir. Örnek:
+    <code>cuisine + rating_avg</code>, <code>meal_type + total_time_min</code>,
+    <code>ingredient_tokens + image_status</code>. Tümü <code>firestore.indexes.json</code>'da
+    tanımlıdır ve <code>firebase deploy</code> ile yüklenir.
+  </div>
+
+  <h3>4.2 Cloud Functions</h3>
+  <p>11 fonksiyon üç kategoriye ayrılır:</p>
+  <table>
+    <tr><th>Tip</th><th>Fonksiyon</th><th>Görev</th></tr>
+    <tr><td>Callable</td><td>getRecipeRecommendations</td><td>3 modun ana algoritması</td></tr>
+    <tr><td>Callable</td><td>analyzePantryPhoto</td><td>Vision API ile fotoğraf analizi</td></tr>
+    <tr><td>Callable</td><td>scanProductLabel</td><td>OCR — ürün etiketi tarama</td></tr>
+    <tr><td>Callable</td><td>getSimilarRecipes</td><td>Embedding tabanlı benzer tarif</td></tr>
+    <tr><td>Callable</td><td>submitRating, incrementViewCount</td><td>Kullanıcı etkileşimleri</td></tr>
+    <tr><td>Trigger</td><td>onRatingChange</td><td>Puan ortalaması yeniden hesabı</td></tr>
+    <tr><td>Trigger</td><td>onFavoriteChange</td><td>Favori sayacı senkronizasyonu</td></tr>
+    <tr><td>Scheduled</td><td>cleanupPantryScans</td><td>24s+ eski fotoğrafları siler</td></tr>
+    <tr><td>Scheduled</td><td>notifyTrialExpiringSoon</td><td>Deneme bitimi bildirimi</td></tr>
+  </table>
+
+  <h3>4.3 Maliyet Profili</h3>
+  <div class="stats">
+    <div class="stat"><div class="num">$3</div><div class="lbl">Öneri fonksiyonu/ay</div></div>
+    <div class="stat"><div class="num">$2</div><div class="lbl">Vision API/ay</div></div>
+    <div class="stat"><div class="num">$1</div><div class="lbl">Diğer fonksiyonlar/ay</div></div>
+    <div class="stat"><div class="num">~$6</div><div class="lbl">Toplam (10K MAU)</div></div>
+  </div>
+  <p style="font-size:9pt; color:#8A7E6D;">
+    Firebase ücretsiz katmanı (2M çağrı/ay) çoğu senaryoda yeterlidir. Maliyet asıl
+    olarak Cloud Storage bant genişliği ve Vision API çağrılarından kaynaklanır.
+  </p>
+</div>
+
+<!-- ════════════ 5 · GÖRSEL PIPELINE ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>5 · Görsel Üretim Pipeline'ı</span></div>
+  <span class="section-num">BÖLÜM 5</span>
+  <h2>Görsel Üretim Pipeline'ı (Faz 3.2)</h2>
+
+  <p>
+    2500 tarifin her birine yüksek kaliteli bir görsel gerekir. Bunları tek tek manuel
+    bulmak haftalar sürerdi. Çözüm: <strong>otomatik batch (toplu) işleme pipeline'ı</strong>.
+    Bu bölüm, görsel içeriğin nasıl üretildiğini adım adım açıklar.
+  </p>
+
+  <h3>5.1 Hibrit Kaynak Stratejisi</h3>
+  <p>
+    Pipeline, dört görsel kaynağını <strong>öncelik sırasıyla</strong> dener. Ücretsiz stok
+    fotoğraf kaynakları önce denenir; hiçbiri yeterli kalitede sonuç vermezse, son çare
+    olarak yapay zeka ile görsel üretilir.
+  </p>
+
+  <div class="flow">
+    <div class="flow-step"><div class="fs-icon">1️⃣</div><div class="fs-title">Unsplash</div><div class="fs-desc">Ücretsiz, yüksek kalite</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step"><div class="fs-icon">2️⃣</div><div class="fs-title">Pexels</div><div class="fs-desc">Ücretsiz, yedek</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step"><div class="fs-icon">3️⃣</div><div class="fs-title">Pixabay</div><div class="fs-desc">Ücretsiz, son şans</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step" style="border-color:#5B8C5A;"><div class="fs-icon">4️⃣</div><div class="fs-title">DALL-E 3</div><div class="fs-desc">AI üretim, $0.04/görsel</div></div>
+  </div>
+
+  <div class="box">
+    <div class="box-title">💡 Neden Hibrit?</div>
+    Türk yöresel yemekleri (örn. "perde pilavı", "kuru fasulye") stok fotoğraf
+    sitelerinde nadiren bulunur. Bu tarifler için DALL-E 3, "geleneksel Türk sunumu"
+    yönergesiyle özgün görsel üretir. Yaygın yemekler (pizza, salata) ise ücretsiz
+    kaynaklardan gelir — bu, maliyeti minimumda tutar.
+  </div>
+
+  <h3>5.2 Tek Tarif İçin İşlem Adımları</h3>
+  <p>Pipeline her tarif için şu 6 adımı uygular:</p>
+  <ol>
+    <li><strong>Arama:</strong> Tarifin <code>search_terms</code> alanından sorgu üretilir
+    (örn. <code>"lentil Turkish food"</code>) ve kaynaklar sırayla taranır.</li>
+    <li><strong>Kalite skoru:</strong> Bulunan görsel çözünürlük, en-boy oranı ve alaka
+    açısından puanlanır. Skor <code>≥ 0.70</code> ise kabul edilir.</li>
+    <li><strong>AI yedek:</strong> Hiçbir kaynak eşik değeri geçemezse DALL-E 3 devreye girer.</li>
+    <li><strong>Dönüştürme:</strong> Görsel <code>1200×900 WebP</code> (kalite 85) +
+    <code>400×300</code> thumbnail'e çevrilir.</li>
+    <li><strong>BlurHash:</strong> ~20 karakterlik bulanık placeholder string üretilir
+    (progressif yükleme için).</li>
+    <li><strong>Kayıt:</strong> Sonuç <code>results.json</code>'a yazılır; görseller
+    Storage'a yüklenmeye hazır hâle gelir.</li>
+  </ol>
+
+  <pre><span class="c"># Pipeline çalıştırma komutları</span>
+<span class="c"># 1. Dry-run — API çağrısı yapmadan simülasyon (test)</span>
+python image_pipeline_v2.py --dry-run
+
+<span class="c"># 2. Pilot batch — 50 tarif, 13 mutfak temsili</span>
+python image_pipeline_v2.py --input pilot_batch.json --output ./output/
+
+<span class="c"># 3. Tek tarif testi</span>
+python image_pipeline_v2.py --recipe-id tr-mercimek-corbasi
+
+<span class="c"># 4. Sadece AI — önceki başarısız işleri yeniden dene</span>
+python image_pipeline_v2.py --ai-only --input failed_jobs.json</pre>
+</div>
+
+<!-- ════════════ 5 devam · BATCH SİSTEMİ ════════════ -->
+<div class="page">
+  <div class="running"><span>Pratik Tarifler — Teknik Dokümantasyon</span><span>5 · Görsel Üretim Pipeline'ı</span></div>
+
+  <h3>5.3 Batch İş Kuyruğu Yönetimi</h3>
+  <p>
+    2500 görsel tek seferde işlenmez. <code>image_jobs.json</code> dosyası, her tarif için
+    bir <strong>iş kaydı</strong> tutar. Bu kayıt durumu (<code>pending</code>,
+    <code>processing</code>, <code>completed</code>, <code>failed</code>) ve deneme
+    geçmişini izler. Pipeline kesilse bile kaldığı yerden devam eder.
+  </p>
+
+  <pre><span class="c">// image_jobs.json — tek iş kaydı yapısı</span>
+{
+  <span class="k">job_id</span>: <span class="s">"img_job_tr-mercimek-corbasi"</span>,
+  <span class="k">recipe_id</span>: <span class="s">"tr-mercimek-corbasi"</span>,
+  <span class="k">status</span>: <span class="s">"pending"</span>,         <span class="c">// pending|processing|completed|failed</span>
+  <span class="k">attempts</span>: [],                <span class="c">// her denemenin günlüğü</span>
+  <span class="k">priority</span>: <span class="s">2</span>,                <span class="c">// 1=premium öncelikli</span>
+  <span class="k">requires_review</span>: <span class="k">false</span>,     <span class="c">// AI üretimi insan onayı bekler</span>
+  <span class="k">search_terms</span>: {
+    <span class="k">primary_keywords</span>: <span class="s">"lentil"</span>,
+    <span class="k">cuisine_keyword</span>: <span class="s">"Turkish food"</span>,
+    <span class="k">fallback_query</span>: <span class="s">"lentil Turkish food"</span>
+  }
+}</pre>
+
+  <h3>İş Akışı Diyagramı</h3>
+  <div class="flow">
+    <div class="flow-step"><div class="fs-icon">📋</div><div class="fs-title">Kuyruk Yükle</div><div class="fs-desc">pending işleri al</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step"><div class="fs-icon">⚡</div><div class="fs-title">Paralel İşle</div><div class="fs-desc">asyncio, 5 eşzamanlı</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step"><div class="fs-icon">🖼️</div><div class="fs-title">Görsel Üret</div><div class="fs-desc">kaynak zinciri</div></div>
+    <div class="flow-conn">→</div>
+    <div class="flow-step"><div class="fs-icon">💾</div><div class="fs-title">Durum Yaz</div><div class="fs-desc">jobs.json güncelle</div></div>
+  </div>
+
+  <div class="box green">
+    <div class="box-title">⚡ Paralel İşleme</div>
+    Pipeline <code>asyncio</code> + <code>aiohttp</code> ile aynı anda 5 görsel işler.
+    Bu, API oran limitlerini aşmadan ~2500 görseli birkaç saatte tamamlar. Tek-iş-parçacıklı
+    yaklaşıma göre ~5x hızlanma sağlar.
+  </div>
+
+  <h3>5.4 Maliyet Analizi</h3>
+  <table>
+    <tr><th>Senaryo</th><th>Ücretsiz kaynak</th><th>DALL-E 3</th><th>Toplam</th></tr>
+    <tr><td>İyimser (%80 ücretsiz)</td><td>2000 görsel · $0</td><td>500 · $20</td><td><strong>~$20</strong></td></tr>
+    <tr><td>Gerçekçi (%60 ücretsiz)</td><td>1500 görsel · $0</td><td>1000 · $40</td><td><strong>~$40</strong></td></tr>
+    <tr><td>Kötümser (%40 ücretsiz)</td><td>1000 görsel · $0</td><td>1500 · $60</td><td><strong>~$60</strong></td></tr>
+  </table>
+  <p style="font-size:9pt; color:#8A7E6D;">
+    Tüm 2500 tarif için toplam görsel maliyeti <strong>$40-60</strong> aralığındadır.
+    Ücretsiz stok kaynaklar maliyeti dramatik biçimde düşürür.
+  </p>
+
+  <h3>5.5 Storage Yapısı</h3>
+  <pre><span class="c"># Cloud Storage klasör düzeni — diller görselleri PAYLAŞIR</span>
+gs://pratik-tarifler-{env}/recipes/{lang}/full/{recipe_id}.webp
+gs://pratik-tarifler-{env}/recipes/{lang}/thumb/{recipe_id}.webp
+<span class="c"># Not: lang segmenti olsa da tüm diller aynı dosyaya işaret eder</span>
+<span class="c"># — görsel dilden bağımsızdır, çeviri sadece metni etkiler</span></pre>
+
+  <div class="box blue">
+    <div class="box-title">🔄 Upload Adımı</div>
+    Görseller üretildikten sonra <code>upload_to_firebase.py</code> scripti, WebP
+    dosyalarını Cloud Storage'a yükler ve her tarifin Firestore dokümanındaki
+    <code>image</code> alanını günceller (<code>image_status: "ready"</code>).
+  </div>
+</div>
+
+</body>
+</html>
