@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Πες μας τι έχεις. Εμείς βρίσκουμε τη συνταγή."
+  },
+  "auth": {
+    "sign_in": "Σύνδεση",
+    "sign_up": "Εγγραφή",
+    "sign_out": "Αποσύνδεση",
+    "email": "E-mail",
+    "password": "Κωδικός",
+    "continue_google": "Συνέχεια με Google",
+    "continue_apple": "Συνέχεια με Apple",
+    "continue_anonymous": "Συνέχεια ως επισκέπτης",
+    "or": "ή",
+    "have_account": "Έχεις λογαριασμό;",
+    "no_account": "Δεν έχεις λογαριασμό;",
+    "forgot_password": "Ξέχασα τον κωδικό",
+    "errors": {
+      "invalid_email": "Εισάγετε έγκυρο email.",
+      "weak_password": "Ο κωδικός πρέπει να έχει τουλάχιστον 8 χαρακτήρες.",
+      "wrong_credentials": "Λάθος email ή κωδικός."
+    }
+  },
+  "home": {
+    "greeting": "Γεια σου {{name}}",
+    "greeting_guest": "Γεια σου",
+    "prompt": "Τι μαγειρεύουμε σήμερα;",
+    "section_title": "ΤΙ ΕΧΕΙΣ ΣΤΟ ΨΥΓΕΙΟ;",
+    "section_subtitle": "Πρόσθεσε 3-5 υλικά",
+    "input_placeholder": "Πρόσθεσε υλικό...",
+    "cta": "Βρες τη συνταγή",
+    "popular_categories": "Δημοφιλείς κατηγορίες",
+    "cat_quick": "Γρήγορα γεύματα",
+    "cat_traditional": "Παραδοσιακά",
+    "cat_desserts": "Επιδόρπια",
+    "cat_healthy": "Υγιεινές συνταγές",
+    "tip_title": "ΣΥΜΒΟΥΛΗ",
+    "tip_body": "Για καλύτερα αποτελέσματα, πρόσθεσε τουλάχιστον 3 υλικά."
+  },
+  "results": {
+    "title": "Συνταγές που ταιριάζουν",
+    "count": "{{count}} συνταγές βρέθηκαν",
+    "match": "{{pct}}% Ταίριασμα",
+    "empty": "Δεν βρέθηκαν συνταγές με αυτά τα υλικά.",
+    "filters": {
+      "all": "Όλα",
+      "quick": "<30 λεπτά",
+      "vegan": "Vegan",
+      "vegetarian": "Χορτοφαγικό",
+      "gluten_free": "Χωρίς γλουτένη",
+      "low_carb": "Λίγοι υδατάνθρακες",
+      "easy": "Εύκολο"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Υλικά",
+    "tab_steps": "Βήματα",
+    "tab_reviews": "Κριτικές",
+    "minutes": "λεπτά",
+    "servings": "Για {{count}} άτομα",
+    "difficulty": "Εύκολο",
+    "difficulty_easy": "Εύκολο",
+    "difficulty_medium": "Μέτριο",
+    "difficulty_hard": "Δύσκολο",
+    "start_cooking": "Ξεκίνα το μαγείρεμα",
+    "missing_ingredients": "Υλικά που λείπουν",
+    "you_have": "Έχεις",
+    "you_need": "Χρειάζεσαι",
+    "add_to_shopping": "Πρόσθεσε στη λίστα αγορών"
+  },
+  "cooking": {
+    "step": "ΒΗΜΑ {{current}} / {{total}}",
+    "next": "Επόμενο",
+    "prev": "Προηγούμενο",
+    "finish": "Τέλος",
+    "timer": "ΧΡΟΝΟΜΕΤΡΟ",
+    "voice_hint": "Φωνή: \"Επόμενο\"",
+    "completed": "Ολοκλήρωσες τη συνταγή!",
+    "rate_recipe": "Βαθμολόγησε τη συνταγή"
+  },
+  "favorites": {
+    "title": "Τα αγαπημένα μου",
+    "count": "{{count}} αποθηκευμένες συνταγές",
+    "search_placeholder": "Αναζήτηση στα αγαπημένα...",
+    "tab_all": "Όλα",
+    "tab_collections": "Συλλογές",
+    "tab_recent": "Πρόσφατα",
+    "empty": "Καμία αγαπημένη ακόμα. Πάτα την καρδιά σε μια συνταγή.",
+    "limit_free": "Δωρεάν: έως 10 αγαπημένες"
+  },
+  "shopping": {
+    "title": "Λίστα αγορών",
+    "subtitle": "{{count}} είδη • {{recipes}} συνταγές",
+    "cat_produce": "Φρούτα & Λαχανικά",
+    "cat_meat": "Κρέας & Γαλακτοκομικά",
+    "cat_pantry": "Αποθήκη",
+    "add_manually": "Προσθήκη χειροκίνητα",
+    "clear_checked": "Διαγραφή τσεκαρισμένων",
+    "premium_only": "Premium λειτουργία"
+  },
+  "premium": {
+    "title": "Αναβάθμιση σε Premium",
+    "subtitle": "Ξεκλείδωσε την κουζίνα",
+    "feature_recipes": "Όλες οι 500+ συνταγές",
+    "feature_filters": "Διατροφικά φίλτρα",
+    "feature_shopping": "Έξυπνη λίστα αγορών",
+    "feature_favorites": "Απεριόριστα αγαπημένα",
+    "feature_nutrition": "Διατροφικά δεδομένα",
+    "feature_voice": "Προχωρημένη φωνητική εντολή",
+    "monthly": "Μηνιαίο",
+    "yearly": "Ετήσιο",
+    "price_monthly": "4,99 €/μήνα",
+    "price_yearly": "39,99 €/έτος",
+    "save_badge": "ΕΞΟΙΚΟΝΟΜΗΣΕ 33%",
+    "trial": "7 ημέρες δωρεάν",
+    "restore": "Επαναφορά αγορών",
+    "terms": "Ακύρωσε όποτε θέλεις."
+  },
+  "profile": {
+    "title": "Προφίλ",
+    "stats_cooked": "Μαγειρεμένες",
+    "stats_favorites": "Αγαπημένα",
+    "stats_streak": "Σερί ημερών",
+    "settings": "Ρυθμίσεις",
+    "language": "Γλώσσα",
+    "notifications": "Ειδοποιήσεις",
+    "premium": "Premium",
+    "manage_account": "Διαχείριση λογαριασμού",
+    "help": "Βοήθεια & Υποστήριξη",
+    "about": "Σχετικά",
+    "logout": "Αποσύνδεση",
+    "delete_account": "Διαγραφή λογαριασμού"
+  },
+  "language": {
+    "title": "Γλώσσα",
+    "subtitle": "Διαθέσιμο σε 13 γλώσσες",
+    "available": "Διαθέσιμες γλώσσες"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Ακύρωση",
+    "save": "Αποθήκευση",
+    "delete": "Διαγραφή",
+    "edit": "Επεξεργασία",
+    "back": "Πίσω",
+    "loading": "Φόρτωση...",
+    "error": "Κάτι πήγε στραβά",
+    "retry": "Δοκίμασε ξανά",
+    "premium_badge": "PREMIUM"
+  }
+}

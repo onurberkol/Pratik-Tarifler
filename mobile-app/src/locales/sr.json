@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Reci nam šta imaš. Mi ćemo naći recept."
+  },
+  "auth": {
+    "sign_in": "Prijava",
+    "sign_up": "Registracija",
+    "sign_out": "Odjava",
+    "email": "E-mail",
+    "password": "Lozinka",
+    "continue_google": "Nastavi sa Google",
+    "continue_apple": "Nastavi sa Apple",
+    "continue_anonymous": "Nastavi kao gost",
+    "or": "ili",
+    "have_account": "Imaš nalog?",
+    "no_account": "Nemaš nalog?",
+    "forgot_password": "Zaboravljena lozinka",
+    "errors": {
+      "invalid_email": "Unesi važeći e-mail.",
+      "weak_password": "Lozinka mora imati bar 8 karaktera.",
+      "wrong_credentials": "Pogrešan e-mail ili lozinka."
+    }
+  },
+  "home": {
+    "greeting": "Zdravo {{name}}",
+    "greeting_guest": "Zdravo",
+    "prompt": "Šta kuvamo danas?",
+    "section_title": "ŠTA IMAŠ U FRIŽIDERU?",
+    "section_subtitle": "Dodaj 3-5 sastojaka",
+    "input_placeholder": "Dodaj sastojak...",
+    "cta": "Pronađi recept",
+    "popular_categories": "Popularne kategorije",
+    "cat_quick": "Brza jela",
+    "cat_traditional": "Tradicionalna",
+    "cat_desserts": "Slatkiši",
+    "cat_healthy": "Zdravi recepti",
+    "tip_title": "SAVET",
+    "tip_body": "Za bolje rezultate, dodaj bar 3 sastojka."
+  },
+  "results": {
+    "title": "Odgovarajući recepti",
+    "count": "{{count}} recepata pronađeno",
+    "match": "{{pct}}% Poklapanje",
+    "empty": "Nema recepata sa ovim sastojcima.",
+    "filters": {
+      "all": "Sve",
+      "quick": "<30 min",
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarijansko",
+      "gluten_free": "Bez glutena",
+      "low_carb": "Malo ugljenih hidrata",
+      "easy": "Lako"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Sastojci",
+    "tab_steps": "Koraci",
+    "tab_reviews": "Recenzije",
+    "minutes": "min",
+    "servings": "Za {{count}} osoba",
+    "difficulty": "Lako",
+    "difficulty_easy": "Lako",
+    "difficulty_medium": "Srednje",
+    "difficulty_hard": "Teško",
+    "start_cooking": "Počni kuvanje",
+    "missing_ingredients": "Sastojci koji nedostaju",
+    "you_have": "Imaš",
+    "you_need": "Treba ti",
+    "add_to_shopping": "Dodaj u listu kupovine"
+  },
+  "cooking": {
+    "step": "KORAK {{current}} / {{total}}",
+    "next": "Sledeće",
+    "prev": "Prethodno",
+    "finish": "Završi",
+    "timer": "TAJMER",
+    "voice_hint": "Glas: \"Sledeće\"",
+    "completed": "Recept završen!",
+    "rate_recipe": "Oceni recept"
+  },
+  "favorites": {
+    "title": "Moji omiljeni",
+    "count": "{{count}} sačuvanih recepata",
+    "search_placeholder": "Pretraga omiljenih...",
+    "tab_all": "Sve",
+    "tab_collections": "Kolekcije",
+    "tab_recent": "Skoro",
+    "empty": "Još nema omiljenih. Pritisni srce na receptu.",
+    "limit_free": "Besplatno: do 10 omiljenih"
+  },
+  "shopping": {
+    "title": "Lista kupovine",
+    "subtitle": "{{count}} stavki • {{recipes}} recepata",
+    "cat_produce": "Voće i povrće",
+    "cat_meat": "Meso i mlečno",
+    "cat_pantry": "Ostava",
+    "add_manually": "Dodaj ručno",
+    "clear_checked": "Obriši označene",
+    "premium_only": "Premium funkcija"
+  },
+  "premium": {
+    "title": "Pređi na Premium",
+    "subtitle": "Otključaj punu kuhinju",
+    "feature_recipes": "Svih 500+ recepata",
+    "feature_filters": "Dijetalni filteri",
+    "feature_shopping": "Pametna lista kupovine",
+    "feature_favorites": "Neograničeni omiljeni",
+    "feature_nutrition": "Puni nutritivni podaci",
+    "feature_voice": "Napredni glasovni režim",
+    "monthly": "Mesečno",
+    "yearly": "Godišnje",
+    "price_monthly": "599 RSD/mes",
+    "price_yearly": "4 790 RSD/god",
+    "save_badge": "UŠTEDI 33%",
+    "trial": "7 dana besplatno",
+    "restore": "Vrati kupovine",
+    "terms": "Otkaži bilo kada."
+  },
+  "profile": {
+    "title": "Profil",
+    "stats_cooked": "Skuvano",
+    "stats_favorites": "Omiljeni",
+    "stats_streak": "Dana zaredom",
+    "settings": "Podešavanja",
+    "language": "Jezik",
+    "notifications": "Obaveštenja",
+    "premium": "Premium",
+    "manage_account": "Upravljaj nalogom",
+    "help": "Pomoć i podrška",
+    "about": "O aplikaciji",
+    "logout": "Odjava",
+    "delete_account": "Obriši nalog"
+  },
+  "language": {
+    "title": "Jezik",
+    "subtitle": "Dostupno na 13 jezika",
+    "available": "Dostupni jezici"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Otkaži",
+    "save": "Sačuvaj",
+    "delete": "Obriši",
+    "edit": "Izmeni",
+    "back": "Nazad",
+    "loading": "Učitavanje...",
+    "error": "Nešto je pošlo po zlu",
+    "retry": "Pokušaj ponovo",
+    "premium_badge": "PREMIUM"
+  }
+}

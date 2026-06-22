@@ -1,0 +1,67 @@
+{
+  "id": "pasta-pomodoro",
+  "ingredient_tokens": ["pasta", "tomato", "garlic", "olive_oil", "basil", "salt", "cheese"],
+  "primary_ingredients": ["pasta", "tomato"],
+  "total_time_min": 20,
+  "active_time_min": 15,
+  "servings": 2,
+  "difficulty": "easy",
+  "cuisine": "italian",
+  "diet_tags": ["vegetarian"],
+  "meal_type": ["lunch", "dinner"],
+  "hero_image_url": "https://firebasestorage.googleapis.com/v0/b/pratik-tarifler.appspot.com/o/recipes%2Fpasta-pomodoro.jpg?alt=media",
+  "is_premium": false,
+  "rating_avg": 4.7,
+  "rating_count": 156,
+  "schema_version": 1,
+  "i18n": {
+    "tr": {
+      "title": "Domatesli Makarna",
+      "description": "İtalyan mutfağının basit ve lezzetli klasiği. 20 dakikada hazır.",
+      "ingredients": [
+        { "token": "pasta", "amount": "250 g", "note": "spagetti veya penne" },
+        { "token": "tomato", "amount": "4 adet", "note": "olgun" },
+        { "token": "garlic", "amount": "3 diş", "note": "ezilmiş" },
+        { "token": "olive_oil", "amount": "3 yk", "note": "sızma" },
+        { "token": "basil", "amount": "10 yaprak", "note": "taze fesleğen" },
+        { "token": "salt", "amount": "tatma göre", "note": "" },
+        { "token": "cheese", "amount": "50 g", "note": "rendelenmiş parmesan" }
+      ],
+      "steps": [
+        { "order": 1, "title": "Makarnayı haşla", "body": "Bol tuzlu kaynar suya makarnayı atın. Paketteki süreye göre al dente pişirin.", "timer_sec": 600 },
+        { "order": 2, "title": "Sarımsağı kavur", "body": "Tavada zeytinyağını ısıtın. Sarımsağı renk almadan 1 dakika kavurun.", "timer_sec": 60 },
+        { "order": 3, "title": "Domatesi ekle", "body": "Soyulmuş ve doğranmış domatesleri ekleyin. 8-10 dakika koyulaşana kadar pişirin.", "timer_sec": 540 },
+        { "order": 4, "title": "Makarnayı ekle", "body": "Süzülmüş makarnayı sosa katın. Bir kepçe pişirme suyu ekleyip karıştırın.", "timer_sec": 120 },
+        { "order": 5, "title": "Servis", "body": "Fesleğen yapraklarını ve parmesanı ekleyin. Sıcak servis edin.", "timer_sec": 0 }
+      ],
+      "tips": [
+        "Makarnayı asla durulamayın - nişastalı su sosu güzelleştirir.",
+        "Sosun son dakikada bir tatlı kaşığı pişirme suyu ile inceltin."
+      ]
+    },
+    "en": {
+      "title": "Pasta Pomodoro",
+      "description": "A simple, classic Italian dish. Ready in 20 minutes.",
+      "ingredients": [
+        { "token": "pasta", "amount": "250 g", "note": "spaghetti or penne" },
+        { "token": "tomato", "amount": "4 medium", "note": "ripe" },
+        { "token": "garlic", "amount": "3 cloves", "note": "crushed" },
+        { "token": "olive_oil", "amount": "3 tbsp", "note": "extra virgin" },
+        { "token": "basil", "amount": "10 leaves", "note": "fresh" },
+        { "token": "salt", "amount": "to taste", "note": "" },
+        { "token": "cheese", "amount": "50 g", "note": "grated parmesan" }
+      ],
+      "steps": [
+        { "order": 1, "title": "Boil the pasta", "body": "Cook pasta in plenty of salted boiling water until al dente per package.", "timer_sec": 600 },
+        { "order": 2, "title": "Sauté garlic", "body": "Heat olive oil in a pan. Sauté garlic for 1 minute without browning.", "timer_sec": 60 },
+        { "order": 3, "title": "Add tomatoes", "body": "Add peeled, diced tomatoes. Cook 8-10 minutes until thickened.", "timer_sec": 540 },
+        { "order": 4, "title": "Combine", "body": "Toss drained pasta into the sauce with a ladle of cooking water.", "timer_sec": 120 },
+        { "order": 5, "title": "Serve", "body": "Top with basil and parmesan. Serve immediately.", "timer_sec": 0 }
+      ],
+      "tips": [
+        "Never rinse the pasta — the starchy water improves the sauce.",
+        "Loosen the sauce with a splash of pasta water at the end."
+      ]
+    }
+  }
+}

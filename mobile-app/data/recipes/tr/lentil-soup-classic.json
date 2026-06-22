@@ -1,0 +1,69 @@
+{
+  "id": "lentil-soup-classic",
+  "ingredient_tokens": ["lentil", "onion", "carrot", "potato", "olive_oil", "salt", "lemon", "cumin"],
+  "primary_ingredients": ["lentil"],
+  "total_time_min": 40,
+  "active_time_min": 15,
+  "servings": 4,
+  "difficulty": "easy",
+  "cuisine": "turkish",
+  "diet_tags": ["vegan", "vegetarian", "gluten_free"],
+  "meal_type": ["lunch", "dinner"],
+  "hero_image_url": "https://firebasestorage.googleapis.com/v0/b/pratik-tarifler.appspot.com/o/recipes%2Flentil-soup.jpg?alt=media",
+  "is_premium": false,
+  "rating_avg": 4.9,
+  "rating_count": 412,
+  "schema_version": 1,
+  "i18n": {
+    "tr": {
+      "title": "Klasik Mercimek Çorbası",
+      "description": "Sıcak, doyurucu ve sağlıklı. Türk mutfağının vazgeçilmez çorbası.",
+      "ingredients": [
+        { "token": "lentil", "amount": "1 su bardağı", "note": "kırmızı mercimek" },
+        { "token": "onion", "amount": "1 adet", "note": "doğranmış" },
+        { "token": "carrot", "amount": "1 adet", "note": "doğranmış" },
+        { "token": "potato", "amount": "1 adet", "note": "küçük, doğranmış" },
+        { "token": "olive_oil", "amount": "2 yk", "note": "" },
+        { "token": "salt", "amount": "1 tatlı kaşığı", "note": "tuz" },
+        { "token": "cumin", "amount": "1 çay kaşığı", "note": "kimyon" },
+        { "token": "lemon", "amount": "1 adet", "note": "servis için" }
+      ],
+      "steps": [
+        { "order": 1, "title": "Sebzeleri kavur", "body": "Tencerede zeytinyağını ısıtın. Soğan, havuç ve patatesi 5 dakika kavurun.", "timer_sec": 300 },
+        { "order": 2, "title": "Mercimeği ekle", "body": "Yıkanmış mercimeği ekleyin. Üzerini geçecek kadar su koyun.", "timer_sec": 60 },
+        { "order": 3, "title": "Pişir", "body": "Kaynamaya başlayınca kısık ateşte mercimekler dağılana kadar pişirin.", "timer_sec": 1500 },
+        { "order": 4, "title": "Blenderdan geçir", "body": "El blenderı ile pürüzsüz olana kadar çırpın. Tuz ve kimyonu ekleyin.", "timer_sec": 60 },
+        { "order": 5, "title": "Servis et", "body": "Sıcak servis edin. Yanında limon dilimleri sunun.", "timer_sec": 0 }
+      ],
+      "tips": [
+        "Daha kremamsı için pişerken bir tatlı kaşığı pirinç ekleyebilirsiniz.",
+        "Üzerine eritilmiş tereyağı + pul biber sosu gezdirerek servis edin."
+      ]
+    },
+    "en": {
+      "title": "Classic Lentil Soup",
+      "description": "Warm, hearty and healthy. A staple of Turkish cuisine.",
+      "ingredients": [
+        { "token": "lentil", "amount": "1 cup", "note": "red lentils" },
+        { "token": "onion", "amount": "1 medium", "note": "chopped" },
+        { "token": "carrot", "amount": "1 medium", "note": "chopped" },
+        { "token": "potato", "amount": "1 small", "note": "diced" },
+        { "token": "olive_oil", "amount": "2 tbsp", "note": "" },
+        { "token": "salt", "amount": "1 tsp", "note": "to taste" },
+        { "token": "cumin", "amount": "1 tsp", "note": "ground" },
+        { "token": "lemon", "amount": "1 wedge", "note": "for serving" }
+      ],
+      "steps": [
+        { "order": 1, "title": "Sauté vegetables", "body": "Heat olive oil in a pot. Sauté onion, carrot and potato for 5 minutes.", "timer_sec": 300 },
+        { "order": 2, "title": "Add lentils", "body": "Add washed lentils. Cover with water about 5 cm above the contents.", "timer_sec": 60 },
+        { "order": 3, "title": "Simmer", "body": "Once boiling, reduce heat and simmer until lentils break down completely.", "timer_sec": 1500 },
+        { "order": 4, "title": "Blend", "body": "Blend with an immersion blender until smooth. Add salt and cumin.", "timer_sec": 60 },
+        { "order": 5, "title": "Serve", "body": "Serve hot with lemon wedges on the side.", "timer_sec": 0 }
+      ],
+      "tips": [
+        "Add a teaspoon of rice while cooking for a creamier texture.",
+        "Top with melted butter and red pepper flakes for traditional finishing."
+      ]
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Sag uns, was du hast. Wir finden das Rezept."
+  },
+  "auth": {
+    "sign_in": "Anmelden",
+    "sign_up": "Registrieren",
+    "sign_out": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "continue_google": "Mit Google fortfahren",
+    "continue_apple": "Mit Apple fortfahren",
+    "continue_anonymous": "Als Gast fortfahren",
+    "or": "oder",
+    "have_account": "Hast du ein Konto?",
+    "no_account": "Noch kein Konto?",
+    "forgot_password": "Passwort vergessen",
+    "errors": {
+      "invalid_email": "Gib eine gültige E-Mail ein.",
+      "weak_password": "Passwort muss mindestens 8 Zeichen lang sein.",
+      "wrong_credentials": "E-Mail oder Passwort ist falsch."
+    }
+  },
+  "home": {
+    "greeting": "Hallo {{name}}",
+    "greeting_guest": "Hallo",
+    "prompt": "Was kochen wir heute?",
+    "section_title": "WAS HAST DU IM KÜHLSCHRANK?",
+    "section_subtitle": "Füge 3-5 Zutaten hinzu",
+    "input_placeholder": "Zutat hinzufügen...",
+    "cta": "Rezept finden",
+    "popular_categories": "Beliebte Kategorien",
+    "cat_quick": "Schnelle Gerichte",
+    "cat_traditional": "Traditionelle Gerichte",
+    "cat_desserts": "Desserts",
+    "cat_healthy": "Gesunde Rezepte",
+    "tip_title": "TIPP",
+    "tip_body": "Für bessere Treffer mindestens 3 Zutaten hinzufügen."
+  },
+  "results": {
+    "title": "Passende Rezepte",
+    "count": "{{count}} Rezepte gefunden",
+    "match": "{{pct}}% Übereinstimmung",
+    "empty": "Keine Rezepte passen zu diesen Zutaten.",
+    "filters": {
+      "all": "Alle",
+      "quick": "<30 Min",
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarisch",
+      "gluten_free": "Glutenfrei",
+      "low_carb": "Low-Carb",
+      "easy": "Einfach"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Zutaten",
+    "tab_steps": "Schritte",
+    "tab_reviews": "Bewertungen",
+    "minutes": "Min",
+    "servings": "Für {{count}} Personen",
+    "difficulty": "Einfach",
+    "difficulty_easy": "Einfach",
+    "difficulty_medium": "Mittel",
+    "difficulty_hard": "Schwer",
+    "start_cooking": "Kochen beginnen",
+    "missing_ingredients": "Fehlende Zutaten",
+    "you_have": "Du hast",
+    "you_need": "Du brauchst",
+    "add_to_shopping": "Zur Einkaufsliste hinzufügen"
+  },
+  "cooking": {
+    "step": "SCHRITT {{current}} / {{total}}",
+    "next": "Weiter",
+    "prev": "Zurück",
+    "finish": "Fertig",
+    "timer": "TIMER",
+    "voice_hint": "Sprich: \"Weiter\"",
+    "completed": "Du hast das Rezept beendet!",
+    "rate_recipe": "Rezept bewerten"
+  },
+  "favorites": {
+    "title": "Meine Favoriten",
+    "count": "{{count}} gespeicherte Rezepte",
+    "search_placeholder": "Favoriten suchen...",
+    "tab_all": "Alle",
+    "tab_collections": "Sammlungen",
+    "tab_recent": "Kürzlich",
+    "empty": "Noch keine Favoriten. Tippe das Herz an einem Rezept.",
+    "limit_free": "Kostenlos: bis zu 10 Favoriten"
+  },
+  "shopping": {
+    "title": "Einkaufsliste",
+    "subtitle": "{{count}} Artikel • {{recipes}} Rezepte",
+    "cat_produce": "Obst & Gemüse",
+    "cat_meat": "Fleisch & Milch",
+    "cat_pantry": "Vorrat",
+    "add_manually": "Manuell hinzufügen",
+    "clear_checked": "Abgehakte löschen",
+    "premium_only": "Premium-Funktion"
+  },
+  "premium": {
+    "title": "Auf Premium upgraden",
+    "subtitle": "Schalte die volle Küche frei",
+    "feature_recipes": "Alle 500+ Rezepte",
+    "feature_filters": "Ernährungsfilter",
+    "feature_shopping": "Intelligente Einkaufsliste",
+    "feature_favorites": "Unbegrenzte Favoriten",
+    "feature_nutrition": "Vollständige Nährwertangaben",
+    "feature_voice": "Erweiterter Sprachmodus",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "price_monthly": "4,99 €/Monat",
+    "price_yearly": "39,99 €/Jahr",
+    "save_badge": "33% SPAREN",
+    "trial": "7 Tage kostenlos testen",
+    "restore": "Käufe wiederherstellen",
+    "terms": "Jederzeit kündbar."
+  },
+  "profile": {
+    "title": "Profil",
+    "stats_cooked": "Gekocht",
+    "stats_favorites": "Favoriten",
+    "stats_streak": "Tage Serie",
+    "settings": "Einstellungen",
+    "language": "Sprache",
+    "notifications": "Benachrichtigungen",
+    "premium": "Premium",
+    "manage_account": "Konto verwalten",
+    "help": "Hilfe & Support",
+    "about": "Über",
+    "logout": "Abmelden",
+    "delete_account": "Konto löschen"
+  },
+  "language": {
+    "title": "Sprache",
+    "subtitle": "In 13 Sprachen verfügbar",
+    "available": "Verfügbare Sprachen"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "back": "Zurück",
+    "loading": "Lädt...",
+    "error": "Etwas ist schiefgelaufen",
+    "retry": "Erneut versuchen",
+    "premium_badge": "PREMIUM"
+  }
+}

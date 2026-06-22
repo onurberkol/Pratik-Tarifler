@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Vertel ons wat je hebt. Wij vinden het recept."
+  },
+  "auth": {
+    "sign_in": "Inloggen",
+    "sign_up": "Registreren",
+    "sign_out": "Uitloggen",
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "continue_google": "Doorgaan met Google",
+    "continue_apple": "Doorgaan met Apple",
+    "continue_anonymous": "Doorgaan als gast",
+    "or": "of",
+    "have_account": "Heb je een account?",
+    "no_account": "Geen account?",
+    "forgot_password": "Wachtwoord vergeten",
+    "errors": {
+      "invalid_email": "Voer een geldig e-mailadres in.",
+      "weak_password": "Wachtwoord moet minimaal 8 tekens hebben.",
+      "wrong_credentials": "E-mail of wachtwoord onjuist."
+    }
+  },
+  "home": {
+    "greeting": "Hallo {{name}}",
+    "greeting_guest": "Hallo",
+    "prompt": "Wat koken we vandaag?",
+    "section_title": "WAT HEB JE IN DE KOELKAST?",
+    "section_subtitle": "Voeg 3-5 ingrediënten toe",
+    "input_placeholder": "Voeg ingrediënt toe...",
+    "cta": "Vind mijn recept",
+    "popular_categories": "Populaire categorieën",
+    "cat_quick": "Snelle maaltijden",
+    "cat_traditional": "Klassiekers",
+    "cat_desserts": "Desserts",
+    "cat_healthy": "Gezonde recepten",
+    "tip_title": "TIP",
+    "tip_body": "Voor betere resultaten, voeg minstens 3 ingrediënten toe."
+  },
+  "results": {
+    "title": "Bijpassende recepten",
+    "count": "{{count}} recepten gevonden",
+    "match": "{{pct}}% Overeenkomst",
+    "empty": "Geen recepten gevonden met deze ingrediënten.",
+    "filters": {
+      "all": "Alle",
+      "quick": "<30 min",
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarisch",
+      "gluten_free": "Glutenvrij",
+      "low_carb": "Low-carb",
+      "easy": "Makkelijk"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Ingrediënten",
+    "tab_steps": "Stappen",
+    "tab_reviews": "Beoordelingen",
+    "minutes": "min",
+    "servings": "Voor {{count}} personen",
+    "difficulty": "Makkelijk",
+    "difficulty_easy": "Makkelijk",
+    "difficulty_medium": "Gemiddeld",
+    "difficulty_hard": "Moeilijk",
+    "start_cooking": "Begin met koken",
+    "missing_ingredients": "Ontbrekende ingrediënten",
+    "you_have": "Je hebt",
+    "you_need": "Je hebt nodig",
+    "add_to_shopping": "Toevoegen aan boodschappenlijst"
+  },
+  "cooking": {
+    "step": "STAP {{current}} / {{total}}",
+    "next": "Volgende",
+    "prev": "Vorige",
+    "finish": "Klaar",
+    "timer": "TIMER",
+    "voice_hint": "Stem: \"Volgende\"",
+    "completed": "Recept voltooid!",
+    "rate_recipe": "Beoordeel het recept"
+  },
+  "favorites": {
+    "title": "Mijn favorieten",
+    "count": "{{count}} opgeslagen recepten",
+    "search_placeholder": "Zoek in favorieten...",
+    "tab_all": "Alle",
+    "tab_collections": "Collecties",
+    "tab_recent": "Recent",
+    "empty": "Nog geen favorieten. Tik op het hartje bij een recept.",
+    "limit_free": "Gratis: tot 10 favorieten"
+  },
+  "shopping": {
+    "title": "Boodschappenlijst",
+    "subtitle": "{{count}} items • {{recipes}} recepten",
+    "cat_produce": "Groente & Fruit",
+    "cat_meat": "Vlees & Zuivel",
+    "cat_pantry": "Voorraadkast",
+    "add_manually": "Handmatig toevoegen",
+    "clear_checked": "Aangevinkte wissen",
+    "premium_only": "Premium functie"
+  },
+  "premium": {
+    "title": "Upgrade naar Premium",
+    "subtitle": "Ontgrendel de hele keuken",
+    "feature_recipes": "Alle 500+ recepten",
+    "feature_filters": "Dieetfilters",
+    "feature_shopping": "Slimme boodschappenlijst",
+    "feature_favorites": "Onbeperkt favorieten",
+    "feature_nutrition": "Volledige voedingswaarden",
+    "feature_voice": "Geavanceerde spraakmodus",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "price_monthly": "€ 4,99/maand",
+    "price_yearly": "€ 39,99/jaar",
+    "save_badge": "33% KORTING",
+    "trial": "7 dagen gratis proberen",
+    "restore": "Aankopen herstellen",
+    "terms": "Op elk moment opzegbaar."
+  },
+  "profile": {
+    "title": "Profiel",
+    "stats_cooked": "Gekookt",
+    "stats_favorites": "Favorieten",
+    "stats_streak": "Dagen op rij",
+    "settings": "Instellingen",
+    "language": "Taal",
+    "notifications": "Meldingen",
+    "premium": "Premium",
+    "manage_account": "Account beheren",
+    "help": "Hulp & ondersteuning",
+    "about": "Over",
+    "logout": "Uitloggen",
+    "delete_account": "Account verwijderen"
+  },
+  "language": {
+    "title": "Taal",
+    "subtitle": "Beschikbaar in 13 talen",
+    "available": "Beschikbare talen"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "back": "Terug",
+    "loading": "Laden...",
+    "error": "Er ging iets mis",
+    "retry": "Probeer opnieuw",
+    "premium_badge": "PREMIUM"
+  }
+}

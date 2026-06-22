@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Diga o que tem. Encontramos a receita."
+  },
+  "auth": {
+    "sign_in": "Entrar",
+    "sign_up": "Cadastrar",
+    "sign_out": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "continue_google": "Continuar com Google",
+    "continue_apple": "Continuar com Apple",
+    "continue_anonymous": "Continuar como convidado",
+    "or": "ou",
+    "have_account": "Tem uma conta?",
+    "no_account": "Não tem uma conta?",
+    "forgot_password": "Esqueci a senha",
+    "errors": {
+      "invalid_email": "Insira um e-mail válido.",
+      "weak_password": "A senha deve ter pelo menos 8 caracteres.",
+      "wrong_credentials": "E-mail ou senha incorretos."
+    }
+  },
+  "home": {
+    "greeting": "Olá {{name}}",
+    "greeting_guest": "Olá",
+    "prompt": "O que vamos cozinhar hoje?",
+    "section_title": "O QUE TEM NA GELADEIRA?",
+    "section_subtitle": "Adicione 3-5 ingredientes",
+    "input_placeholder": "Adicionar ingrediente...",
+    "cta": "Encontrar receita",
+    "popular_categories": "Categorias populares",
+    "cat_quick": "Refeições rápidas",
+    "cat_traditional": "Clássicos",
+    "cat_desserts": "Sobremesas",
+    "cat_healthy": "Receitas saudáveis",
+    "tip_title": "DICA",
+    "tip_body": "Para melhores resultados, adicione pelo menos 3 ingredientes."
+  },
+  "results": {
+    "title": "Receitas correspondentes",
+    "count": "{{count}} receitas encontradas",
+    "match": "{{pct}}% correspondência",
+    "empty": "Nenhuma receita corresponde a esses ingredientes.",
+    "filters": {
+      "all": "Tudo",
+      "quick": "<30 min",
+      "vegan": "Vegano",
+      "vegetarian": "Vegetariano",
+      "gluten_free": "Sem glúten",
+      "low_carb": "Baixo carboidrato",
+      "easy": "Fácil"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Ingredientes",
+    "tab_steps": "Passos",
+    "tab_reviews": "Avaliações",
+    "minutes": "min",
+    "servings": "Serve {{count}}",
+    "difficulty": "Fácil",
+    "difficulty_easy": "Fácil",
+    "difficulty_medium": "Médio",
+    "difficulty_hard": "Difícil",
+    "start_cooking": "Começar a cozinhar",
+    "missing_ingredients": "Ingredientes faltantes",
+    "you_have": "Você tem",
+    "you_need": "Você precisa",
+    "add_to_shopping": "Adicionar à lista de compras"
+  },
+  "cooking": {
+    "step": "PASSO {{current}} / {{total}}",
+    "next": "Próximo",
+    "prev": "Anterior",
+    "finish": "Finalizar",
+    "timer": "TEMPORIZADOR",
+    "voice_hint": "Voz: \"Próximo\"",
+    "completed": "Receita concluída!",
+    "rate_recipe": "Avaliar receita"
+  },
+  "favorites": {
+    "title": "Meus favoritos",
+    "count": "{{count}} receitas salvas",
+    "search_placeholder": "Buscar nos favoritos...",
+    "tab_all": "Todos",
+    "tab_collections": "Coleções",
+    "tab_recent": "Recentes",
+    "empty": "Sem favoritos ainda. Toque no coração de uma receita.",
+    "limit_free": "Grátis: até 10 favoritos"
+  },
+  "shopping": {
+    "title": "Lista de compras",
+    "subtitle": "{{count}} itens • {{recipes}} receitas",
+    "cat_produce": "Frutas e legumes",
+    "cat_meat": "Carne e laticínios",
+    "cat_pantry": "Despensa",
+    "add_manually": "Adicionar manualmente",
+    "clear_checked": "Limpar marcados",
+    "premium_only": "Recurso Premium"
+  },
+  "premium": {
+    "title": "Atualizar para Premium",
+    "subtitle": "Desbloqueie a cozinha completa",
+    "feature_recipes": "Todas as 500+ receitas",
+    "feature_filters": "Filtros alimentares",
+    "feature_shopping": "Lista inteligente",
+    "feature_favorites": "Favoritos ilimitados",
+    "feature_nutrition": "Dados nutricionais",
+    "feature_voice": "Modo de voz avançado",
+    "monthly": "Mensal",
+    "yearly": "Anual",
+    "price_monthly": "R$ 24,99/mês",
+    "price_yearly": "R$ 199/ano",
+    "save_badge": "ECONOMIZE 33%",
+    "trial": "Teste grátis por 7 dias",
+    "restore": "Restaurar compras",
+    "terms": "Cancele quando quiser."
+  },
+  "profile": {
+    "title": "Perfil",
+    "stats_cooked": "Cozinhadas",
+    "stats_favorites": "Favoritos",
+    "stats_streak": "Dias seguidos",
+    "settings": "Configurações",
+    "language": "Idioma",
+    "notifications": "Notificações",
+    "premium": "Premium",
+    "manage_account": "Gerenciar conta",
+    "help": "Ajuda e suporte",
+    "about": "Sobre",
+    "logout": "Sair",
+    "delete_account": "Excluir conta"
+  },
+  "language": {
+    "title": "Idioma",
+    "subtitle": "Disponível em 13 idiomas",
+    "available": "Idiomas disponíveis"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "retry": "Tentar novamente",
+    "premium_badge": "PREMIUM"
+  }
+}

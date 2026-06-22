@@ -1,0 +1,339 @@
+{
+  "tomato": {
+    "token": "tomato",
+    "category": "produce",
+    "aliases": {
+      "tr": ["domates", "kirmizi domates"],
+      "en": ["tomato", "tomatoes"],
+      "de": ["tomate", "tomaten"],
+      "fr": ["tomate", "tomates"],
+      "it": ["pomodoro", "pomodori"],
+      "es": ["tomate"],
+      "pt": ["tomate"],
+      "el": ["ντομάτα"],
+      "nl": ["tomaat"],
+      "ru": ["помидор", "томат"],
+      "sr": ["paradajz"],
+      "ar": ["طماطم"],
+      "he": ["עגבנייה"]
+    },
+    "display": {
+      "tr": "Domates", "en": "Tomato", "de": "Tomate", "fr": "Tomate",
+      "it": "Pomodoro", "es": "Tomate", "pt": "Tomate", "el": "Ντομάτα",
+      "nl": "Tomaat", "ru": "Помидор", "sr": "Paradajz", "ar": "طماطم", "he": "עגבנייה"
+    },
+    "emoji": "🍅",
+    "is_common": true
+  },
+  "onion": {
+    "token": "onion",
+    "category": "produce",
+    "aliases": {
+      "tr": ["soğan", "sogan"],
+      "en": ["onion", "onions"],
+      "de": ["zwiebel"],
+      "fr": ["oignon"],
+      "it": ["cipolla"],
+      "es": ["cebolla"],
+      "pt": ["cebola"],
+      "el": ["κρεμμύδι"],
+      "nl": ["ui"],
+      "ru": ["лук"],
+      "sr": ["luk"],
+      "ar": ["بصل"],
+      "he": ["בצל"]
+    },
+    "display": {
+      "tr": "Soğan", "en": "Onion", "de": "Zwiebel", "fr": "Oignon",
+      "it": "Cipolla", "es": "Cebolla", "pt": "Cebola", "el": "Κρεμμύδι",
+      "nl": "Ui", "ru": "Лук", "sr": "Luk", "ar": "بصل", "he": "בצל"
+    },
+    "emoji": "🧅",
+    "is_common": true
+  },
+  "egg": {
+    "token": "egg",
+    "category": "dairy",
+    "aliases": {
+      "tr": ["yumurta"],
+      "en": ["egg", "eggs"],
+      "de": ["ei", "eier"],
+      "fr": ["œuf", "oeuf"],
+      "it": ["uovo", "uova"],
+      "es": ["huevo"],
+      "pt": ["ovo"],
+      "el": ["αυγό"],
+      "nl": ["ei"],
+      "ru": ["яйцо"],
+      "sr": ["jaje"],
+      "ar": ["بيض"],
+      "he": ["ביצה"]
+    },
+    "display": {
+      "tr": "Yumurta", "en": "Egg", "de": "Ei", "fr": "Œuf",
+      "it": "Uovo", "es": "Huevo", "pt": "Ovo", "el": "Αυγό",
+      "nl": "Ei", "ru": "Яйцо", "sr": "Jaje", "ar": "بيض", "he": "ביצה"
+    },
+    "emoji": "🥚",
+    "is_common": true
+  },
+  "chicken": {
+    "token": "chicken",
+    "category": "meat",
+    "aliases": {
+      "tr": ["tavuk", "piliç"],
+      "en": ["chicken"],
+      "de": ["huhn", "hähnchen"],
+      "fr": ["poulet"],
+      "it": ["pollo"],
+      "es": ["pollo"],
+      "pt": ["frango"],
+      "el": ["κοτόπουλο"],
+      "nl": ["kip"],
+      "ru": ["курица"],
+      "sr": ["piletina"],
+      "ar": ["دجاج"],
+      "he": ["עוף"]
+    },
+    "display": {
+      "tr": "Tavuk", "en": "Chicken", "de": "Huhn", "fr": "Poulet",
+      "it": "Pollo", "es": "Pollo", "pt": "Frango", "el": "Κοτόπουλο",
+      "nl": "Kip", "ru": "Курица", "sr": "Piletina", "ar": "دجاج", "he": "עוף"
+    },
+    "emoji": "🍗",
+    "is_common": true
+  },
+  "potato": {
+    "token": "potato",
+    "category": "produce",
+    "aliases": {
+      "tr": ["patates"],
+      "en": ["potato", "potatoes"],
+      "de": ["kartoffel"],
+      "fr": ["pomme de terre"],
+      "it": ["patata"],
+      "es": ["patata"],
+      "pt": ["batata"],
+      "el": ["πατάτα"],
+      "nl": ["aardappel"],
+      "ru": ["картофель", "картошка"],
+      "sr": ["krompir"],
+      "ar": ["بطاطا"],
+      "he": ["תפוח אדמה"]
+    },
+    "display": {
+      "tr": "Patates", "en": "Potato", "de": "Kartoffel", "fr": "Pomme de terre",
+      "it": "Patata", "es": "Patata", "pt": "Batata", "el": "Πατάτα",
+      "nl": "Aardappel", "ru": "Картофель", "sr": "Krompir", "ar": "بطاطا", "he": "תפוח אדמה"
+    },
+    "emoji": "🥔",
+    "is_common": true
+  },
+  "cheese": {
+    "token": "cheese",
+    "category": "dairy",
+    "aliases": {
+      "tr": ["peynir", "beyaz peynir"],
+      "en": ["cheese"],
+      "de": ["käse"],
+      "fr": ["fromage"],
+      "it": ["formaggio"],
+      "es": ["queso"],
+      "pt": ["queijo"],
+      "el": ["τυρί"],
+      "nl": ["kaas"],
+      "ru": ["сыр"],
+      "sr": ["sir"],
+      "ar": ["جبن"],
+      "he": ["גבינה"]
+    },
+    "display": {
+      "tr": "Peynir", "en": "Cheese", "de": "Käse", "fr": "Fromage",
+      "it": "Formaggio", "es": "Queso", "pt": "Queijo", "el": "Τυρί",
+      "nl": "Kaas", "ru": "Сыр", "sr": "Sir", "ar": "جبن", "he": "גבינה"
+    },
+    "emoji": "🧀",
+    "is_common": true
+  },
+  "rice": {
+    "token": "rice",
+    "category": "pantry",
+    "aliases": {
+      "tr": ["pirinç", "pirinc"],
+      "en": ["rice"],
+      "de": ["reis"],
+      "fr": ["riz"],
+      "it": ["riso"],
+      "es": ["arroz"],
+      "pt": ["arroz"],
+      "el": ["ρύζι"],
+      "nl": ["rijst"],
+      "ru": ["рис"],
+      "sr": ["pirinač"],
+      "ar": ["أرز"],
+      "he": ["אורז"]
+    },
+    "display": {
+      "tr": "Pirinç", "en": "Rice", "de": "Reis", "fr": "Riz",
+      "it": "Riso", "es": "Arroz", "pt": "Arroz", "el": "Ρύζι",
+      "nl": "Rijst", "ru": "Рис", "sr": "Pirinač", "ar": "أرز", "he": "אורז"
+    },
+    "emoji": "🍚",
+    "is_common": true
+  },
+  "garlic": {
+    "token": "garlic",
+    "category": "produce",
+    "aliases": {
+      "tr": ["sarımsak", "sarimsak"],
+      "en": ["garlic"],
+      "de": ["knoblauch"],
+      "fr": ["ail"],
+      "it": ["aglio"],
+      "es": ["ajo"],
+      "pt": ["alho"],
+      "el": ["σκόρδο"],
+      "nl": ["knoflook"],
+      "ru": ["чеснок"],
+      "sr": ["beli luk"],
+      "ar": ["ثوم"],
+      "he": ["שום"]
+    },
+    "display": {
+      "tr": "Sarımsak", "en": "Garlic", "de": "Knoblauch", "fr": "Ail",
+      "it": "Aglio", "es": "Ajo", "pt": "Alho", "el": "Σκόρδο",
+      "nl": "Knoflook", "ru": "Чеснок", "sr": "Beli luk", "ar": "ثوم", "he": "שום"
+    },
+    "emoji": "🧄",
+    "is_common": true
+  },
+  "pasta": {
+    "token": "pasta",
+    "category": "pantry",
+    "aliases": {
+      "tr": ["makarna"],
+      "en": ["pasta", "noodles"],
+      "de": ["nudeln", "pasta"],
+      "fr": ["pâtes"],
+      "it": ["pasta"],
+      "es": ["pasta"],
+      "pt": ["massa"],
+      "el": ["ζυμαρικά"],
+      "nl": ["pasta"],
+      "ru": ["паста", "макароны"],
+      "sr": ["testenina"],
+      "ar": ["معكرونة"],
+      "he": ["פסטה"]
+    },
+    "display": {
+      "tr": "Makarna", "en": "Pasta", "de": "Pasta", "fr": "Pâtes",
+      "it": "Pasta", "es": "Pasta", "pt": "Massa", "el": "Ζυμαρικά",
+      "nl": "Pasta", "ru": "Паста", "sr": "Testenina", "ar": "معكرونة", "he": "פסטה"
+    },
+    "emoji": "🍝",
+    "is_common": true
+  },
+  "lentil": {
+    "token": "lentil",
+    "category": "pantry",
+    "aliases": {
+      "tr": ["mercimek", "kırmızı mercimek"],
+      "en": ["lentil", "lentils"],
+      "de": ["linsen"],
+      "fr": ["lentilles"],
+      "it": ["lenticchie"],
+      "es": ["lentejas"],
+      "pt": ["lentilhas"],
+      "el": ["φακές"],
+      "nl": ["linzen"],
+      "ru": ["чечевица"],
+      "sr": ["sočivo"],
+      "ar": ["عدس"],
+      "he": ["עדשים"]
+    },
+    "display": {
+      "tr": "Mercimek", "en": "Lentil", "de": "Linsen", "fr": "Lentilles",
+      "it": "Lenticchie", "es": "Lentejas", "pt": "Lentilhas", "el": "Φακές",
+      "nl": "Linzen", "ru": "Чечевица", "sr": "Sočivo", "ar": "عدس", "he": "עדשים"
+    },
+    "emoji": "🫘",
+    "is_common": true
+  },
+  "carrot": {
+    "token": "carrot",
+    "category": "produce",
+    "aliases": {
+      "tr": ["havuç", "havuc"],
+      "en": ["carrot", "carrots"]
+    },
+    "display": { "tr": "Havuç", "en": "Carrot" },
+    "emoji": "🥕",
+    "is_common": true
+  },
+  "pepper": {
+    "token": "pepper",
+    "category": "produce",
+    "aliases": {
+      "tr": ["biber", "yeşil biber", "sivri biber"],
+      "en": ["pepper", "bell pepper"]
+    },
+    "display": { "tr": "Biber", "en": "Pepper" },
+    "emoji": "🫑",
+    "is_common": true
+  },
+  "olive_oil": {
+    "token": "olive_oil",
+    "category": "pantry",
+    "aliases": {
+      "tr": ["zeytinyağı", "zeytinyagi"],
+      "en": ["olive oil"]
+    },
+    "display": { "tr": "Zeytinyağı", "en": "Olive Oil" },
+    "emoji": "🫒",
+    "is_common": true
+  },
+  "salt": {
+    "token": "salt",
+    "category": "spice",
+    "aliases": {
+      "tr": ["tuz"],
+      "en": ["salt"]
+    },
+    "display": { "tr": "Tuz", "en": "Salt" },
+    "emoji": "🧂",
+    "is_common": false
+  },
+  "cumin": {
+    "token": "cumin",
+    "category": "spice",
+    "aliases": {
+      "tr": ["kimyon"],
+      "en": ["cumin"]
+    },
+    "display": { "tr": "Kimyon", "en": "Cumin" },
+    "emoji": "🌶️",
+    "is_common": false
+  },
+  "basil": {
+    "token": "basil",
+    "category": "produce",
+    "aliases": {
+      "tr": ["fesleğen", "fesleğen"],
+      "en": ["basil"]
+    },
+    "display": { "tr": "Fesleğen", "en": "Basil" },
+    "emoji": "🌿",
+    "is_common": false
+  },
+  "lemon": {
+    "token": "lemon",
+    "category": "produce",
+    "aliases": {
+      "tr": ["limon"],
+      "en": ["lemon"]
+    },
+    "display": { "tr": "Limon", "en": "Lemon" },
+    "emoji": "🍋",
+    "is_common": true
+  }
+}

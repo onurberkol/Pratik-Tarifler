@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Tell us what you have. We'll find the recipe."
+  },
+  "auth": {
+    "sign_in": "Sign In",
+    "sign_up": "Sign Up",
+    "sign_out": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "continue_google": "Continue with Google",
+    "continue_apple": "Continue with Apple",
+    "continue_anonymous": "Browse as guest",
+    "or": "or",
+    "have_account": "Have an account?",
+    "no_account": "Don't have an account?",
+    "forgot_password": "Forgot password",
+    "errors": {
+      "invalid_email": "Enter a valid email.",
+      "weak_password": "Password must be at least 8 characters.",
+      "wrong_credentials": "Email or password is incorrect."
+    }
+  },
+  "home": {
+    "greeting": "Hello {{name}}",
+    "greeting_guest": "Hello",
+    "prompt": "What's cooking today?",
+    "section_title": "WHAT'S IN YOUR FRIDGE?",
+    "section_subtitle": "Add 3-5 ingredients",
+    "input_placeholder": "Add ingredient...",
+    "cta": "Find My Recipe",
+    "popular_categories": "Popular Categories",
+    "cat_quick": "Quick Meals",
+    "cat_traditional": "Traditional Favorites",
+    "cat_desserts": "Desserts",
+    "cat_healthy": "Healthy Recipes",
+    "tip_title": "TIP",
+    "tip_body": "For better matches, try adding at least 3 ingredients."
+  },
+  "results": {
+    "title": "Matching Recipes",
+    "count": "{{count}} recipes found",
+    "match": "{{pct}}% Match",
+    "empty": "No recipes match these ingredients.",
+    "filters": {
+      "all": "All",
+      "quick": "<30 min",
+      "vegan": "Vegan",
+      "vegetarian": "Vegetarian",
+      "gluten_free": "Gluten-Free",
+      "low_carb": "Low-Carb",
+      "easy": "Easy"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Ingredients",
+    "tab_steps": "Steps",
+    "tab_reviews": "Reviews",
+    "minutes": "min",
+    "servings": "Serves {{count}}",
+    "difficulty": "Easy",
+    "difficulty_easy": "Easy",
+    "difficulty_medium": "Medium",
+    "difficulty_hard": "Hard",
+    "start_cooking": "Start Cooking",
+    "missing_ingredients": "Missing Ingredients",
+    "you_have": "You have",
+    "you_need": "You need",
+    "add_to_shopping": "Add to Shopping List"
+  },
+  "cooking": {
+    "step": "STEP {{current}} / {{total}}",
+    "next": "Next",
+    "prev": "Previous",
+    "finish": "Finish",
+    "timer": "TIMER",
+    "voice_hint": "Voice: \"Next\"",
+    "completed": "You completed the recipe!",
+    "rate_recipe": "Rate this recipe"
+  },
+  "favorites": {
+    "title": "My Favorites",
+    "count": "{{count}} saved recipes",
+    "search_placeholder": "Search favorites...",
+    "tab_all": "All",
+    "tab_collections": "Collections",
+    "tab_recent": "Recent",
+    "empty": "No favorites yet. Tap the heart on any recipe.",
+    "limit_free": "Free tier: up to 10 favorites"
+  },
+  "shopping": {
+    "title": "Shopping List",
+    "subtitle": "{{count}} items • {{recipes}} recipes",
+    "cat_produce": "Produce",
+    "cat_meat": "Meat & Dairy",
+    "cat_pantry": "Pantry",
+    "add_manually": "Add Manually",
+    "clear_checked": "Clear Checked",
+    "premium_only": "Premium feature"
+  },
+  "premium": {
+    "title": "Upgrade to Premium",
+    "subtitle": "Unlock the full kitchen",
+    "feature_recipes": "All 500+ recipes",
+    "feature_filters": "Dietary filters",
+    "feature_shopping": "Smart shopping list",
+    "feature_favorites": "Unlimited favorites",
+    "feature_nutrition": "Full nutrition data",
+    "feature_voice": "Advanced voice mode",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "price_monthly": "$4.99/mo",
+    "price_yearly": "$39.99/yr",
+    "save_badge": "SAVE 33%",
+    "trial": "7-day free trial",
+    "restore": "Restore Purchases",
+    "terms": "Cancel anytime."
+  },
+  "profile": {
+    "title": "Profile",
+    "stats_cooked": "Cooked",
+    "stats_favorites": "Favorites",
+    "stats_streak": "Day Streak",
+    "settings": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "premium": "Premium",
+    "manage_account": "Manage Account",
+    "help": "Help & Support",
+    "about": "About",
+    "logout": "Sign Out",
+    "delete_account": "Delete Account"
+  },
+  "language": {
+    "title": "Language",
+    "subtitle": "Available in 13 languages",
+    "available": "Available Languages"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "premium_badge": "PREMIUM"
+  }
+}

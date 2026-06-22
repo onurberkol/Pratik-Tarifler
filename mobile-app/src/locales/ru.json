@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Скажи, что у тебя есть. Мы найдём рецепт."
+  },
+  "auth": {
+    "sign_in": "Войти",
+    "sign_up": "Регистрация",
+    "sign_out": "Выйти",
+    "email": "Эл. почта",
+    "password": "Пароль",
+    "continue_google": "Продолжить с Google",
+    "continue_apple": "Продолжить с Apple",
+    "continue_anonymous": "Продолжить как гость",
+    "or": "или",
+    "have_account": "Есть аккаунт?",
+    "no_account": "Нет аккаунта?",
+    "forgot_password": "Забыл пароль",
+    "errors": {
+      "invalid_email": "Введите корректный email.",
+      "weak_password": "Пароль должен быть не менее 8 символов.",
+      "wrong_credentials": "Неверный email или пароль."
+    }
+  },
+  "home": {
+    "greeting": "Привет, {{name}}",
+    "greeting_guest": "Привет",
+    "prompt": "Что готовим сегодня?",
+    "section_title": "ЧТО У ТЕБЯ В ХОЛОДИЛЬНИКЕ?",
+    "section_subtitle": "Добавь 3-5 ингредиентов",
+    "input_placeholder": "Добавь ингредиент...",
+    "cta": "Найти рецепт",
+    "popular_categories": "Популярные категории",
+    "cat_quick": "Быстрые блюда",
+    "cat_traditional": "Традиционные",
+    "cat_desserts": "Десерты",
+    "cat_healthy": "Здоровые рецепты",
+    "tip_title": "СОВЕТ",
+    "tip_body": "Для лучших результатов добавь хотя бы 3 ингредиента."
+  },
+  "results": {
+    "title": "Подходящие рецепты",
+    "count": "Найдено {{count}} рецептов",
+    "match": "{{pct}}% Совпадение",
+    "empty": "Нет рецептов с этими ингредиентами.",
+    "filters": {
+      "all": "Все",
+      "quick": "<30 мин",
+      "vegan": "Веганские",
+      "vegetarian": "Вегетарианские",
+      "gluten_free": "Без глютена",
+      "low_carb": "Низкоуглеводные",
+      "easy": "Простые"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Ингредиенты",
+    "tab_steps": "Шаги",
+    "tab_reviews": "Отзывы",
+    "minutes": "мин",
+    "servings": "На {{count}} порций",
+    "difficulty": "Легко",
+    "difficulty_easy": "Легко",
+    "difficulty_medium": "Средне",
+    "difficulty_hard": "Сложно",
+    "start_cooking": "Начать готовить",
+    "missing_ingredients": "Не хватает",
+    "you_have": "У тебя есть",
+    "you_need": "Нужно",
+    "add_to_shopping": "Добавить в список покупок"
+  },
+  "cooking": {
+    "step": "ШАГ {{current}} / {{total}}",
+    "next": "Дальше",
+    "prev": "Назад",
+    "finish": "Готово",
+    "timer": "ТАЙМЕР",
+    "voice_hint": "Голос: \"Дальше\"",
+    "completed": "Рецепт готов!",
+    "rate_recipe": "Оценить рецепт"
+  },
+  "favorites": {
+    "title": "Избранное",
+    "count": "{{count}} сохранённых рецептов",
+    "search_placeholder": "Поиск в избранном...",
+    "tab_all": "Все",
+    "tab_collections": "Коллекции",
+    "tab_recent": "Недавние",
+    "empty": "Пока нет избранного. Нажми на сердце на рецепте.",
+    "limit_free": "Бесплатно: до 10 избранных"
+  },
+  "shopping": {
+    "title": "Список покупок",
+    "subtitle": "{{count}} продуктов • {{recipes}} рецептов",
+    "cat_produce": "Овощи и фрукты",
+    "cat_meat": "Мясо и молочка",
+    "cat_pantry": "Кладовая",
+    "add_manually": "Добавить вручную",
+    "clear_checked": "Очистить отмеченные",
+    "premium_only": "Премиум функция"
+  },
+  "premium": {
+    "title": "Перейти на Премиум",
+    "subtitle": "Открой всю кухню",
+    "feature_recipes": "Все 500+ рецептов",
+    "feature_filters": "Диетические фильтры",
+    "feature_shopping": "Умный список покупок",
+    "feature_favorites": "Безлимит избранных",
+    "feature_nutrition": "Полная пищевая ценность",
+    "feature_voice": "Расширенный голос",
+    "monthly": "Месяц",
+    "yearly": "Год",
+    "price_monthly": "499 ₽/мес",
+    "price_yearly": "3 990 ₽/год",
+    "save_badge": "ЭКОНОМИЯ 33%",
+    "trial": "7 дней бесплатно",
+    "restore": "Восстановить покупки",
+    "terms": "Отмена в любой момент."
+  },
+  "profile": {
+    "title": "Профиль",
+    "stats_cooked": "Приготовлено",
+    "stats_favorites": "Избранное",
+    "stats_streak": "Дней подряд",
+    "settings": "Настройки",
+    "language": "Язык",
+    "notifications": "Уведомления",
+    "premium": "Премиум",
+    "manage_account": "Управление аккаунтом",
+    "help": "Помощь и поддержка",
+    "about": "О приложении",
+    "logout": "Выйти",
+    "delete_account": "Удалить аккаунт"
+  },
+  "language": {
+    "title": "Язык",
+    "subtitle": "Доступно на 13 языках",
+    "available": "Доступные языки"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "edit": "Изменить",
+    "back": "Назад",
+    "loading": "Загрузка...",
+    "error": "Что-то пошло не так",
+    "retry": "Повторить",
+    "premium_badge": "ПРЕМИУМ"
+  }
+}

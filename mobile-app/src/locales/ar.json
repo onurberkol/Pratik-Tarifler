@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "أخبرنا بما لديك. سنجد الوصفة."
+  },
+  "auth": {
+    "sign_in": "تسجيل الدخول",
+    "sign_up": "إنشاء حساب",
+    "sign_out": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "continue_google": "المتابعة عبر Google",
+    "continue_apple": "المتابعة عبر Apple",
+    "continue_anonymous": "المتابعة كضيف",
+    "or": "أو",
+    "have_account": "لديك حساب؟",
+    "no_account": "ليس لديك حساب؟",
+    "forgot_password": "نسيت كلمة المرور",
+    "errors": {
+      "invalid_email": "أدخل بريدًا إلكترونيًا صالحًا.",
+      "weak_password": "يجب أن تكون كلمة المرور 8 أحرف على الأقل.",
+      "wrong_credentials": "البريد الإلكتروني أو كلمة المرور خاطئة."
+    }
+  },
+  "home": {
+    "greeting": "مرحبًا {{name}}",
+    "greeting_guest": "مرحبًا",
+    "prompt": "ماذا نطبخ اليوم؟",
+    "section_title": "ماذا لديك في الثلاجة؟",
+    "section_subtitle": "أضف 3-5 مكونات",
+    "input_placeholder": "أضف مكونًا...",
+    "cta": "ابحث عن وصفتي",
+    "popular_categories": "فئات شائعة",
+    "cat_quick": "وجبات سريعة",
+    "cat_traditional": "كلاسيكيات",
+    "cat_desserts": "حلويات",
+    "cat_healthy": "وصفات صحية",
+    "tip_title": "نصيحة",
+    "tip_body": "للحصول على نتائج أفضل، أضف 3 مكونات على الأقل."
+  },
+  "results": {
+    "title": "وصفات مطابقة",
+    "count": "تم العثور على {{count}} وصفة",
+    "match": "تطابق {{pct}}%",
+    "empty": "لا توجد وصفات تطابق هذه المكونات.",
+    "filters": {
+      "all": "الكل",
+      "quick": "<30 دقيقة",
+      "vegan": "نباتي صرف",
+      "vegetarian": "نباتي",
+      "gluten_free": "خالٍ من الجلوتين",
+      "low_carb": "قليل الكربوهيدرات",
+      "easy": "سهل"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "المكونات",
+    "tab_steps": "الخطوات",
+    "tab_reviews": "التقييمات",
+    "minutes": "د",
+    "servings": "يكفي {{count}}",
+    "difficulty": "سهل",
+    "difficulty_easy": "سهل",
+    "difficulty_medium": "متوسط",
+    "difficulty_hard": "صعب",
+    "start_cooking": "ابدأ الطبخ",
+    "missing_ingredients": "مكونات ناقصة",
+    "you_have": "لديك",
+    "you_need": "تحتاج",
+    "add_to_shopping": "أضف إلى قائمة التسوق"
+  },
+  "cooking": {
+    "step": "خطوة {{current}} / {{total}}",
+    "next": "التالي",
+    "prev": "السابق",
+    "finish": "إنهاء",
+    "timer": "المؤقت",
+    "voice_hint": "صوت: \"التالي\"",
+    "completed": "أكملت الوصفة!",
+    "rate_recipe": "قيّم الوصفة"
+  },
+  "favorites": {
+    "title": "المفضلة",
+    "count": "{{count}} وصفة محفوظة",
+    "search_placeholder": "ابحث في المفضلة...",
+    "tab_all": "الكل",
+    "tab_collections": "المجموعات",
+    "tab_recent": "الأخيرة",
+    "empty": "لا توجد مفضلة بعد. اضغط على القلب في أي وصفة.",
+    "limit_free": "مجاني: حتى 10 مفضلات"
+  },
+  "shopping": {
+    "title": "قائمة التسوق",
+    "subtitle": "{{count}} عنصرًا • {{recipes}} وصفة",
+    "cat_produce": "خضار وفواكه",
+    "cat_meat": "لحوم وألبان",
+    "cat_pantry": "المؤن",
+    "add_manually": "إضافة يدوية",
+    "clear_checked": "مسح المحدد",
+    "premium_only": "ميزة بريميوم"
+  },
+  "premium": {
+    "title": "الترقية إلى Premium",
+    "subtitle": "افتح المطبخ الكامل",
+    "feature_recipes": "كل الـ 500+ وصفة",
+    "feature_filters": "فلاتر غذائية",
+    "feature_shopping": "قائمة تسوق ذكية",
+    "feature_favorites": "مفضلة لا محدودة",
+    "feature_nutrition": "بيانات غذائية كاملة",
+    "feature_voice": "وضع صوتي متقدم",
+    "monthly": "شهري",
+    "yearly": "سنوي",
+    "price_monthly": "$4.99/شهر",
+    "price_yearly": "$39.99/سنة",
+    "save_badge": "وفّر 33%",
+    "trial": "تجربة مجانية 7 أيام",
+    "restore": "استعادة المشتريات",
+    "terms": "ألغ في أي وقت."
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "stats_cooked": "تم طبخها",
+    "stats_favorites": "المفضلة",
+    "stats_streak": "أيام متتالية",
+    "settings": "الإعدادات",
+    "language": "اللغة",
+    "notifications": "الإشعارات",
+    "premium": "Premium",
+    "manage_account": "إدارة الحساب",
+    "help": "المساعدة والدعم",
+    "about": "حول",
+    "logout": "تسجيل الخروج",
+    "delete_account": "حذف الحساب"
+  },
+  "language": {
+    "title": "اللغة",
+    "subtitle": "متوفر بـ 13 لغة",
+    "available": "اللغات المتوفرة"
+  },
+  "common": {
+    "ok": "موافق",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "back": "رجوع",
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ",
+    "retry": "أعد المحاولة",
+    "premium_badge": "PREMIUM"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "Söyle, biz pişirelim."
+  },
+  "auth": {
+    "sign_in": "Giriş Yap",
+    "sign_up": "Kayıt Ol",
+    "sign_out": "Çıkış Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "continue_google": "Google ile devam et",
+    "continue_apple": "Apple ile devam et",
+    "continue_anonymous": "Şimdilik misafir olarak gez",
+    "or": "veya",
+    "have_account": "Hesabın var mı?",
+    "no_account": "Hesabın yok mu?",
+    "forgot_password": "Şifremi unuttum",
+    "errors": {
+      "invalid_email": "Geçerli bir e-posta gir.",
+      "weak_password": "Şifre en az 8 karakter olmalı.",
+      "wrong_credentials": "E-posta veya şifre hatalı."
+    }
+  },
+  "home": {
+    "greeting": "Merhaba {{name}}",
+    "greeting_guest": "Merhaba",
+    "prompt": "Bugün ne pişirelim?",
+    "section_title": "DOLABINIZDA NELER VAR?",
+    "section_subtitle": "3-5 malzeme ekleyin",
+    "input_placeholder": "Malzeme ekle...",
+    "cta": "Tarifimi Bul",
+    "popular_categories": "Popüler Kategoriler",
+    "cat_quick": "Hızlı Yemekler",
+    "cat_traditional": "Geleneksel Lezzetler",
+    "cat_desserts": "Tatlılar",
+    "cat_healthy": "Sağlıklı Tarifler",
+    "tip_title": "İPUCU",
+    "tip_body": "Daha doğru sonuçlar için en az 3 malzeme girmeyi deneyin."
+  },
+  "results": {
+    "title": "Eşleşen Tarifler",
+    "count": "{{count}} tarif bulundu",
+    "match": "{{pct}}% Eşleşme",
+    "empty": "Bu malzemelerle uyumlu tarif bulunamadı.",
+    "filters": {
+      "all": "Tümü",
+      "quick": "<30dk",
+      "vegan": "Vegan",
+      "vegetarian": "Vejetaryen",
+      "gluten_free": "Glütensiz",
+      "low_carb": "Düşük Karb",
+      "easy": "Kolay"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "Malzemeler",
+    "tab_steps": "Hazırlanışı",
+    "tab_reviews": "Yorumlar",
+    "minutes": "dk",
+    "servings": "{{count}} kişilik",
+    "difficulty": "Kolay",
+    "difficulty_easy": "Kolay",
+    "difficulty_medium": "Orta",
+    "difficulty_hard": "Zor",
+    "start_cooking": "Pişirmeye Başla",
+    "missing_ingredients": "Eksik Malzemeler",
+    "you_have": "Sende olan",
+    "you_need": "İhtiyacın olan",
+    "add_to_shopping": "Alışveriş Listesine Ekle"
+  },
+  "cooking": {
+    "step": "ADIM {{current}} / {{total}}",
+    "next": "Sonraki",
+    "prev": "Önceki",
+    "finish": "Bitir",
+    "timer": "ZAMANLAYICI",
+    "voice_hint": "Sesli komut: \"Sonraki\"",
+    "completed": "Tarifi tamamladın!",
+    "rate_recipe": "Tarifi puanla"
+  },
+  "favorites": {
+    "title": "Favorilerim",
+    "count": "{{count}} kayıtlı tarif",
+    "search_placeholder": "Favorilerde ara...",
+    "tab_all": "Tümü",
+    "tab_collections": "Koleksiyonlar",
+    "tab_recent": "Son Eklenenler",
+    "empty": "Henüz favorin yok. Tarif sayfasında kalp ikonuna dokun.",
+    "limit_free": "Ücretsiz üyelikle 10 favoriye kadar"
+  },
+  "shopping": {
+    "title": "Alışveriş Listesi",
+    "subtitle": "{{count}} öğe • {{recipes}} tarif",
+    "cat_produce": "Sebze & Meyve",
+    "cat_meat": "Et & Süt",
+    "cat_pantry": "Kiler",
+    "add_manually": "Manuel Ekle",
+    "clear_checked": "İşaretlileri Sil",
+    "premium_only": "Premium üyelere özel"
+  },
+  "premium": {
+    "title": "Premium'a Yükselt",
+    "subtitle": "Tarif dünyasının kapılarını aç",
+    "feature_recipes": "500+ tarifin tamamı",
+    "feature_filters": "Diyet filtreleri",
+    "feature_shopping": "Akıllı alışveriş listesi",
+    "feature_favorites": "Sınırsız favori",
+    "feature_nutrition": "Tam besin bilgisi",
+    "feature_voice": "Gelişmiş sesli komut",
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "price_monthly": "₺49,99/ay",
+    "price_yearly": "₺399/yıl",
+    "save_badge": "33% TASARRUF",
+    "trial": "7 gün ücretsiz dene",
+    "restore": "Satın alımları geri yükle",
+    "terms": "Aboneliği istediğin zaman iptal edebilirsin."
+  },
+  "profile": {
+    "title": "Profil",
+    "stats_cooked": "Pişirilen",
+    "stats_favorites": "Favori",
+    "stats_streak": "Gün serisi",
+    "settings": "Ayarlar",
+    "language": "Dil",
+    "notifications": "Bildirimler",
+    "premium": "Premium",
+    "manage_account": "Hesabı Yönet",
+    "help": "Yardım & Destek",
+    "about": "Hakkında",
+    "logout": "Çıkış Yap",
+    "delete_account": "Hesabı Sil"
+  },
+  "language": {
+    "title": "Dil",
+    "subtitle": "13 dilde mevcut",
+    "available": "Mevcut Diller"
+  },
+  "common": {
+    "ok": "Tamam",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "back": "Geri",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar dene",
+    "premium_badge": "PREMIUM"
+  }
+}

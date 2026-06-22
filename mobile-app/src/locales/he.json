@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "Pratik Tarifler",
+    "tagline": "ספר לנו מה יש לך. אנחנו נמצא את המתכון."
+  },
+  "auth": {
+    "sign_in": "התחברות",
+    "sign_up": "הרשמה",
+    "sign_out": "התנתקות",
+    "email": "אימייל",
+    "password": "סיסמה",
+    "continue_google": "המשך עם Google",
+    "continue_apple": "המשך עם Apple",
+    "continue_anonymous": "המשך כאורח",
+    "or": "או",
+    "have_account": "יש לך חשבון?",
+    "no_account": "אין חשבון?",
+    "forgot_password": "שכחתי סיסמה",
+    "errors": {
+      "invalid_email": "הזן אימייל תקין.",
+      "weak_password": "הסיסמה חייבת להיות לפחות 8 תווים.",
+      "wrong_credentials": "אימייל או סיסמה שגויים."
+    }
+  },
+  "home": {
+    "greeting": "שלום {{name}}",
+    "greeting_guest": "שלום",
+    "prompt": "מה מבשלים היום?",
+    "section_title": "מה יש לך במקרר?",
+    "section_subtitle": "הוסף 3-5 מרכיבים",
+    "input_placeholder": "הוסף מרכיב...",
+    "cta": "מצא לי מתכון",
+    "popular_categories": "קטגוריות פופולריות",
+    "cat_quick": "ארוחות מהירות",
+    "cat_traditional": "מסורתי",
+    "cat_desserts": "קינוחים",
+    "cat_healthy": "מתכונים בריאים",
+    "tip_title": "טיפ",
+    "tip_body": "לתוצאות טובות יותר, הוסף לפחות 3 מרכיבים."
+  },
+  "results": {
+    "title": "מתכונים תואמים",
+    "count": "נמצאו {{count}} מתכונים",
+    "match": "{{pct}}% התאמה",
+    "empty": "לא נמצאו מתכונים עם מרכיבים אלה.",
+    "filters": {
+      "all": "הכל",
+      "quick": "<30 דקות",
+      "vegan": "טבעוני",
+      "vegetarian": "צמחוני",
+      "gluten_free": "ללא גלוטן",
+      "low_carb": "דל פחמימה",
+      "easy": "קל"
+    }
+  },
+  "recipe": {
+    "tab_ingredients": "מרכיבים",
+    "tab_steps": "שלבים",
+    "tab_reviews": "ביקורות",
+    "minutes": "דק'",
+    "servings": "ל-{{count}} מנות",
+    "difficulty": "קל",
+    "difficulty_easy": "קל",
+    "difficulty_medium": "בינוני",
+    "difficulty_hard": "קשה",
+    "start_cooking": "התחל לבשל",
+    "missing_ingredients": "מרכיבים חסרים",
+    "you_have": "יש לך",
+    "you_need": "אתה צריך",
+    "add_to_shopping": "הוסף לרשימת קניות"
+  },
+  "cooking": {
+    "step": "שלב {{current}} / {{total}}",
+    "next": "הבא",
+    "prev": "הקודם",
+    "finish": "סיום",
+    "timer": "טיימר",
+    "voice_hint": "קול: \"הבא\"",
+    "completed": "סיימת את המתכון!",
+    "rate_recipe": "דרג את המתכון"
+  },
+  "favorites": {
+    "title": "המועדפים שלי",
+    "count": "{{count}} מתכונים שמורים",
+    "search_placeholder": "חפש במועדפים...",
+    "tab_all": "הכל",
+    "tab_collections": "אוספים",
+    "tab_recent": "אחרונים",
+    "empty": "אין עוד מועדפים. לחץ על הלב במתכון.",
+    "limit_free": "חינם: עד 10 מועדפים"
+  },
+  "shopping": {
+    "title": "רשימת קניות",
+    "subtitle": "{{count}} פריטים • {{recipes}} מתכונים",
+    "cat_produce": "ירקות ופירות",
+    "cat_meat": "בשר וחלב",
+    "cat_pantry": "מזווה",
+    "add_manually": "הוסף ידנית",
+    "clear_checked": "נקה מסומנים",
+    "premium_only": "תכונת Premium"
+  },
+  "premium": {
+    "title": "שדרג ל-Premium",
+    "subtitle": "פתח את כל המטבח",
+    "feature_recipes": "כל 500+ המתכונים",
+    "feature_filters": "פילטרים תזונתיים",
+    "feature_shopping": "רשימת קניות חכמה",
+    "feature_favorites": "מועדפים ללא הגבלה",
+    "feature_nutrition": "מידע תזונתי מלא",
+    "feature_voice": "מצב קולי מתקדם",
+    "monthly": "חודשי",
+    "yearly": "שנתי",
+    "price_monthly": "₪17.90/חודש",
+    "price_yearly": "₪149/שנה",
+    "save_badge": "חסוך 33%",
+    "trial": "7 ימים חינם",
+    "restore": "שחזר רכישות",
+    "terms": "ביטול בכל עת."
+  },
+  "profile": {
+    "title": "פרופיל",
+    "stats_cooked": "בושלו",
+    "stats_favorites": "מועדפים",
+    "stats_streak": "ימים ברצף",
+    "settings": "הגדרות",
+    "language": "שפה",
+    "notifications": "התראות",
+    "premium": "Premium",
+    "manage_account": "ניהול חשבון",
+    "help": "עזרה ותמיכה",
+    "about": "אודות",
+    "logout": "התנתק",
+    "delete_account": "מחק חשבון"
+  },
+  "language": {
+    "title": "שפה",
+    "subtitle": "זמין ב-13 שפות",
+    "available": "שפות זמינות"
+  },
+  "common": {
+    "ok": "אישור",
+    "cancel": "ביטול",
+    "save": "שמור",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "back": "חזור",
+    "loading": "טוען...",
+    "error": "משהו השתבש",
+    "retry": "נסה שוב",
+    "premium_badge": "PREMIUM"
+  }
+}
