@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "clear_all": "Alle löschen",
+    "or": "oder",
+    "min_short": "Min",
+    "back": "Zurück"
+  },
+  "mode": {
+    "greeting": "Hallo {{name}}!",
+    "title": "Was kochen wir heute?",
+    "subtitle": "Personalisierte Rezepte für dich",
+    "recipe_of_the_day": "Rezept des Tages",
+    "pantry": {
+      "title": "Mit den Zutaten zu Hause",
+      "subtitle": "Kühlschrank-Foto oder Liste",
+      "full_match": "Alle Zutaten vorhanden ({{count}}/{{count}})"
+    },
+    "supply": {
+      "title": "1-2 Zutaten zukaufen",
+      "subtitle": "Erweiterte Auswahl",
+      "missing": "{{count}} fehlt"
+    },
+    "discover": {
+      "title": "Unbegrenzt entdecken",
+      "subtitle": "Unter 2500 Rezepten"
+    }
+  },
+  "pantry_input": {
+    "title": "Wie willst du Zutaten hinzufügen?",
+    "subtitle_pantry": "Wir schlagen Rezepte mit deinen Zutaten vor",
+    "subtitle_supply": "Wir schlagen Rezepte mit 1-2 zusätzlichen Zutaten vor",
+    "camera_title": "Foto vom Kühlschrank machen",
+    "camera_desc": "KI findet die Zutaten",
+    "manual_title": "Zutaten selbst eingeben",
+    "manual_desc": "Aus Liste wählen oder tippen",
+    "saved_title": "Mein gespeicherter Vorrat",
+    "saved_desc_items": "{{count}} gespeicherte Artikel",
+    "saved_desc_empty": "Noch keine Vorräte gespeichert",
+    "daily_remaining": "{{remaining}}/{{total}} Scans übrig",
+    "tip": "Öffne deine Kühlschranktür und fotografiere alle Fächer"
+  },
+  "ingredient_list": {
+    "title": "Deine Zutaten",
+    "subtitle_pantry": "Wähle alles aus, was du hast",
+    "subtitle_supply": "Wähle, was du hast — 1-2 dürfen fehlen",
+    "search_placeholder": "Zutat suchen...",
+    "search_results": "Ergebnisse",
+    "frequent": "Häufig verwendet",
+    "selected": "Ausgewählt ({{count}})",
+    "empty_hint": "Wähle Zutaten aus der Liste oben",
+    "need_more": "Wähle {{need}} weitere Zutaten",
+    "show_recipes": "🍳 Rezepte anzeigen ({{count}})"
+  },
+  "scan": {
+    "limit_title": "Tageslimit erreicht",
+    "limit_message": "Du hast deine {{limit}} Scans heute genutzt. Premium = unbegrenzt."
+  },
+  "results": {
+    "loading": "Suche Rezepte...",
+    "sort": {
+      "best_match": "Beste Übereinstimmung",
+      "least_missing": "Wenigste fehlend",
+      "rating": "Bewertung",
+      "time": "Zeit"
+    },
+    "pantry": {
+      "title": "{{count}} Rezepte mit {{ingredientCount}} Zutaten",
+      "empty_title": "Keine Rezepte gefunden",
+      "empty_message": "Versuche Modus 2, wenn du 1-2 zusätzliche kaufen kannst",
+      "switch_to_supply": "🛒 Zu Modus 2 wechseln",
+      "cross_sell_title": "Mehr Optionen?",
+      "cross_sell_message": "Mit 1-2 zusätzlichen Zutaten 25 weitere Rezepte",
+      "cross_sell_cta": "Zu Modus 2"
+    },
+    "supply": {
+      "title": "{{count}} Rezepte mit Einkaufen",
+      "max_missing": "Max. fehlend",
+      "shopping_list": "Kombinierte Einkaufsliste",
+      "shopping_list_subtitle": "Alles fehlende in einer Liste",
+      "shopping_list_premium": "Premium-Funktion",
+      "empty_title": "Nicht genug Ergebnisse",
+      "empty_message": "Mehr Zutaten hinzufügen und erneut versuchen"
+    }
+  },
+  "discover": {
+    "search_placeholder": "Rezepte oder Zutaten suchen...",
+    "recipe_of_the_day": "Rezept des Tages",
+    "cuisines": "Küchen",
+    "quick_recipes": "Schnell (unter 15 Min)",
+    "vegetarian_favorites": "Vegetarische Favoriten",
+    "turkish_desserts": "Türkische Süßspeisen",
+    "trending": "Im Trend",
+    "browse_all": "Alle {{count}} Rezepte"
+  },
+  "recipe": {
+    "votes": "Stimmen",
+    "total_time": "Dauer",
+    "servings": "Portionen",
+    "difficulty": "Schwierigkeit",
+    "cuisine": "Küche",
+    "ingredients": "Zutaten",
+    "steps": "Schritte",
+    "tips": "Tipps",
+    "missing_warning": "Fehlende Zutaten: {{count}}",
+    "start_cooking": "KOCHEN STARTEN"
+  },
+  "premium": {
+    "banner_title": "Premium werden",
+    "banner_subtitle": "Unbegrenzte Scans, exklusive Rezepte",
+    "unlimited": "Unbegrenzt",
+    "upgrade_cta": "Upgrade"
+  },
+  "difficulty": {
+    "easy": "Einfach",
+    "medium": "Mittel",
+    "hard": "Schwer"
+  },
+  "cuisine": {
+    "turkish": "Türkisch",
+    "italian": "Italienisch",
+    "mediterranean": "Mediterran",
+    "french": "Französisch",
+    "middle_eastern": "Nahöstlich",
+    "american": "Amerikanisch",
+    "mexican": "Mexikanisch",
+    "indian": "Indisch",
+    "spanish": "Spanisch",
+    "japanese": "Japanisch",
+    "chinese": "Chinesisch",
+    "thai": "Thailändisch",
+    "other": "Sonstiges"
+  }
+}

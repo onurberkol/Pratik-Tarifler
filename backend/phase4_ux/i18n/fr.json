@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "clear_all": "Tout effacer",
+    "or": "ou",
+    "min_short": "min",
+    "back": "Retour"
+  },
+  "mode": {
+    "greeting": "Bonjour {{name}} !",
+    "title": "Que cuisinons-nous aujourd'hui ?",
+    "subtitle": "Recettes personnalisées pour toi",
+    "recipe_of_the_day": "Recette du jour",
+    "pantry": {
+      "title": "Avec ce que j'ai à la maison",
+      "subtitle": "Photo du frigo ou liste",
+      "full_match": "Tous les ingrédients disponibles ({{count}}/{{count}})"
+    },
+    "supply": {
+      "title": "Acheter 1-2 ingrédients",
+      "subtitle": "Sélection plus large",
+      "missing": "{{count}} manquant"
+    },
+    "discover": {
+      "title": "Découvrir sans limite",
+      "subtitle": "Parmi 2500 recettes"
+    }
+  },
+  "pantry_input": {
+    "title": "Comment ajouter tes ingrédients ?",
+    "subtitle_pantry": "Recettes faisables avec ce que tu as",
+    "subtitle_supply": "Recettes avec 1-2 ingrédients en plus",
+    "camera_title": "Photographier le frigo",
+    "camera_desc": "L'IA trouve pour toi",
+    "manual_title": "Saisir moi-même",
+    "manual_desc": "Choisir dans la liste ou taper",
+    "saved_title": "Mon garde-manger",
+    "saved_desc_items": "{{count}} articles enregistrés",
+    "saved_desc_empty": "Aucun garde-manger enregistré",
+    "daily_remaining": "{{remaining}}/{{total}} scans restants",
+    "tip": "Ouvre la porte du frigo et photographie toutes les étagères"
+  },
+  "ingredient_list": {
+    "title": "Tes ingrédients",
+    "subtitle_pantry": "Sélectionne tout ce que tu as",
+    "subtitle_supply": "Sélectionne — 1-2 manquants OK",
+    "search_placeholder": "Rechercher un ingrédient...",
+    "search_results": "Résultats",
+    "frequent": "Fréquemment utilisés",
+    "selected": "Sélectionnés ({{count}})",
+    "empty_hint": "Choisis des ingrédients ci-dessus",
+    "need_more": "Choisis {{need}} ingrédients de plus",
+    "show_recipes": "🍳 Voir les recettes ({{count}})"
+  },
+  "scan": {
+    "limit_title": "Limite quotidienne atteinte",
+    "limit_message": "{{limit}} scans utilisés aujourd'hui. Premium = illimité."
+  },
+  "results": {
+    "loading": "Recherche de recettes...",
+    "sort": {
+      "best_match": "Meilleure correspondance",
+      "least_missing": "Moins de manquant",
+      "rating": "Note",
+      "time": "Durée"
+    },
+    "pantry": {
+      "title": "{{count}} recettes avec {{ingredientCount}} ingrédients",
+      "empty_title": "Aucune recette trouvée",
+      "empty_message": "Essaie Mode 2 si tu peux acheter 1-2 ingrédients",
+      "switch_to_supply": "🛒 Passer au Mode 2",
+      "cross_sell_title": "Plus d'options ?",
+      "cross_sell_message": "Avec 1-2 ingrédients de plus, 25 recettes en plus",
+      "cross_sell_cta": "Vers Mode 2"
+    },
+    "supply": {
+      "title": "{{count}} recettes avec achats",
+      "max_missing": "Max manquant",
+      "shopping_list": "Liste de courses combinée",
+      "shopping_list_subtitle": "Tout le manquant en une liste",
+      "shopping_list_premium": "Fonction premium",
+      "empty_title": "Pas assez de résultats",
+      "empty_message": "Ajoute plus d'ingrédients et réessaie"
+    }
+  },
+  "discover": {
+    "search_placeholder": "Recherche recette ou ingrédient...",
+    "recipe_of_the_day": "Recette du jour",
+    "cuisines": "Cuisines",
+    "quick_recipes": "Rapide (moins 15 min)",
+    "vegetarian_favorites": "Favoris végétariens",
+    "turkish_desserts": "Desserts turcs",
+    "trending": "Tendance",
+    "browse_all": "Toutes les {{count}} recettes"
+  },
+  "recipe": {
+    "votes": "votes",
+    "total_time": "Durée",
+    "servings": "Personnes",
+    "difficulty": "Difficulté",
+    "cuisine": "Cuisine",
+    "ingredients": "Ingrédients",
+    "steps": "Étapes",
+    "tips": "Conseils",
+    "missing_warning": "Ingrédients manquants : {{count}}",
+    "start_cooking": "COMMENCER À CUISINER"
+  },
+  "premium": {
+    "banner_title": "Passer Premium",
+    "banner_subtitle": "Scans illimités, recettes exclusives",
+    "unlimited": "Illimité",
+    "upgrade_cta": "Upgrade"
+  },
+  "difficulty": {
+    "easy": "Facile",
+    "medium": "Moyen",
+    "hard": "Difficile"
+  },
+  "cuisine": {
+    "turkish": "Turque",
+    "italian": "Italienne",
+    "mediterranean": "Méditerranéenne",
+    "french": "Française",
+    "middle_eastern": "Moyen-Orientale",
+    "american": "Américaine",
+    "mexican": "Mexicaine",
+    "indian": "Indienne",
+    "spanish": "Espagnole",
+    "japanese": "Japonaise",
+    "chinese": "Chinoise",
+    "thai": "Thaïlandaise",
+    "other": "Autre"
+  }
+}

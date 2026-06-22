@@ -1,0 +1,20 @@
+[
+  {
+    "recipe_id": "tr-yayla-corbasi",
+    "target_lang": "en",
+    "status": "dry_run",
+    "prompt_preview": "You are a professional culinary translator specializing in Turkish cuisine.\n\nTranslate the following recipe content from Turkish to English.\n\nCRITICAL RULES:\n1. Return ONLY valid JSON in the EXACT same structure as input\n2. DO NOT translate or alter ingredient_tokens, ids, numbers, or measurements a..."
+  },
+  {
+    "recipe_id": "tr-mercimek-corbasi",
+    "target_lang": "en",
+    "status": "dry_run",
+    "prompt_preview": "You are a professional culinary translator specializing in Turkish cuisine.\n\nTranslate the following recipe content from Turkish to English.\n\nCRITICAL RULES:\n1. Return ONLY valid JSON in the EXACT same structure as input\n2. DO NOT translate or alter ingredient_tokens, ids, numbers, or measurements a..."
+  },
+  {
+    "recipe_id": "tr-ezogelin-corbasi",
+    "target_lang": "en",
+    "status": "dry_run",
+    "prompt_preview": "You are a professional culinary translator specializing in Turkish cuisine.\n\nTranslate the following recipe content from Turkish to English.\n\nCRITICAL RULES:\n1. Return ONLY valid JSON in the EXACT same structure as input\n2. DO NOT translate or alter ingredient_tokens, ids, numbers, or measurements a..."
+  }
+]

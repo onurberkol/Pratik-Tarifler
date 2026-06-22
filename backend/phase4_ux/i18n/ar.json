@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "جاري التحميل...", "error": "حدث خطأ", "retry": "إعادة المحاولة", "cancel": "إلغاء", "confirm": "تأكيد", "save": "حفظ", "delete": "حذف", "clear_all": "مسح الكل", "or": "أو", "min_short": "د", "back": "رجوع" },
+  "mode": {
+    "greeting": "مرحباً {{name}}!",
+    "title": "ماذا سنطبخ اليوم؟",
+    "subtitle": "وصفات مخصصة لك",
+    "recipe_of_the_day": "وصفة اليوم",
+    "pantry": { "title": "بما لدي في المنزل", "subtitle": "صورة الثلاجة أو قائمة", "full_match": "كل المكونات متوفرة ({{count}}/{{count}})" },
+    "supply": { "title": "يمكنني شراء 1-2", "subtitle": "خيارات أوسع", "missing": "{{count}} ناقص" },
+    "discover": { "title": "اكتشف بلا حدود", "subtitle": "بين 2500 وصفة" }
+  },
+  "pantry_input": {
+    "title": "كيف ستضيف المكونات؟",
+    "subtitle_pantry": "وصفات بما لديك",
+    "subtitle_supply": "وصفات مع 1-2 إضافية",
+    "camera_title": "صور الثلاجة",
+    "camera_desc": "الذكاء الاصطناعي يجد لك",
+    "manual_title": "أدخل يدوياً",
+    "manual_desc": "اختر من القائمة أو اكتب",
+    "saved_title": "مخزني المحفوظ",
+    "saved_desc_items": "{{count}} عنصر محفوظ",
+    "saved_desc_empty": "لا يوجد مخزن محفوظ",
+    "daily_remaining": "{{remaining}}/{{total}} مسحات متبقية",
+    "tip": "افتح الثلاجة وصور كل الرفوف"
+  },
+  "ingredient_list": {
+    "title": "مكوناتك",
+    "subtitle_pantry": "اختر كل ما لديك",
+    "subtitle_supply": "اختر — 1-2 يمكن أن تنقص",
+    "search_placeholder": "بحث عن مكون...",
+    "search_results": "النتائج",
+    "frequent": "الأكثر استخداماً",
+    "selected": "المختار ({{count}})",
+    "empty_hint": "اختر مكونات من القائمة أعلاه",
+    "need_more": "اختر {{need}} مكونات إضافية",
+    "show_recipes": "🍳 عرض الوصفات ({{count}})"
+  },
+  "scan": { "limit_title": "تم الوصول للحد اليومي", "limit_message": "استخدمت {{limit}} مسحات اليوم. Premium = غير محدود." },
+  "results": {
+    "loading": "البحث عن وصفات...",
+    "sort": { "best_match": "الأفضل تطابقاً", "least_missing": "الأقل نقصاً", "rating": "التقييم", "time": "الوقت" },
+    "pantry": { "title": "{{count}} وصفة مع {{ingredientCount}} مكون", "empty_title": "لم يتم العثور على وصفات", "empty_message": "جرب الوضع 2 إذا كنت تستطيع شراء 1-2", "switch_to_supply": "🛒 الانتقال للوضع 2", "cross_sell_title": "خيارات أكثر؟", "cross_sell_message": "بإضافة 1-2 ستحصل على 25 وصفة أخرى", "cross_sell_cta": "للوضع 2" },
+    "supply": { "title": "{{count}} وصفة مع التسوق", "max_missing": "أقصى نقص", "shopping_list": "قائمة تسوق مجمعة", "shopping_list_subtitle": "كل المفقود في قائمة واحدة", "shopping_list_premium": "ميزة Premium", "empty_title": "نتائج غير كافية", "empty_message": "أضف مزيداً من المكونات" }
+  },
+  "discover": {
+    "search_placeholder": "بحث عن وصفة أو مكون...",
+    "recipe_of_the_day": "وصفة اليوم",
+    "cuisines": "المطابخ",
+    "quick_recipes": "سريعة (أقل من 15 د)",
+    "vegetarian_favorites": "نباتية مفضلة",
+    "turkish_desserts": "حلويات تركية",
+    "trending": "رائج",
+    "browse_all": "كل الـ {{count}} وصفة"
+  },
+  "recipe": { "votes": "صوت", "total_time": "الوقت", "servings": "حصص", "difficulty": "الصعوبة", "cuisine": "المطبخ", "ingredients": "المكونات", "steps": "الخطوات", "tips": "نصائح", "missing_warning": "المكونات الناقصة: {{count}}", "start_cooking": "ابدأ الطبخ" },
+  "premium": { "banner_title": "اشترك في Premium", "banner_subtitle": "مسحات غير محدودة، وصفات حصرية", "unlimited": "غير محدود", "upgrade_cta": "ترقية" },
+  "difficulty": { "easy": "سهل", "medium": "متوسط", "hard": "صعب" },
+  "cuisine": { "turkish": "تركي", "italian": "إيطالي", "mediterranean": "متوسطي", "french": "فرنسي", "middle_eastern": "شرق أوسطي", "american": "أمريكي", "mexican": "مكسيكي", "indian": "هندي", "spanish": "إسباني", "japanese": "ياباني", "chinese": "صيني", "thai": "تايلاندي", "other": "أخرى" }
+}

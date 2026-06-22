@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Caricamento...", "error": "Si è verificato un errore", "retry": "Riprova", "cancel": "Annulla", "confirm": "Conferma", "save": "Salva", "delete": "Elimina", "clear_all": "Cancella tutto", "or": "o", "min_short": "min", "back": "Indietro" },
+  "mode": {
+    "greeting": "Ciao {{name}}!",
+    "title": "Cosa cuciniamo oggi?",
+    "subtitle": "Ricette personalizzate per te",
+    "recipe_of_the_day": "Ricetta del giorno",
+    "pantry": { "title": "Con quello che ho in casa", "subtitle": "Foto del frigo o lista", "full_match": "Tutti gli ingredienti disponibili ({{count}}/{{count}})" },
+    "supply": { "title": "Posso comprare 1-2 cose", "subtitle": "Più scelta", "missing": "{{count}} mancante" },
+    "discover": { "title": "Esplora senza limiti", "subtitle": "Tra 2500 ricette" }
+  },
+  "pantry_input": {
+    "title": "Come aggiungi gli ingredienti?",
+    "subtitle_pantry": "Ricette con quello che hai",
+    "subtitle_supply": "Ricette con 1-2 ingredienti extra",
+    "camera_title": "Fotografa il frigo",
+    "camera_desc": "L'IA trova per te",
+    "manual_title": "Scrivi a mano",
+    "manual_desc": "Scegli dalla lista o digita",
+    "saved_title": "Mia dispensa salvata",
+    "saved_desc_items": "{{count}} articoli salvati",
+    "saved_desc_empty": "Nessuna dispensa salvata",
+    "daily_remaining": "{{remaining}}/{{total}} scansioni rimaste",
+    "tip": "Apri il frigo e fotografa tutti i ripiani"
+  },
+  "ingredient_list": {
+    "title": "I tuoi ingredienti",
+    "subtitle_pantry": "Seleziona tutto ciò che hai",
+    "subtitle_supply": "Seleziona — 1-2 mancanti OK",
+    "search_placeholder": "Cerca ingrediente...",
+    "search_results": "Risultati",
+    "frequent": "Usati spesso",
+    "selected": "Selezionati ({{count}})",
+    "empty_hint": "Scegli ingredienti dalla lista sopra",
+    "need_more": "Scegli {{need}} ingredienti in più",
+    "show_recipes": "🍳 Mostra ricette ({{count}})"
+  },
+  "scan": { "limit_title": "Limite giornaliero raggiunto", "limit_message": "Hai usato le {{limit}} scansioni di oggi. Premium = illimitate." },
+  "results": {
+    "loading": "Cerco ricette...",
+    "sort": { "best_match": "Migliore", "least_missing": "Meno mancanti", "rating": "Voto", "time": "Tempo" },
+    "pantry": { "title": "{{count}} ricette con {{ingredientCount}} ingredienti", "empty_title": "Nessuna ricetta trovata", "empty_message": "Prova Modalità 2 se puoi comprare 1-2 cose", "switch_to_supply": "🛒 Passa a Modalità 2", "cross_sell_title": "Più opzioni?", "cross_sell_message": "Con 1-2 ingredienti extra 25 ricette in più", "cross_sell_cta": "Vai a Modalità 2" },
+    "supply": { "title": "{{count}} ricette con acquisti", "max_missing": "Max mancanti", "shopping_list": "Lista spesa combinata", "shopping_list_subtitle": "Tutto il mancante in una lista", "shopping_list_premium": "Funzione premium", "empty_title": "Non abbastanza risultati", "empty_message": "Aggiungi più ingredienti e riprova" }
+  },
+  "discover": {
+    "search_placeholder": "Cerca ricetta o ingrediente...",
+    "recipe_of_the_day": "Ricetta del giorno",
+    "cuisines": "Cucine",
+    "quick_recipes": "Veloci (sotto 15 min)",
+    "vegetarian_favorites": "Preferiti vegetariani",
+    "turkish_desserts": "Dolci turchi",
+    "trending": "Di tendenza",
+    "browse_all": "Tutte le {{count}} ricette"
+  },
+  "recipe": { "votes": "voti", "total_time": "Tempo", "servings": "Porzioni", "difficulty": "Difficoltà", "cuisine": "Cucina", "ingredients": "Ingredienti", "steps": "Passi", "tips": "Consigli", "missing_warning": "Ingredienti mancanti: {{count}}", "start_cooking": "INIZIA A CUCINARE" },
+  "premium": { "banner_title": "Passa a Premium", "banner_subtitle": "Scansioni illimitate, ricette esclusive", "unlimited": "Illimitato", "upgrade_cta": "Upgrade" },
+  "difficulty": { "easy": "Facile", "medium": "Medio", "hard": "Difficile" },
+  "cuisine": { "turkish": "Turca", "italian": "Italiana", "mediterranean": "Mediterranea", "french": "Francese", "middle_eastern": "Mediorientale", "american": "Americana", "mexican": "Messicana", "indian": "Indiana", "spanish": "Spagnola", "japanese": "Giapponese", "chinese": "Cinese", "thai": "Thailandese", "other": "Altro" }
+}

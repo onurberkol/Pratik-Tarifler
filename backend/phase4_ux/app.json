@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Pratik Tarifler",
+    "slug": "pratik-tarifler",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "pratiktarifler",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FAF7F2"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pratiktarifler.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Pratik Tarifler buzdolabınızı tarayarak elinizdeki malzemelerle yapabileceğiniz tarifleri bulmak için kameraya ihtiyaç duyar.",
+        "NSPhotoLibraryUsageDescription": "Galeriden buzdolabı fotoğrafı seçmek için fotoğraflara erişim gerekli.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.pratiktarifler.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#D89A1E"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-localization",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Pratik Tarifler needs camera to scan your fridge."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pratik Tarifler needs photo library access."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-expo-project-id"
+      }
+    }
+  }
+}

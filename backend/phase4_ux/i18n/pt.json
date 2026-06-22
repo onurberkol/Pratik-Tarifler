@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Carregando...", "error": "Ocorreu um erro", "retry": "Tentar novamente", "cancel": "Cancelar", "confirm": "Confirmar", "save": "Salvar", "delete": "Excluir", "clear_all": "Limpar tudo", "or": "ou", "min_short": "min", "back": "Voltar" },
+  "mode": {
+    "greeting": "Olá {{name}}!",
+    "title": "O que vamos cozinhar hoje?",
+    "subtitle": "Receitas personalizadas para você",
+    "recipe_of_the_day": "Receita do dia",
+    "pantry": { "title": "Com o que tenho em casa", "subtitle": "Foto da geladeira ou lista", "full_match": "Todos os ingredientes disponíveis ({{count}}/{{count}})" },
+    "supply": { "title": "Posso comprar 1-2 itens", "subtitle": "Seleção mais ampla", "missing": "{{count}} faltando" },
+    "discover": { "title": "Descobrir sem limites", "subtitle": "Entre 2500 receitas" }
+  },
+  "pantry_input": {
+    "title": "Como adicionar ingredientes?",
+    "subtitle_pantry": "Receitas com o que você tem",
+    "subtitle_supply": "Receitas com 1-2 ingredientes extras",
+    "camera_title": "Fotografar a geladeira",
+    "camera_desc": "A IA encontra para você",
+    "manual_title": "Escrever manualmente",
+    "manual_desc": "Escolher da lista ou digitar",
+    "saved_title": "Minha despensa salva",
+    "saved_desc_items": "{{count}} itens salvos",
+    "saved_desc_empty": "Sem despensa salva",
+    "daily_remaining": "{{remaining}}/{{total}} escaneamentos restantes",
+    "tip": "Abra a geladeira e fotografe todas as prateleiras"
+  },
+  "ingredient_list": {
+    "title": "Seus ingredientes",
+    "subtitle_pantry": "Selecione tudo que tem",
+    "subtitle_supply": "Selecione — 1-2 faltando OK",
+    "search_placeholder": "Buscar ingrediente...",
+    "search_results": "Resultados",
+    "frequent": "Mais usados",
+    "selected": "Selecionados ({{count}})",
+    "empty_hint": "Escolha ingredientes da lista acima",
+    "need_more": "Escolha mais {{need}} ingredientes",
+    "show_recipes": "🍳 Mostrar receitas ({{count}})"
+  },
+  "scan": { "limit_title": "Limite diário atingido", "limit_message": "Usou seus {{limit}} escaneamentos hoje. Premium = ilimitado." },
+  "results": {
+    "loading": "Buscando receitas...",
+    "sort": { "best_match": "Melhor", "least_missing": "Menos faltando", "rating": "Avaliação", "time": "Tempo" },
+    "pantry": { "title": "{{count}} receitas com {{ingredientCount}} ingredientes", "empty_title": "Nenhuma receita encontrada", "empty_message": "Tente Modo 2 se puder comprar 1-2 itens", "switch_to_supply": "🛒 Mudar para Modo 2", "cross_sell_title": "Mais opções?", "cross_sell_message": "Com 1-2 extras, mais 25 receitas", "cross_sell_cta": "Para Modo 2" },
+    "supply": { "title": "{{count}} receitas com compras", "max_missing": "Máx faltando", "shopping_list": "Lista de compras combinada", "shopping_list_subtitle": "Tudo faltando em uma lista", "shopping_list_premium": "Função premium", "empty_title": "Resultados insuficientes", "empty_message": "Adicione mais ingredientes e tente novamente" }
+  },
+  "discover": {
+    "search_placeholder": "Buscar receita ou ingrediente...",
+    "recipe_of_the_day": "Receita do dia",
+    "cuisines": "Culinárias",
+    "quick_recipes": "Rápidas (menos 15 min)",
+    "vegetarian_favorites": "Favoritas vegetarianas",
+    "turkish_desserts": "Sobremesas turcas",
+    "trending": "Em alta",
+    "browse_all": "Todas as {{count}} receitas"
+  },
+  "recipe": { "votes": "votos", "total_time": "Tempo", "servings": "Porções", "difficulty": "Dificuldade", "cuisine": "Culinária", "ingredients": "Ingredientes", "steps": "Passos", "tips": "Dicas", "missing_warning": "Ingredientes faltando: {{count}}", "start_cooking": "COMEÇAR A COZINHAR" },
+  "premium": { "banner_title": "Vire Premium", "banner_subtitle": "Escaneamentos ilimitados, receitas exclusivas", "unlimited": "Ilimitado", "upgrade_cta": "Upgrade" },
+  "difficulty": { "easy": "Fácil", "medium": "Médio", "hard": "Difícil" },
+  "cuisine": { "turkish": "Turca", "italian": "Italiana", "mediterranean": "Mediterrânea", "french": "Francesa", "middle_eastern": "Oriente Médio", "american": "Americana", "mexican": "Mexicana", "indian": "Indiana", "spanish": "Espanhola", "japanese": "Japonesa", "chinese": "Chinesa", "thai": "Tailandesa", "other": "Outro" }
+}

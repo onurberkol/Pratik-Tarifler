@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "טוען...", "error": "אירעה שגיאה", "retry": "נסה שוב", "cancel": "ביטול", "confirm": "אישור", "save": "שמירה", "delete": "מחק", "clear_all": "נקה הכל", "or": "או", "min_short": "דק", "back": "חזרה" },
+  "mode": {
+    "greeting": "שלום {{name}}!",
+    "title": "מה נבשל היום?",
+    "subtitle": "מתכונים מותאמים אישית",
+    "recipe_of_the_day": "המתכון של היום",
+    "pantry": { "title": "ממה שיש לי בבית", "subtitle": "צילום מקרר או רשימה", "full_match": "כל המרכיבים זמינים ({{count}}/{{count}})" },
+    "supply": { "title": "אפשר לקנות 1-2", "subtitle": "בחירה רחבה", "missing": "{{count}} חסר" },
+    "discover": { "title": "גלה ללא הגבלה", "subtitle": "מתוך 2500 מתכונים" }
+  },
+  "pantry_input": {
+    "title": "איך תוסיף מרכיבים?",
+    "subtitle_pantry": "מתכונים ממה שיש לך",
+    "subtitle_supply": "מתכונים עם 1-2 נוספים",
+    "camera_title": "צלם את המקרר",
+    "camera_desc": "AI מוצא בשבילך",
+    "manual_title": "הזן ידנית",
+    "manual_desc": "בחר מהרשימה או הקלד",
+    "saved_title": "המזווה השמור שלי",
+    "saved_desc_items": "{{count}} פריטים שמורים",
+    "saved_desc_empty": "אין מזווה שמור",
+    "daily_remaining": "{{remaining}}/{{total}} סריקות נותרו",
+    "tip": "פתח את המקרר וצלם את כל המדפים"
+  },
+  "ingredient_list": {
+    "title": "המרכיבים שלך",
+    "subtitle_pantry": "בחר את כל מה שיש לך",
+    "subtitle_supply": "בחר — 1-2 חסרים בסדר",
+    "search_placeholder": "חפש מרכיב...",
+    "search_results": "תוצאות",
+    "frequent": "בשימוש תכוף",
+    "selected": "נבחרו ({{count}})",
+    "empty_hint": "בחר מרכיבים מהרשימה למעלה",
+    "need_more": "בחר עוד {{need}} מרכיבים",
+    "show_recipes": "🍳 הצג מתכונים ({{count}})"
+  },
+  "scan": { "limit_title": "הגעת למגבלת היום", "limit_message": "השתמשת ב-{{limit}} סריקות היום. Premium = ללא הגבלה." },
+  "results": {
+    "loading": "מחפש מתכונים...",
+    "sort": { "best_match": "ההתאמה הטובה", "least_missing": "הכי פחות חסר", "rating": "דירוג", "time": "זמן" },
+    "pantry": { "title": "{{count}} מתכונים עם {{ingredientCount}} מרכיבים", "empty_title": "לא נמצאו מתכונים", "empty_message": "נסה מצב 2 אם אתה יכול לקנות 1-2", "switch_to_supply": "🛒 עבור למצב 2", "cross_sell_title": "אפשרויות נוספות?", "cross_sell_message": "עם 1-2 נוספים 25 מתכונים נוספים", "cross_sell_cta": "למצב 2" },
+    "supply": { "title": "{{count}} מתכונים עם קניות", "max_missing": "חסרים מקס", "shopping_list": "רשימת קניות משולבת", "shopping_list_subtitle": "כל החסר ברשימה אחת", "shopping_list_premium": "תכונת Premium", "empty_title": "אין מספיק תוצאות", "empty_message": "הוסף עוד מרכיבים" }
+  },
+  "discover": {
+    "search_placeholder": "חפש מתכון או מרכיב...",
+    "recipe_of_the_day": "המתכון של היום",
+    "cuisines": "מטבחים",
+    "quick_recipes": "מהיר (פחות מ-15 דק)",
+    "vegetarian_favorites": "מועדפים צמחוניים",
+    "turkish_desserts": "קינוחים טורקיים",
+    "trending": "פופולרי",
+    "browse_all": "כל {{count}} המתכונים"
+  },
+  "recipe": { "votes": "הצבעות", "total_time": "זמן", "servings": "מנות", "difficulty": "קושי", "cuisine": "מטבח", "ingredients": "מרכיבים", "steps": "שלבים", "tips": "טיפים", "missing_warning": "מרכיבים חסרים: {{count}}", "start_cooking": "התחל לבשל" },
+  "premium": { "banner_title": "הצטרף ל-Premium", "banner_subtitle": "סריקות ללא הגבלה, מתכונים בלעדיים", "unlimited": "ללא הגבלה", "upgrade_cta": "שדרג" },
+  "difficulty": { "easy": "קל", "medium": "בינוני", "hard": "קשה" },
+  "cuisine": { "turkish": "טורקי", "italian": "איטלקי", "mediterranean": "ים תיכוני", "french": "צרפתי", "middle_eastern": "מזרח תיכוני", "american": "אמריקאי", "mexican": "מקסיקני", "indian": "הודי", "spanish": "ספרדי", "japanese": "יפני", "chinese": "סיני", "thai": "תאילנדי", "other": "אחר" }
+}

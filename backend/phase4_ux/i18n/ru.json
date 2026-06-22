@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Загрузка...", "error": "Произошла ошибка", "retry": "Повторить", "cancel": "Отмена", "confirm": "Подтвердить", "save": "Сохранить", "delete": "Удалить", "clear_all": "Очистить все", "or": "или", "min_short": "мин", "back": "Назад" },
+  "mode": {
+    "greeting": "Привет, {{name}}!",
+    "title": "Что приготовим сегодня?",
+    "subtitle": "Персональные рецепты для тебя",
+    "recipe_of_the_day": "Рецепт дня",
+    "pantry": { "title": "Из того, что есть дома", "subtitle": "Фото холодильника или список", "full_match": "Все ингредиенты есть ({{count}}/{{count}})" },
+    "supply": { "title": "Могу купить 1-2 продукта", "subtitle": "Больше выбора", "missing": "{{count}} не хватает" },
+    "discover": { "title": "Открой без границ", "subtitle": "Среди 2500 рецептов" }
+  },
+  "pantry_input": {
+    "title": "Как добавить ингредиенты?",
+    "subtitle_pantry": "Рецепты из твоих продуктов",
+    "subtitle_supply": "Рецепты с 1-2 дополнительными",
+    "camera_title": "Сфотографировать холодильник",
+    "camera_desc": "ИИ найдет все за тебя",
+    "manual_title": "Ввести вручную",
+    "manual_desc": "Выбрать из списка или ввести",
+    "saved_title": "Моя кладовая",
+    "saved_desc_items": "{{count}} сохраненных",
+    "saved_desc_empty": "Нет сохраненной кладовой",
+    "daily_remaining": "Осталось {{remaining}}/{{total}} сканов",
+    "tip": "Открой холодильник и сфотографируй все полки"
+  },
+  "ingredient_list": {
+    "title": "Твои ингредиенты",
+    "subtitle_pantry": "Выбери все, что есть",
+    "subtitle_supply": "Выбери — 1-2 могут отсутствовать",
+    "search_placeholder": "Найти ингредиент...",
+    "search_results": "Результаты",
+    "frequent": "Часто используемые",
+    "selected": "Выбрано ({{count}})",
+    "empty_hint": "Выбери ингредиенты из списка",
+    "need_more": "Выбери еще {{need}}",
+    "show_recipes": "🍳 Показать рецепты ({{count}})"
+  },
+  "scan": { "limit_title": "Дневной лимит", "limit_message": "Использовано {{limit}} сканов. Premium = без ограничений." },
+  "results": {
+    "loading": "Поиск рецептов...",
+    "sort": { "best_match": "Лучшее совпадение", "least_missing": "Минимум недостающих", "rating": "Рейтинг", "time": "Время" },
+    "pantry": { "title": "{{count}} рецептов с {{ingredientCount}} ингредиентами", "empty_title": "Рецепты не найдены", "empty_message": "Попробуй Режим 2, если можешь купить 1-2", "switch_to_supply": "🛒 Перейти в Режим 2", "cross_sell_title": "Больше вариантов?", "cross_sell_message": "С 1-2 продуктами еще 25 рецептов", "cross_sell_cta": "В Режим 2" },
+    "supply": { "title": "{{count}} рецептов с покупками", "max_missing": "Макс недостающих", "shopping_list": "Общий список покупок", "shopping_list_subtitle": "Все недостающее в одном списке", "shopping_list_premium": "Premium функция", "empty_title": "Мало результатов", "empty_message": "Добавь больше ингредиентов" }
+  },
+  "discover": {
+    "search_placeholder": "Найти рецепт или ингредиент...",
+    "recipe_of_the_day": "Рецепт дня",
+    "cuisines": "Кухни",
+    "quick_recipes": "Быстрые (до 15 мин)",
+    "vegetarian_favorites": "Вегетарианские",
+    "turkish_desserts": "Турецкие десерты",
+    "trending": "В тренде",
+    "browse_all": "Все {{count}} рецептов"
+  },
+  "recipe": { "votes": "голосов", "total_time": "Время", "servings": "Порций", "difficulty": "Сложность", "cuisine": "Кухня", "ingredients": "Ингредиенты", "steps": "Шаги", "tips": "Советы", "missing_warning": "Недостающие: {{count}}", "start_cooking": "НАЧАТЬ ГОТОВКУ" },
+  "premium": { "banner_title": "Получить Premium", "banner_subtitle": "Безлимитные сканы, эксклюзивные рецепты", "unlimited": "Без лимитов", "upgrade_cta": "Перейти" },
+  "difficulty": { "easy": "Легко", "medium": "Средне", "hard": "Сложно" },
+  "cuisine": { "turkish": "Турецкая", "italian": "Итальянская", "mediterranean": "Средиземноморская", "french": "Французская", "middle_eastern": "Ближневосточная", "american": "Американская", "mexican": "Мексиканская", "indian": "Индийская", "spanish": "Испанская", "japanese": "Японская", "chinese": "Китайская", "thai": "Тайская", "other": "Другое" }
+}

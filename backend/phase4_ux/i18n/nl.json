@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Laden...", "error": "Er is een fout opgetreden", "retry": "Opnieuw", "cancel": "Annuleren", "confirm": "Bevestigen", "save": "Opslaan", "delete": "Verwijderen", "clear_all": "Alles wissen", "or": "of", "min_short": "min", "back": "Terug" },
+  "mode": {
+    "greeting": "Hallo {{name}}!",
+    "title": "Wat koken we vandaag?",
+    "subtitle": "Recepten op maat voor jou",
+    "recipe_of_the_day": "Recept van de dag",
+    "pantry": { "title": "Met wat ik thuis heb", "subtitle": "Koelkast-foto of lijst", "full_match": "Alle ingrediënten beschikbaar ({{count}}/{{count}})" },
+    "supply": { "title": "Kan 1-2 dingen kopen", "subtitle": "Bredere selectie", "missing": "{{count}} ontbreekt" },
+    "discover": { "title": "Onbeperkt ontdekken", "subtitle": "Onder 2500 recepten" }
+  },
+  "pantry_input": {
+    "title": "Hoe voeg je ingrediënten toe?",
+    "subtitle_pantry": "Recepten met wat je hebt",
+    "subtitle_supply": "Recepten met 1-2 extra ingrediënten",
+    "camera_title": "Foto van koelkast",
+    "camera_desc": "AI vindt het voor je",
+    "manual_title": "Zelf invoeren",
+    "manual_desc": "Kies uit lijst of typ",
+    "saved_title": "Mijn opgeslagen voorraad",
+    "saved_desc_items": "{{count}} opgeslagen items",
+    "saved_desc_empty": "Geen voorraad opgeslagen",
+    "daily_remaining": "{{remaining}}/{{total}} scans over",
+    "tip": "Open de koelkast en fotografeer alle planken"
+  },
+  "ingredient_list": {
+    "title": "Jouw ingrediënten",
+    "subtitle_pantry": "Selecteer alles wat je hebt",
+    "subtitle_supply": "Selecteer — 1-2 ontbrekend OK",
+    "search_placeholder": "Zoek ingrediënt...",
+    "search_results": "Resultaten",
+    "frequent": "Vaak gebruikt",
+    "selected": "Geselecteerd ({{count}})",
+    "empty_hint": "Kies ingrediënten uit de lijst",
+    "need_more": "Kies {{need}} meer ingrediënten",
+    "show_recipes": "🍳 Toon recepten ({{count}})"
+  },
+  "scan": { "limit_title": "Dagelijkse limiet", "limit_message": "Je gebruikte {{limit}} scans vandaag. Premium = onbeperkt." },
+  "results": {
+    "loading": "Recepten zoeken...",
+    "sort": { "best_match": "Beste match", "least_missing": "Minst ontbrekend", "rating": "Beoordeling", "time": "Tijd" },
+    "pantry": { "title": "{{count}} recepten met {{ingredientCount}} ingrediënten", "empty_title": "Geen recepten gevonden", "empty_message": "Probeer Modus 2 als je 1-2 kunt kopen", "switch_to_supply": "🛒 Naar Modus 2", "cross_sell_title": "Meer opties?", "cross_sell_message": "Met 1-2 extra 25 recepten meer", "cross_sell_cta": "Naar Modus 2" },
+    "supply": { "title": "{{count}} recepten met inkopen", "max_missing": "Max ontbrekend", "shopping_list": "Gecombineerde boodschappenlijst", "shopping_list_subtitle": "Al het ontbrekende in één lijst", "shopping_list_premium": "Premium functie", "empty_title": "Niet genoeg resultaten", "empty_message": "Voeg meer ingrediënten toe" }
+  },
+  "discover": {
+    "search_placeholder": "Zoek recept of ingrediënt...",
+    "recipe_of_the_day": "Recept van de dag",
+    "cuisines": "Keukens",
+    "quick_recipes": "Snel (onder 15 min)",
+    "vegetarian_favorites": "Vegetarische favorieten",
+    "turkish_desserts": "Turkse desserts",
+    "trending": "Trending",
+    "browse_all": "Alle {{count}} recepten"
+  },
+  "recipe": { "votes": "stemmen", "total_time": "Tijd", "servings": "Porties", "difficulty": "Moeilijkheid", "cuisine": "Keuken", "ingredients": "Ingrediënten", "steps": "Stappen", "tips": "Tips", "missing_warning": "Ontbrekende ingrediënten: {{count}}", "start_cooking": "BEGIN MET KOKEN" },
+  "premium": { "banner_title": "Word Premium", "banner_subtitle": "Onbeperkte scans, exclusieve recepten", "unlimited": "Onbeperkt", "upgrade_cta": "Upgrade" },
+  "difficulty": { "easy": "Makkelijk", "medium": "Gemiddeld", "hard": "Moeilijk" },
+  "cuisine": { "turkish": "Turks", "italian": "Italiaans", "mediterranean": "Mediterraans", "french": "Frans", "middle_eastern": "Midden-Oosten", "american": "Amerikaans", "mexican": "Mexicaans", "indian": "Indiaas", "spanish": "Spaans", "japanese": "Japans", "chinese": "Chinees", "thai": "Thais", "other": "Anders" }
+}

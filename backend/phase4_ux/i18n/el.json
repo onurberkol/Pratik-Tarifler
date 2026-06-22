@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Φόρτωση...", "error": "Παρουσιάστηκε σφάλμα", "retry": "Δοκίμασε ξανά", "cancel": "Άκυρο", "confirm": "Επιβεβαίωση", "save": "Αποθήκευση", "delete": "Διαγραφή", "clear_all": "Καθαρισμός", "or": "ή", "min_short": "λεπ", "back": "Πίσω" },
+  "mode": {
+    "greeting": "Γεια σου {{name}}!",
+    "title": "Τι μαγειρεύουμε σήμερα;",
+    "subtitle": "Εξατομικευμένες συνταγές για εσένα",
+    "recipe_of_the_day": "Συνταγή της ημέρας",
+    "pantry": { "title": "Με ό,τι έχω στο σπίτι", "subtitle": "Φωτογραφία ψυγείου ή λίστα", "full_match": "Όλα τα υλικά διαθέσιμα ({{count}}/{{count}})" },
+    "supply": { "title": "Μπορώ να αγοράσω 1-2", "subtitle": "Ευρύτερη επιλογή", "missing": "{{count}} λείπει" },
+    "discover": { "title": "Ανακάλυψε χωρίς όρια", "subtitle": "Μεταξύ 2500 συνταγών" }
+  },
+  "pantry_input": {
+    "title": "Πώς θα προσθέσεις υλικά;",
+    "subtitle_pantry": "Συνταγές με ό,τι έχεις",
+    "subtitle_supply": "Συνταγές με 1-2 επιπλέον",
+    "camera_title": "Φωτογράφισε το ψυγείο",
+    "camera_desc": "Η AI βρίσκει για σένα",
+    "manual_title": "Γράψε χειροκίνητα",
+    "manual_desc": "Επίλεξε από λίστα ή πληκτρολόγησε",
+    "saved_title": "Αποθηκευμένο ντουλάπι",
+    "saved_desc_items": "{{count}} αποθηκευμένα",
+    "saved_desc_empty": "Δεν υπάρχει αποθηκευμένο",
+    "daily_remaining": "{{remaining}}/{{total}} σαρώσεις",
+    "tip": "Άνοιξε το ψυγείο και φωτογράφισε όλα τα ράφια"
+  },
+  "ingredient_list": {
+    "title": "Τα υλικά σου",
+    "subtitle_pantry": "Επίλεξε ό,τι έχεις",
+    "subtitle_supply": "Επίλεξε — 1-2 να λείπουν OK",
+    "search_placeholder": "Αναζήτηση υλικού...",
+    "search_results": "Αποτελέσματα",
+    "frequent": "Συχνά χρησιμοποιούμενα",
+    "selected": "Επιλεγμένα ({{count}})",
+    "empty_hint": "Επίλεξε υλικά από τη λίστα",
+    "need_more": "Επίλεξε {{need}} ακόμα",
+    "show_recipes": "🍳 Εμφάνιση συνταγών ({{count}})"
+  },
+  "scan": { "limit_title": "Όριο ημέρας", "limit_message": "Χρησιμοποίησες τις {{limit}} σαρώσεις. Premium = απεριόριστες." },
+  "results": {
+    "loading": "Αναζήτηση συνταγών...",
+    "sort": { "best_match": "Καλύτερη", "least_missing": "Λιγότερα ελλιπή", "rating": "Βαθμολογία", "time": "Χρόνος" },
+    "pantry": { "title": "{{count}} συνταγές με {{ingredientCount}} υλικά", "empty_title": "Δεν βρέθηκαν συνταγές", "empty_message": "Δοκίμασε Mode 2 αν μπορείς να αγοράσεις 1-2", "switch_to_supply": "🛒 Μετάβαση σε Mode 2", "cross_sell_title": "Περισσότερες επιλογές;", "cross_sell_message": "Με 1-2 επιπλέον 25 συνταγές περισσότερες", "cross_sell_cta": "Στο Mode 2" },
+    "supply": { "title": "{{count}} συνταγές με αγορές", "max_missing": "Μέγ. ελλιπή", "shopping_list": "Συνδυασμένη λίστα", "shopping_list_subtitle": "Όλα τα ελλιπή σε μία λίστα", "shopping_list_premium": "Λειτουργία premium", "empty_title": "Λίγα αποτελέσματα", "empty_message": "Πρόσθεσε περισσότερα υλικά" }
+  },
+  "discover": {
+    "search_placeholder": "Αναζήτηση συνταγής...",
+    "recipe_of_the_day": "Συνταγή της ημέρας",
+    "cuisines": "Κουζίνες",
+    "quick_recipes": "Γρήγορες (κάτω 15 λεπ)",
+    "vegetarian_favorites": "Χορτοφαγικές αγαπημένες",
+    "turkish_desserts": "Τουρκικά γλυκά",
+    "trending": "Δημοφιλείς",
+    "browse_all": "Όλες οι {{count}} συνταγές"
+  },
+  "recipe": { "votes": "ψήφοι", "total_time": "Χρόνος", "servings": "Μερίδες", "difficulty": "Δυσκολία", "cuisine": "Κουζίνα", "ingredients": "Υλικά", "steps": "Βήματα", "tips": "Συμβουλές", "missing_warning": "Υλικά που λείπουν: {{count}}", "start_cooking": "ΞΕΚΙΝΑ ΜΑΓΕΙΡΕΜΑ" },
+  "premium": { "banner_title": "Γίνε Premium", "banner_subtitle": "Απεριόριστες σαρώσεις", "unlimited": "Απεριόριστα", "upgrade_cta": "Upgrade" },
+  "difficulty": { "easy": "Εύκολο", "medium": "Μέτριο", "hard": "Δύσκολο" },
+  "cuisine": { "turkish": "Τουρκική", "italian": "Ιταλική", "mediterranean": "Μεσογειακή", "french": "Γαλλική", "middle_eastern": "Μέσης Ανατολής", "american": "Αμερικανική", "mexican": "Μεξικάνικη", "indian": "Ινδική", "spanish": "Ισπανική", "japanese": "Ιαπωνική", "chinese": "Κινέζικη", "thai": "Ταϊλανδέζικη", "other": "Άλλο" }
+}

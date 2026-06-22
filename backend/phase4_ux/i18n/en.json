@@ -1,0 +1,151 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "clear_all": "Clear all",
+    "or": "or",
+    "min_short": "min",
+    "back": "Back"
+  },
+  
+  "mode": {
+    "greeting": "Hi {{name}}!",
+    "title": "What shall we cook today?",
+    "subtitle": "Personalized recipes for you",
+    "recipe_of_the_day": "Recipe of the Day",
+    
+    "pantry": {
+      "title": "Cook With What I Have",
+      "subtitle": "Fridge photo or list",
+      "full_match": "All ingredients available ({{count}}/{{count}})"
+    },
+    "supply": {
+      "title": "Can Buy 1-2 Extra",
+      "subtitle": "Wider selection",
+      "missing": "{{count}} missing"
+    },
+    "discover": {
+      "title": "Discover Without Limits",
+      "subtitle": "Among 2500 recipes"
+    }
+  },
+  
+  "pantry_input": {
+    "title": "How will you add ingredients?",
+    "subtitle_pantry": "We'll suggest recipes you can make with what you have",
+    "subtitle_supply": "We'll suggest recipes needing only 1-2 extra ingredients",
+    "camera_title": "Take a Fridge Photo",
+    "camera_desc": "Let AI find for you",
+    "manual_title": "Type Ingredients Myself",
+    "manual_desc": "Pick from list or type",
+    "saved_title": "My Saved Pantry",
+    "saved_desc_items": "{{count}} saved items",
+    "saved_desc_empty": "No pantry saved yet",
+    "daily_remaining": "{{remaining}}/{{total}} scans left",
+    "tip": "For best results, open your fridge door and capture all shelves"
+  },
+  
+  "ingredient_list": {
+    "title": "Your Ingredients",
+    "subtitle_pantry": "Select everything you have",
+    "subtitle_supply": "Select what you have, we'll allow 1-2 missing",
+    "search_placeholder": "Search ingredient...",
+    "search_results": "Results",
+    "frequent": "Frequently Used",
+    "selected": "Selected ({{count}})",
+    "empty_hint": "Choose ingredients from the list above",
+    "need_more": "Pick {{need}} more ingredients",
+    "show_recipes": "🍳 Show Recipes ({{count}})"
+  },
+  
+  "scan": {
+    "limit_title": "Daily Limit Reached",
+    "limit_message": "You've used your {{limit}} scans today. Premium gets unlimited."
+  },
+  
+  "results": {
+    "loading": "Finding recipes...",
+    "sort": {
+      "best_match": "Best Match",
+      "least_missing": "Least Missing",
+      "rating": "Rating",
+      "time": "Time"
+    },
+    "pantry": {
+      "title": "{{count}} recipes with {{ingredientCount}} ingredients",
+      "empty_title": "No recipes found",
+      "empty_message": "Try Mode 2 if you can buy 1-2 extras",
+      "switch_to_supply": "🛒 Switch to Supply Mode",
+      "cross_sell_title": "More options?",
+      "cross_sell_message": "Buying 1-2 extras unlocks 25 more recipes",
+      "cross_sell_cta": "Switch to Mode 2"
+    },
+    "supply": {
+      "title": "{{count}} recipes with supply",
+      "max_missing": "Max missing",
+      "shopping_list": "Combined Shopping List",
+      "shopping_list_subtitle": "All missing in one list",
+      "shopping_list_premium": "Premium feature",
+      "empty_title": "Not enough results",
+      "empty_message": "Add more ingredients and try again"
+    }
+  },
+  
+  "discover": {
+    "search_placeholder": "Search recipes or ingredients...",
+    "recipe_of_the_day": "Recipe of the Day",
+    "cuisines": "Cuisines",
+    "quick_recipes": "Quick (under 15 min)",
+    "vegetarian_favorites": "Vegetarian Favorites",
+    "turkish_desserts": "Turkish Desserts",
+    "trending": "Trending Now",
+    "browse_all": "Browse all {{count}} recipes"
+  },
+  
+  "recipe": {
+    "votes": "votes",
+    "total_time": "Time",
+    "servings": "Servings",
+    "difficulty": "Difficulty",
+    "cuisine": "Cuisine",
+    "ingredients": "Ingredients",
+    "steps": "Steps",
+    "tips": "Tips",
+    "missing_warning": "Missing ingredients: {{count}}",
+    "start_cooking": "START COOKING"
+  },
+  
+  "premium": {
+    "banner_title": "Go Premium",
+    "banner_subtitle": "Unlimited scans, exclusive recipes",
+    "unlimited": "Unlimited",
+    "upgrade_cta": "Upgrade"
+  },
+  
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  
+  "cuisine": {
+    "turkish": "Turkish",
+    "italian": "Italian",
+    "mediterranean": "Mediterranean",
+    "french": "French",
+    "middle_eastern": "Middle Eastern",
+    "american": "American",
+    "mexican": "Mexican",
+    "indian": "Indian",
+    "spanish": "Spanish",
+    "japanese": "Japanese",
+    "chinese": "Chinese",
+    "thai": "Thai",
+    "other": "Other"
+  }
+}

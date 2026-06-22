@@ -1,0 +1,59 @@
+{
+  "common": { "loading": "Učitavanje...", "error": "Došlo je do greške", "retry": "Pokušaj ponovo", "cancel": "Otkaži", "confirm": "Potvrdi", "save": "Sačuvaj", "delete": "Obriši", "clear_all": "Obriši sve", "or": "ili", "min_short": "min", "back": "Nazad" },
+  "mode": {
+    "greeting": "Zdravo {{name}}!",
+    "title": "Šta kuvamo danas?",
+    "subtitle": "Personalizovani recepti za tebe",
+    "recipe_of_the_day": "Recept dana",
+    "pantry": { "title": "Sa onim što imam kod kuće", "subtitle": "Foto frižidera ili lista", "full_match": "Svi sastojci dostupni ({{count}}/{{count}})" },
+    "supply": { "title": "Mogu kupiti 1-2", "subtitle": "Šira selekcija", "missing": "{{count}} nedostaje" },
+    "discover": { "title": "Otkrij bez granica", "subtitle": "Među 2500 recepata" }
+  },
+  "pantry_input": {
+    "title": "Kako ćeš dodati sastojke?",
+    "subtitle_pantry": "Recepti sa onim što imaš",
+    "subtitle_supply": "Recepti sa 1-2 dodatna",
+    "camera_title": "Slikaj frižider",
+    "camera_desc": "AI pronalazi za tebe",
+    "manual_title": "Sam unesi",
+    "manual_desc": "Izaberi sa liste ili ukucaj",
+    "saved_title": "Moja sačuvana ostava",
+    "saved_desc_items": "{{count}} sačuvanih",
+    "saved_desc_empty": "Nema sačuvanih",
+    "daily_remaining": "{{remaining}}/{{total}} skeniranja",
+    "tip": "Otvori frižider i slikaj sve police"
+  },
+  "ingredient_list": {
+    "title": "Tvoji sastojci",
+    "subtitle_pantry": "Izaberi sve što imaš",
+    "subtitle_supply": "Izaberi — 1-2 mogu nedostajati",
+    "search_placeholder": "Pretraga sastojka...",
+    "search_results": "Rezultati",
+    "frequent": "Često korišćeni",
+    "selected": "Izabrano ({{count}})",
+    "empty_hint": "Izaberi sastojke sa liste",
+    "need_more": "Izaberi još {{need}}",
+    "show_recipes": "🍳 Prikaži recepte ({{count}})"
+  },
+  "scan": { "limit_title": "Dnevni limit", "limit_message": "Iskoristio si {{limit}} skenova. Premium = neograničeno." },
+  "results": {
+    "loading": "Tražim recepte...",
+    "sort": { "best_match": "Najbolji", "least_missing": "Najmanje fali", "rating": "Ocena", "time": "Vreme" },
+    "pantry": { "title": "{{count}} recepata sa {{ingredientCount}} sastojaka", "empty_title": "Nema recepata", "empty_message": "Probaj Mod 2 ako možeš kupiti 1-2", "switch_to_supply": "🛒 Pređi na Mod 2", "cross_sell_title": "Više opcija?", "cross_sell_message": "Sa 1-2 dodatna još 25 recepata", "cross_sell_cta": "U Mod 2" },
+    "supply": { "title": "{{count}} recepata sa kupovinom", "max_missing": "Max nedostaje", "shopping_list": "Kombinovana lista", "shopping_list_subtitle": "Sve što nedostaje u jednoj listi", "shopping_list_premium": "Premium opcija", "empty_title": "Malo rezultata", "empty_message": "Dodaj više sastojaka" }
+  },
+  "discover": {
+    "search_placeholder": "Pretraga recepta ili sastojka...",
+    "recipe_of_the_day": "Recept dana",
+    "cuisines": "Kuhinje",
+    "quick_recipes": "Brzi (ispod 15 min)",
+    "vegetarian_favorites": "Vegetarijanski favoriti",
+    "turkish_desserts": "Turski dezerti",
+    "trending": "U trendu",
+    "browse_all": "Svih {{count}} recepata"
+  },
+  "recipe": { "votes": "glasova", "total_time": "Vreme", "servings": "Porcije", "difficulty": "Težina", "cuisine": "Kuhinja", "ingredients": "Sastojci", "steps": "Koraci", "tips": "Saveti", "missing_warning": "Nedostajući sastojci: {{count}}", "start_cooking": "POČNI KUVANJE" },
+  "premium": { "banner_title": "Postani Premium", "banner_subtitle": "Neograničeno skeniranje", "unlimited": "Neograničeno", "upgrade_cta": "Upgrade" },
+  "difficulty": { "easy": "Lako", "medium": "Srednje", "hard": "Teško" },
+  "cuisine": { "turkish": "Turska", "italian": "Italijanska", "mediterranean": "Mediteranska", "french": "Francuska", "middle_eastern": "Bliskoistočna", "american": "Američka", "mexican": "Meksička", "indian": "Indijska", "spanish": "Španska", "japanese": "Japanska", "chinese": "Kineska", "thai": "Tajlandska", "other": "Ostalo" }
+}
